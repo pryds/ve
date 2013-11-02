@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="eu.pryds.ve.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="eu.pryds.ve.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="eu.pryds.ve.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

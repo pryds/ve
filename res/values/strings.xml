@@ -7,9 +7,20 @@
     <string name="metadata">String number: 1/342\nFiles:</string>
     <string name="action_previous">Previous</string>
     <string name="action_next">Next</string>
+    <string name="action_load">Load</string>
+    <string name="action_save">Save</string>
     <string name="action_settings">Settings</string>
     <string name="approved">Approved:</string>
     <string name="ready">Ready</string>
     <string name="needs_review">Needs review</string>
-        
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_name">Name</string>
+    <string name="pref_name_summ">Your name in English</string>
+    <string name="pref_email">Email</string>
+    <string name="pref_email_summ">Your email address</string>
+    <string name="pref_lang">Default language</string>
+    <string name="pref_lang_summ">Code of the language you translate to, e.g. \'en\' or \'pt_BR\'</string>
+    <string name="pref_maillist">Mailing list</string>
+    <string name="pref_maillist_summ">The email address of your language team\'s mailing list</string>
+    
 </resources>
