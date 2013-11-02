@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vé</string>
+    <string name="orig_str">Hello world! This might potentially be a very long string. It has to wrap lines if it exceeds the width of one line. If it becomes too long, the user has to be able to scroll it up and down. Husyfb sjfb syfsuykfg sfguyfukf jsfb sjfbsyibf syf sduyf suyf gbfyuvlfiaifsgvboigbsdyfbo fpf pfåf USHF ÅSFG SIGH SI  isf isf isfsuy fsuygosuguiog sdiufgvb jhfvbdsfj bigvb igbsdig byfub ufsdi bsduygsdufbyufsdbfy dsf bsdy! Husyfb sjfb syfsuykfg sfguyfukf jsfb sjfbsyibf syf sduyf suyf gbfyuvlfiaifsgvboigbsdyfbo fpf pfåf USHF ÅSFG SIGH SI  isf isf isfsuy fsuygosuguiog sdiufgvb jhfvbdsfj bigvb igbsdig byfub ufsdi bsduygsdufbyufsdbfy dsf bsdy! Husyfb sjfb syfsuykfg sfguyfukf jsfb sjfbsyibf syf sduyf suyf gbfyuvlfiaifsgvboigbsdyfbo fpf pfåf USHF ÅSFG SIGH SI  isf isf isfsuy fsuygosuguiog sdiufgvb jhfvbdsfj bigvb igbsdig byfub ufsdi bsduygsdufbyufsdbfy dsf bsdy! Husyfb sjfb syfsuykfg sfguyfukf jsfb sjfbsyibf syf sduyf suyf gbfyuvlfiaifsgvboigbsdyfbo fpf pfåf USHF ÅSFG SIGH SI  isf isf isfsuy fsuygosuguiog sdiufgvb jhfvbdsfj bigvb igbsdig byfub ufsdi bsduygsdufbyufsdbfy dsf bsdy! Husyfb sjfb syfsuykfg sfguyfukf jsfb sjfbsyibf syf sduyf suyf gbfyuvlfiaifsgvboigbsdyfbo fpf pfåf USHF ÅSFG SIGH SI  isf isf isfsuy fsuygosuguiog sdiufgvb jhfvbdsfj bigvb igbsdig byfub ufsdi bsduygsdufbyufsdbfy dsf bsdy! Husyfb sjfb syfsuykfg sfguyfukf jsfb sjfbsyibf syf sduyf suyf gbfyuvlfiaifsgvboigbsdyfbo fpf pfåf USHF ÅSFG SIGH SI  isf isf isfsuy fsuygosuguiog sdiufgvb jhfvbdsfj bigvb igbsdig byfub ufsdi bsduygsdufbyufsdbfy dsf bsdy!</string>
+    <string name="transl_str">Hej verden! Dette kan også være en meget lang streng. Den skal kunne spænde over flere linier. Hvis den bliver for lang, skal man dog kunne scrolle op og ned i den. Husyfb sjfb syfsuykfg sfguyfukf jsfb sjfbsyibf syf sduyf suyf gbfyuvlfiaifsgvboigbsdyfbo fpf pfåf USHF ÅSFG SIGH SI  isf isf isfsuy fsuygosuguiog sdiufgvb jhfvbdsfj bigvb igbsdig byfub ufsdi bsduygsdufbyufsdbfy dsf bsdy! Husyfb sjfb syfsuykfg sfguyfukf jsfb sjfbsyibf syf sduyf suyf gbfyuvlfiaifsgvboigbsdyfbo fpf pfåf USHF ÅSFG SIGH SI  isf isf isfsuy fsuygosuguiog.</string>
+    <string name="metadata">String number: 1/342\nFiles:</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_settings">Settings</string>
+    <string name="approved">Approved:</string>
+    <string name="ready">Ready</string>
+    <string name="needs_review">Needs review</string>
+        
+</resources>
