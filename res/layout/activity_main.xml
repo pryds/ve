@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:textOn="@string/ready"
         android:textOff="@string/needs_review"
-        android:text="@string/approved" />
+        android:text="@string/approved"
+        android:enabled="false" />
     
     <TextView
         android:id="@+id/orig_str"
@@ -39,7 +40,7 @@
         android:scrollbars="vertical"
         android:gravity="top"
         android:hint="@string/transl_str"
-        android:text="@string/transl_str" />
+        android:enabled="false" />
 
     <TextView
         android:id="@+id/metadata"
