@@ -66,7 +66,10 @@ public class TranslatableString {
 				}
 			
 			} else if (poFileLines[i].startsWith("#,")) {
-				str.flags.add(poFileLines[i].substring(2).trim());
+				String[] parts = poFileLines[i].substring(2).trim().split(", ");
+				for (int j = 0; j < parts.length; j++) {
+					str.flags.add(parts[j]);
+				}
 			
 			} else if (poFileLines[i].startsWith("#| msgctxt")) {
 				str.previousContext = trimQuotes(poFileLines[i].substring(10));
@@ -135,8 +138,100 @@ public class TranslatableString {
 		return v.toArray(new TranslatableString[]{});
 	}
 	
+	public static String[] toPoFile(TranslatableString[] strings) {
+		Vector<String> outputLines = new Vector<String>();
+		
+		for (int i = 0; i < strings.length; i++) {
+			if (i != 0)
+				outputLines.add("");
+			
+			if (!strings[i].translatorComments.equals(""))
+				outputLines.add("#  " + strings[i].translatorComments);
+			
+			if (!strings[i].extractedComments.equals(""))
+				outputLines.add("#. " + strings[i].extractedComments);
+			
+			if (strings[i].reference.size() > 0) {
+				StringBuffer refstr = new StringBuffer();
+				for (int j = 0; j < strings[i].reference.size(); j++) {
+					if (j != 0)
+						refstr.append(" ");
+					refstr.append(strings[i].reference.get(j));
+				}
+				String[] refWrapped = wordWrapToArray(refstr.toString(), 77);
+				for (int j = 0; j < refWrapped.length; j++)
+					outputLines.add("#: " + refWrapped[j]);
+			}
+			
+			if (strings[i].flags.size() > 0) {
+				StringBuffer flagsstr = new StringBuffer();
+				for (int j = 0; j < strings[i].flags.size(); j++) {
+					if (j != 0)
+						flagsstr.append(", ");
+					flagsstr.append(strings[i].flags.get(j));
+				}
+				String[] flagsWrapped = wordWrapToArray(flagsstr.toString(), 77);
+				for (int j = 0; j < flagsWrapped.length; j++)
+					outputLines.add("#, " + flagsWrapped[j]);
+			}
+			
+			if (!strings[i].previousContext.equals(""))
+				outputLines.add("#| " + strings[i].previousContext);
+			
+			if (!strings[i].previousUntranslatedString.equals("")) {
+				String[] prevUntrStrWrapped = wordWrapToArray();
+			}
+		}
+		return outputLines.toArray(new String[]{});
+	}
+	
 	private static String trimQuotes(String str) {
 		return str.trim().replaceAll("^\"|\"$", "");
+	}
+	
+	/**
+	 * Word-wraps a long lined string to the given max-width.
+	 * <p>
+	 * If there are already newlines in the input string, the input
+	 * is split at these newlines, and each substring is fed to the
+	 * private method {@link #wordWrapOneLine(String, int)}, after
+	 * which all (now wrapped) substrings are re-joined, with a
+	 * newline in-between each of them.
+	 * @param input a string to be word-wrapped
+	 * @param width maximum length of each line, in characters
+	 * @return new string containing word-wrapped version of input
+	 * 
+	 * @see #wordWrapOneLine(String, int)
+	 */
+	public static String wordWrap(String input, int width) {
+	    String[] inputLines = input.split("\n");
+	    StringBuffer output = new StringBuffer();
+	    for (int i = 0; i < inputLines.length; i++) {
+	        if (i != 0)
+	            output.append("\n");
+	        output.append(wordWrapOneLine(inputLines[i], width));
+	    }
+	    return output.toString();
+	}
+	
+	public static String[] wordWrapToArray(String input, int width) {
+		return wordWrap(input, width).split("\n");
+	}
+	
+	private static String wordWrapOneLine(String input, int width) {
+	    input = input.trim();
+	    if (input.length() <= width) {
+	        return input;
+	    } else {
+	        int lastSpaceIndex = input.lastIndexOf(" ", width);
+	        if (lastSpaceIndex == -1)
+	            lastSpaceIndex = width;
+	        
+	        String output1 = input.substring(0, lastSpaceIndex).trim() + "\n";
+	        String output2 = input.substring(lastSpaceIndex).trim();
+	        input = null;
+	        return output1 + wordWrapOneLine(output2, width);
+	    }
 	}
 	
 	public static void main(String[] args) {
@@ -156,6 +251,12 @@ public class TranslatableString {
 		
 		System.out.println("v size() = " + v.size());
 		TranslatableString[] strs = parse(v.toArray(new String[]{}));
+		String[] outputLines = toPoFile(strs);
+		
+		for (int i = 0; i < outputLines.length; i++)
+			System.out.println(outputLines[i]);
+		
+		/*
 		for (int i = 0; i < strs.length; i++) {
 			System.out.println("=== Parsed data for string " + i + " ===");
 			System.out.println("Translator comments: " + strs[i].translatorComments);
@@ -169,6 +270,6 @@ public class TranslatableString {
 			System.out.println("Untranslated string: " + strs[i].untranslatedString);
 			System.out.println("Untranslated string plural: " + strs[i].untranslatedStringPlural);
 			System.out.println("Translated string(s): " + strs[i].translatedString);
-		}
+		}*/
 	}
 }
