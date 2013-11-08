@@ -120,12 +120,12 @@ public class TranslatableString {
 				if (lastWrittenMultiliner == MSGID) {
 					if (!str.untranslatedString.equals(""))
 						str.untranslatedString += '\n';
-					str.untranslatedString += '\n' + trimQuotes(poFileLines[i]);
+					str.untranslatedString += trimQuotes(poFileLines[i]);
 					
 				} else if (lastWrittenMultiliner == MSGID_PLURAL) {
 					if (!str.untranslatedStringPlural.equals(""))
 						str.untranslatedStringPlural += '\n';
-					str.untranslatedStringPlural += '\n' + trimQuotes(poFileLines[i]);
+					str.untranslatedStringPlural += trimQuotes(poFileLines[i]);
 					
 				} else if (lastWrittenMultiliner == MSGSTR) {
 					String existingData = str.translatedString.get(lastWrittenMsgstrIndex);
@@ -210,17 +210,41 @@ public class TranslatableString {
 					outputLines.add("#| msgid_plural " + prevUntrStrPlurWrapped[j]);
 			}
 			
+			final int LINE_WIDTH_MINUS_QUOTEATION_MARKS = 80 - "\"\"".length();
+			
 			if (!strings[i].context.equals("")) {
 				if (strings[i].context.length() > 80 - "msgctxt ".length()) {
-					String[] contextLines = wordWrapToArray(strings[i].context, 80 - "\"\"".length());
+					String[] contextLines = wordWrapToArray(strings[i].context, LINE_WIDTH_MINUS_QUOTEATION_MARKS);
 					outputLines.add("msgctxt \"\"");
 					for (int j = 0; j < contextLines.length; j++)
 						outputLines.add("\"" + contextLines[j] + "\"");
 				} else {
-					outputLines.add("msgctxt \"" + strings[i].context.length() + "\"");
+					outputLines.add("msgctxt \"" + strings[i].context + "\"");
 				}
 			}
-			//TODO: untranslated string, untranslated string plural, translated string [0-n]
+			
+			if (!strings[i].untranslatedString.equals("")) {
+				if (strings[i].untranslatedString.length() > 80 - "msgid ".length()) {
+					String[] untrStrLines = wordWrapToArray(strings[i].untranslatedString, LINE_WIDTH_MINUS_QUOTEATION_MARKS);
+					outputLines.add("msgid \"\"");
+					for (int j = 0; j < untrStrLines.length; j++)
+						outputLines.add("\"" + untrStrLines[j] + "\"");
+				} else {
+					outputLines.add("msgid \"" + strings[i].untranslatedString + "\"");
+				}
+			}
+			
+			if (!strings[i].untranslatedStringPlural.equals("")) {
+				if (strings[i].untranslatedStringPlural.length() > 80 - "msgid_plural ".length()) {
+					String[] untrStrPlurLines = wordWrapToArray(strings[i].untranslatedStringPlural, LINE_WIDTH_MINUS_QUOTEATION_MARKS);
+					outputLines.add("msgid_plural \"\"");
+					for (int j = 0; j < untrStrPlurLines.length; j++)
+						outputLines.add("\"" + untrStrPlurLines[j] + "\"");
+				} else {
+					outputLines.add("msgid_plural \"" + strings[i].untranslatedStringPlural + "\"");
+				}
+			}
+			//TODO: translated string [0-n]
 		}
 		return outputLines.toArray(new String[]{});
 	}
@@ -259,7 +283,6 @@ public class TranslatableString {
 	}
 	
 	private static String wordWrapOneLine(String input, int width) {
-	    //input = input.trim();
 	    if (input.length() <= width) {
 	        return input;
 	    } else {
