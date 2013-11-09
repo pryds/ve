@@ -80,7 +80,7 @@ public class TranslatableString {
 			} else if (poFileLines[i].startsWith("#| msgid_plural")) {
 				if (str.previousUntranslatedStringPlural.length() > 0)
 					str.previousUntranslatedStringPlural += '\n';
-				str.previousUntranslatedStringPlural += trimQuotes(poFileLines[i].substring(8));
+				str.previousUntranslatedStringPlural += trimQuotes(poFileLines[i].substring(15));
 			
 			} else if (poFileLines[i].startsWith("#| msgid")) {
 				if (str.previousUntranslatedString.length() > 0)
@@ -177,7 +177,7 @@ public class TranslatableString {
 				}
 				String[] refWrapped = wordWrapToArray(refstr.toString(), LENGTH_OF_LINES_MINUS_SHORT_PREFIX);
 				for (int j = 0; j < refWrapped.length; j++)
-					outputLines.add("#: " + refWrapped[j]);
+					outputLines.add("#: " + refWrapped[j].trim());
 			}
 			
 			if (strings[i].flags.size() > 0) {
@@ -195,58 +195,55 @@ public class TranslatableString {
 			if (!strings[i].previousContext.equals("")) {
 				String[] prevContextLines = strings[i].previousContext.split("\n");
 				for (int j = 0; j < prevContextLines.length; j++)
-					outputLines.add("#| msgctxt " + prevContextLines[j]);
+					outputLines.add("#| msgctxt \"" + prevContextLines[j] + "\"");
 			}
 			
 			if (!strings[i].previousUntranslatedString.equals("")) {
 				String[] prevUntrStrWrapped = strings[i].previousUntranslatedString.split("\n");
 				for (int j = 0; j < prevUntrStrWrapped.length; j++)
-					outputLines.add("#| msgid " + prevUntrStrWrapped[j]);
+					outputLines.add("#| msgid \"" + prevUntrStrWrapped[j] + "\"");
 			}
 			
 			if (!strings[i].previousUntranslatedStringPlural.equals("")) {
 				String[] prevUntrStrPlurWrapped = strings[i].previousUntranslatedStringPlural.split("\n");
 				for (int j = 0; j < prevUntrStrPlurWrapped.length; j++) 
-					outputLines.add("#| msgid_plural " + prevUntrStrPlurWrapped[j]);
+					outputLines.add("#| msgid_plural \"" + prevUntrStrPlurWrapped[j] + "\"");
 			}
 			
-			final int LINE_WIDTH_MINUS_QUOTEATION_MARKS = 80 - "\"\"".length();
-			
 			if (!strings[i].context.equals("")) {
-				if (strings[i].context.length() > 80 - "msgctxt ".length()) {
-					String[] contextLines = wordWrapToArray(strings[i].context, LINE_WIDTH_MINUS_QUOTEATION_MARKS);
-					outputLines.add("msgctxt \"\"");
-					for (int j = 0; j < contextLines.length; j++)
-						outputLines.add("\"" + contextLines[j] + "\"");
-				} else {
-					outputLines.add("msgctxt \"" + strings[i].context + "\"");
-				}
+				writeMultilinesTo(outputLines, "msgctxt ", strings[i].context);
 			}
 			
 			if (!strings[i].untranslatedString.equals("")) {
-				if (strings[i].untranslatedString.length() > 80 - "msgid ".length()) {
-					String[] untrStrLines = wordWrapToArray(strings[i].untranslatedString, LINE_WIDTH_MINUS_QUOTEATION_MARKS);
-					outputLines.add("msgid \"\"");
-					for (int j = 0; j < untrStrLines.length; j++)
-						outputLines.add("\"" + untrStrLines[j] + "\"");
-				} else {
-					outputLines.add("msgid \"" + strings[i].untranslatedString + "\"");
-				}
+				writeMultilinesTo(outputLines, "msgid ", strings[i].untranslatedString);
 			}
 			
 			if (!strings[i].untranslatedStringPlural.equals("")) {
-				if (strings[i].untranslatedStringPlural.length() > 80 - "msgid_plural ".length()) {
-					String[] untrStrPlurLines = wordWrapToArray(strings[i].untranslatedStringPlural, LINE_WIDTH_MINUS_QUOTEATION_MARKS);
-					outputLines.add("msgid_plural \"\"");
-					for (int j = 0; j < untrStrPlurLines.length; j++)
-						outputLines.add("\"" + untrStrPlurLines[j] + "\"");
+				writeMultilinesTo(outputLines, "msgid_plural ", strings[i].untranslatedStringPlural);
+			}
+			
+			if (strings[i].translatedString.size() > 0) {
+				if (strings[i].translatedString.size() == 1) {
+					writeMultilinesTo(outputLines, "msgstr ", strings[i].translatedString.get(0));
 				} else {
-					outputLines.add("msgid_plural \"" + strings[i].untranslatedStringPlural + "\"");
+					for (int j = 0; j < strings[i].translatedString.size(); j++)
+						writeMultilinesTo(outputLines, "msgstr[" + j + "] ", strings[i].translatedString.get(j));
 				}
 			}
-			//TODO: translated string [0-n]
 		}
 		return outputLines.toArray(new String[]{});
+	}
+	
+	private static void writeMultilinesTo(Vector<String> outputLines, String prefix, String writeString) {
+		final int LINE_WIDTH = 80;
+		if (writeString.length() > LINE_WIDTH - prefix.length()) {
+			String[] wrappedLines = wordWrapToArray(writeString, LINE_WIDTH - "\"\"".length());
+			outputLines.add(prefix + "\"\"");
+			for (int i = 0; i < wrappedLines.length; i++)
+				outputLines.add("\"" + wrappedLines[i] + "\"");
+		} else {
+			outputLines.add(prefix + "\"" + writeString + "\"");
+		}
 	}
 	
 	private static String trimQuotes(String str) {
@@ -312,7 +309,6 @@ public class TranslatableString {
 			e.printStackTrace();
 		}
 		
-		System.out.println("v size() = " + v.size());
 		TranslatableString[] strs = parse(v.toArray(new String[]{}));
 		String[] outputLines = toPoFile(strs);
 		
