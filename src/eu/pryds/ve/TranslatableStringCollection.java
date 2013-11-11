@@ -9,11 +9,11 @@ import android.view.ContextMenu;
 
 public class TranslatableStringCollection {
     Vector<TranslatableString> strings;
-    int headerIndex; //index in strings vector that contains po header info
+    TranslatableString header; //contains po header info
     
     public TranslatableStringCollection() {
         strings = new Vector<TranslatableString>();
-        headerIndex = -1;
+        header = null;
     }
     
     public TranslatableString getString(int id) {
@@ -170,21 +170,22 @@ public class TranslatableStringCollection {
         }
         
         // Find index of first occurrence of empty untranslated string
-        // and mark that as header info
+        // and move that to the header var instead
         for (int i = 0; i < strings.size(); i++) {
             if (strings.get(i).containsHeaderInfo()) {
-                headerIndex = i;
+                header = strings.get(i);
+                strings.remove(i);
                 break;
             }
         }
     }
     
     public String[] toPoFile() {
-        if (headerIndex == -1) { // if there was no header entry, create one now
-            strings.add(0, new TranslatableString());
-            strings.get(0).initiateHeaderInfo();
+        if (header == null) { // if there was no header entry, create one now
+            header = new TranslatableString();
+            header.initiateHeaderInfo();
         } else { // otherwise, update existing header entry
-            strings.get(headerIndex); // TODO
+            //header; // TODO
         }
         
         

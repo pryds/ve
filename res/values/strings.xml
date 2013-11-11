@@ -4,7 +4,10 @@
     <string name="app_name">Vé</string>
     <string name="orig_str">Untranslated string</string>
     <string name="transl_str">Translated string</string>
-    <string name="metadata">String number: 1/342\nFiles:</string>
+    <string name="str_no">String number:</string>
+    <string name="context">Context:</string>
+    <string name="notes">Notes:</string>
+    <string name="files">Files:</string>
     <string name="action_previous">Previous</string>
     <string name="action_next">Next</string>
     <string name="action_load">Load</string>

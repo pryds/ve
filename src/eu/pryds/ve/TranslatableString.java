@@ -118,6 +118,16 @@ public class TranslatableString {
         return reference;
     }
     
+    public String getReferencesAsString() {
+        StringBuffer str = new StringBuffer();
+        for (int i = 0; i < reference.size(); i++) {
+            if (i != 0)
+                str.append("\n");
+            str.append(reference.get(i));
+        }
+        return str.toString();
+    }
+    
     public Vector<String> getFlags() {
         return flags;
     }
