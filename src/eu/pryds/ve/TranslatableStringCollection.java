@@ -5,14 +5,39 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Vector;
 
+import android.view.ContextMenu;
+
 public class TranslatableStringCollection {
     Vector<TranslatableString> strings;
+    int headerIndex; //index in strings vector that contains po header info
     
     public TranslatableStringCollection() {
         strings = new Vector<TranslatableString>();
+        headerIndex = -1;
     }
     
-    public void parse(String[] poFileLines) {
+    public TranslatableString getString(int id) {
+        return strings.get(id);
+    }
+    
+    public int size() {
+        return strings.size();
+    }
+    
+    public void parse(File poFile) {
+        Vector<String> poFileLines = new Vector<String>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(poFile));
+            
+            String line;
+            while ((line = reader.readLine()) != null) {
+                poFileLines.add(line);
+            }
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace(); // TODO: Proper exception handling
+        }
+        
         TranslatableString str = new TranslatableString();
         
         final int MSGID = 0;
@@ -22,68 +47,68 @@ public class TranslatableStringCollection {
         int lastWrittenMultiliner = MSGID;
         int lastWrittenMsgstrIndex = 0;
         
-        for (int i = 0; i < poFileLines.length; i++) {
-            if (poFileLines[i] == null || poFileLines[i].trim().equals("")) {
+        for (int i = 0; i < poFileLines.size(); i++) {
+            if (poFileLines.get(i) == null || poFileLines.get(i).trim().equals("")) {
                 strings.add(str);
                 str = new TranslatableString();
                 
-            } else if (poFileLines[i].startsWith("# ")) {
+            } else if (poFileLines.get(i).startsWith("# ")) {
                 if (str.getTranslatorComments().length() > 0)
                     str.addtoTranslatorComments("" + '\n');
-                str.addtoTranslatorComments(poFileLines[i].substring(2).trim());
+                str.addtoTranslatorComments(poFileLines.get(i).substring(2).trim());
                 
-            } else if (poFileLines[i].startsWith("#.")) {
+            } else if (poFileLines.get(i).startsWith("#.")) {
                 if (str.getExtractedComments().length() > 0)
                     str.addtoExtractedComments("" + '\n');
-                str.addtoExtractedComments(poFileLines[i].substring(2).trim());
+                str.addtoExtractedComments(poFileLines.get(i).substring(2).trim());
                 
-            } else if (poFileLines[i].startsWith("#:")) {
-                String[] parts = poFileLines[i].substring(2).trim().split(" ");
+            } else if (poFileLines.get(i).startsWith("#:")) {
+                String[] parts = poFileLines.get(i).substring(2).trim().split(" ");
                 for (int j = 0; j < parts.length; j++) {
                     str.getReferences().add(parts[j]);
                 }
                 
-            } else if (poFileLines[i].startsWith("#,")) {
-                String[] parts = poFileLines[i].substring(2).trim().split(", ");
+            } else if (poFileLines.get(i).startsWith("#,")) {
+                String[] parts = poFileLines.get(i).substring(2).trim().split(", ");
                 for (int j = 0; j < parts.length; j++) {
                     str.getFlags().add(parts[j]);
                 }
                 
-            } else if (poFileLines[i].startsWith("#| msgctxt")) {
+            } else if (poFileLines.get(i).startsWith("#| msgctxt")) {
                 if (str.getPreviousContext().length() > 0)
                     str.addtoPreviousContext("" + '\n');
-                str.addtoPreviousContext(trimQuotes(poFileLines[i]
+                str.addtoPreviousContext(trimQuotes(poFileLines.get(i)
                         .substring(10)));
                 
-            } else if (poFileLines[i].startsWith("#| msgid_plural")) {
+            } else if (poFileLines.get(i).startsWith("#| msgid_plural")) {
                 if (str.getPreviousUntranslatedStringPlural().length() > 0)
                     str.addtoPreviousUntranslatedStringPlural("" + '\n');
-                str.addtoPreviousUntranslatedStringPlural(trimQuotes(poFileLines[i]
+                str.addtoPreviousUntranslatedStringPlural(trimQuotes(poFileLines.get(i)
                         .substring(15)));
                 
-            } else if (poFileLines[i].startsWith("#| msgid")) {
+            } else if (poFileLines.get(i).startsWith("#| msgid")) {
                 if (str.getPreviousUntranslatedString().length() > 0)
                     str.addtoPreviousUntranslatedString("" + '\n');
-                str.addtoPreviousUntranslatedString(trimQuotes(poFileLines[i]
+                str.addtoPreviousUntranslatedString(trimQuotes(poFileLines.get(i)
                         .substring(8)));
                 
-            } else if (poFileLines[i].startsWith("msgctxt")) {
-                str.setContext(trimQuotes(poFileLines[i].substring(7)));
+            } else if (poFileLines.get(i).startsWith("msgctxt")) {
+                str.setContext(trimQuotes(poFileLines.get(i).substring(7)));
                 lastWrittenMultiliner = MSGCTXT;
                 
-            } else if (poFileLines[i].startsWith("msgid_plural")) {
-                str.setUntranslatedStringPlural(trimQuotes(poFileLines[i]
+            } else if (poFileLines.get(i).startsWith("msgid_plural")) {
+                str.setUntranslatedStringPlural(trimQuotes(poFileLines.get(i)
                         .substring(12)));
                 lastWrittenMultiliner = MSGID_PLURAL;
                 
-            } else if (poFileLines[i].startsWith("msgid")) {
-                str.setUntranslatedString(trimQuotes(poFileLines[i]
+            } else if (poFileLines.get(i).startsWith("msgid")) {
+                str.setUntranslatedString(trimQuotes(poFileLines.get(i)
                         .substring(5)));
                 lastWrittenMultiliner = MSGID;
                 
-            } else if (poFileLines[i].startsWith("msgstr[")) {
-                int indexOfSquareEndBracket = poFileLines[i].indexOf(']');
-                String strNoStr = poFileLines[i].substring(7,
+            } else if (poFileLines.get(i).startsWith("msgstr[")) {
+                int indexOfSquareEndBracket = poFileLines.get(i).indexOf(']');
+                String strNoStr = poFileLines.get(i).substring(7,
                         indexOfSquareEndBracket);
                 int strNo = Integer.parseInt(strNoStr);
                 if (strNo == 0) {
@@ -91,57 +116,78 @@ public class TranslatableStringCollection {
                 }
                 str.getTranslatedString().put(
                         strNo,
-                        trimQuotes(poFileLines[i]
+                        trimQuotes(poFileLines.get(i)
                                 .substring(indexOfSquareEndBracket + 1)));
                 lastWrittenMultiliner = MSGSTR;
                 lastWrittenMsgstrIndex = strNo;
                 
-            } else if (poFileLines[i].startsWith("msgstr")) {
+            } else if (poFileLines.get(i).startsWith("msgstr")) {
                 str.resetTranslatedString();
                 str.getTranslatedString().put(0,
-                        trimQuotes(poFileLines[i].substring(6)));
+                        trimQuotes(poFileLines.get(i).substring(6)));
                 lastWrittenMultiliner = MSGSTR;
                 lastWrittenMsgstrIndex = 0;
                 
-            } else if (poFileLines[i].startsWith("\"")) {
+            } else if (poFileLines.get(i).startsWith("\"")) {
                 if (lastWrittenMultiliner == MSGID) {
                     if (!str.getUntranslatedString().equals(""))
                         str.addtoUntranslatedString("" + '\n');
-                    str.addtoUntranslatedString(trimQuotes(poFileLines[i]));
+                    str.addtoUntranslatedString(trimQuotes(poFileLines.get(i)));
                     
                 } else if (lastWrittenMultiliner == MSGID_PLURAL) {
                     if (!str.getUntranslatedStringPlural().equals(""))
                         str.addtoUntranslatedStringPlural("" + '\n');
-                    str.addtoUntranslatedStringPlural(trimQuotes(poFileLines[i]));
+                    str.addtoUntranslatedStringPlural(trimQuotes(poFileLines.get(i)));
                     
                 } else if (lastWrittenMultiliner == MSGSTR) {
                     String existingData = str.getTranslatedString().get(
                             lastWrittenMsgstrIndex);
                     if (existingData.equals(""))
                         str.getTranslatedString().put(lastWrittenMsgstrIndex,
-                                trimQuotes(poFileLines[i]));
+                                trimQuotes(poFileLines.get(i)));
                     else
                         str.getTranslatedString().put(
                                 lastWrittenMsgstrIndex,
                                 existingData + '\n'
-                                        + trimQuotes(poFileLines[i]));
+                                        + trimQuotes(poFileLines.get(i)));
                 } else if (lastWrittenMultiliner == MSGCTXT) {
                     if (!str.getContext().equals(""))
                         str.addtoContext("" + '\n');
-                    str.addtoContext(trimQuotes(poFileLines[i]));
+                    str.addtoContext(trimQuotes(poFileLines.get(i)));
                 }
                 
             } else {
                 System.out.println("Unexpected line " + (i + 1) + ": "
-                        + poFileLines[i]);
+                        + poFileLines.get(i));
             }
         }
         strings.add(str);
         
-        // TODO: Check for empty TranslatableStrings
+        // Check for and remove completely empty TranslatableStrings
+        for (int i = strings.size()-1; i >= 0; i--) {
+            if (strings.get(i).isEmpty())
+                strings.remove(i);
+        }
+        
+        // Find index of first occurrence of empty untranslated string
+        // and mark that as header info
+        for (int i = 0; i < strings.size(); i++) {
+            if (strings.get(i).containsHeaderInfo()) {
+                headerIndex = i;
+                break;
+            }
+        }
     }
     
     public String[] toPoFile() {
+        if (headerIndex == -1) { // if there was no header entry, create one now
+            strings.add(0, new TranslatableString());
+            strings.get(0).initiateHeaderInfo();
+        } else { // otherwise, update existing header entry
+            strings.get(headerIndex); // TODO
+        }
+        
+        
         Vector<String> outputLines = new Vector<String>();
         
         for (int i = 0; i < strings.size(); i++) {
@@ -309,52 +355,5 @@ public class TranslatableStringCollection {
         }
     }
     
-    public static void main(String[] args) {
-        Vector<String> v = new Vector<String>();
-        try {
-            File f = new File(TranslatableString.class.getResource("test.po")
-                    .toURI());
-            BufferedReader r = new BufferedReader(new FileReader(f));
-            
-            String l;
-            while ((l = r.readLine()) != null) {
-                v.add(l);
-            }
-            r.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        
-        TranslatableStringCollection coll = new TranslatableStringCollection();
-        coll.parse(v.toArray(new String[] {}));
-        String[] outputLines = coll.toPoFile();
-        
-        for (int i = 0; i < outputLines.length; i++)
-            System.out.println(outputLines[i]);
-        
-        /*
-         * System.out.println(
-         * "==============================================================");
-         * for (int i = 0; i < strs.length; i++) {
-         * System.out.println("=== Parsed data for string " + i + " ===");
-         * System.out.println("Translator comments: " +
-         * strs[i].translatorComments);
-         * System.out.println("Extracted comments: " +
-         * strs[i].extractedComments); System.out.println("Reference: " +
-         * strs[i].reference); System.out.println("Flag: " + strs[i].flags);
-         * System.out.println("Previous context: " + strs[i].previousContext);
-         * System.out.println("Previous untranslated string: " +
-         * strs[i].previousUntranslatedString);
-         * System.out.println("Previous untranslated string plural: " +
-         * strs[i].previousUntranslatedStringPlural);
-         * System.out.println("Context: " + strs[i].context);
-         * System.out.println("Untranslated string: " +
-         * strs[i].untranslatedString);
-         * System.out.println("Untranslated string plural: " +
-         * strs[i].untranslatedStringPlural);
-         * System.out.println("Translated string(s): " +
-         * strs[i].translatedString); }
-         */
-    }
-    
+    //System.out.println("Version name (string): " + getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
 }
