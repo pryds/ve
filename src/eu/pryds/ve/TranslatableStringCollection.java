@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Vector;
 
-import android.view.ContextMenu;
+import android.app.Activity;
 
 public class TranslatableStringCollection {
     Vector<TranslatableString> strings;
@@ -180,42 +180,43 @@ public class TranslatableStringCollection {
         }
     }
     
-    public String[] toPoFile() {
+    public String[] toPoFile(Activity activity) {
         if (header == null) { // if there was no header entry, create one now
             header = new TranslatableString();
-            header.initiateHeaderInfo();
+            header.initiateHeaderInfo(activity);
         } else { // otherwise, update existing header entry
             //header; // TODO
         }
         
-        
+        Vector<TranslatableString> strToWrite = (Vector<TranslatableString>) strings.clone();
+        strToWrite.add(0, header);
         Vector<String> outputLines = new Vector<String>();
         
-        for (int i = 0; i < strings.size(); i++) {
+        for (int i = 0; i < strToWrite.size(); i++) {
             if (i != 0)
                 outputLines.add("");
             
-            if (!strings.get(i).getTranslatorComments().equals("")) {
-                String[] transCommLines = strings.get(i)
+            if (!strToWrite.get(i).getTranslatorComments().equals("")) {
+                String[] transCommLines = strToWrite.get(i)
                         .getTranslatorComments().split("\n");
                 for (int j = 0; j < transCommLines.length; j++)
                     outputLines.add("#  " + transCommLines[j]);
             }
             
-            if (!strings.get(i).getExtractedComments().equals("")) {
-                String[] extrCommLines = strings.get(i).getExtractedComments()
+            if (!strToWrite.get(i).getExtractedComments().equals("")) {
+                String[] extrCommLines = strToWrite.get(i).getExtractedComments()
                         .split("\n");
                 for (int j = 0; j < extrCommLines.length; j++)
                     outputLines.add("#. " + extrCommLines[j]);
             }
             
             final int LENGTH_OF_LINES_MINUS_SHORT_PREFIX = 80 - "#  ".length(); // 77
-            if (strings.get(i).getReferences().size() > 0) {
+            if (strToWrite.get(i).getReferences().size() > 0) {
                 StringBuffer refstr = new StringBuffer();
-                for (int j = 0; j < strings.get(i).getReferences().size(); j++) {
+                for (int j = 0; j < strToWrite.get(i).getReferences().size(); j++) {
                     if (j != 0)
                         refstr.append(" ");
-                    refstr.append(strings.get(i).getReferences().get(j));
+                    refstr.append(strToWrite.get(i).getReferences().get(j));
                 }
                 String[] refWrapped = wordWrapToArray(refstr.toString(),
                         LENGTH_OF_LINES_MINUS_SHORT_PREFIX);
@@ -223,12 +224,12 @@ public class TranslatableStringCollection {
                     outputLines.add("#: " + refWrapped[j].trim());
             }
             
-            if (strings.get(i).getFlags().size() > 0) {
+            if (strToWrite.get(i).getFlags().size() > 0) {
                 StringBuffer flagsstr = new StringBuffer();
-                for (int j = 0; j < strings.get(i).getFlags().size(); j++) {
+                for (int j = 0; j < strToWrite.get(i).getFlags().size(); j++) {
                     if (j != 0)
                         flagsstr.append(", ");
-                    flagsstr.append(strings.get(i).getFlags().get(j));
+                    flagsstr.append(strToWrite.get(i).getFlags().get(j));
                 }
                 String[] flagsWrapped = wordWrapToArray(flagsstr.toString(),
                         LENGTH_OF_LINES_MINUS_SHORT_PREFIX);
@@ -236,55 +237,55 @@ public class TranslatableStringCollection {
                     outputLines.add("#, " + flagsWrapped[j]);
             }
             
-            if (!strings.get(i).getPreviousContext().equals("")) {
-                String[] prevContextLines = strings.get(i).getPreviousContext()
+            if (!strToWrite.get(i).getPreviousContext().equals("")) {
+                String[] prevContextLines = strToWrite.get(i).getPreviousContext()
                         .split("\n");
                 for (int j = 0; j < prevContextLines.length; j++)
                     outputLines.add("#| msgctxt \"" + prevContextLines[j]
                             + "\"");
             }
             
-            if (!strings.get(i).getPreviousUntranslatedString().equals("")) {
-                String[] prevUntrStrWrapped = strings.get(i)
+            if (!strToWrite.get(i).getPreviousUntranslatedString().equals("")) {
+                String[] prevUntrStrWrapped = strToWrite.get(i)
                         .getPreviousUntranslatedString().split("\n");
                 for (int j = 0; j < prevUntrStrWrapped.length; j++)
                     outputLines.add("#| msgid \"" + prevUntrStrWrapped[j]
                             + "\"");
             }
             
-            if (!strings.get(i).getPreviousUntranslatedStringPlural()
+            if (!strToWrite.get(i).getPreviousUntranslatedStringPlural()
                     .equals("")) {
-                String[] prevUntrStrPlurWrapped = strings.get(i)
+                String[] prevUntrStrPlurWrapped = strToWrite.get(i)
                         .getPreviousUntranslatedStringPlural().split("\n");
                 for (int j = 0; j < prevUntrStrPlurWrapped.length; j++)
                     outputLines.add("#| msgid_plural \""
                             + prevUntrStrPlurWrapped[j] + "\"");
             }
             
-            if (!strings.get(i).getContext().equals("")) {
-                writeMultilinesTo(outputLines, "msgctxt ", strings.get(i)
+            if (!strToWrite.get(i).getContext().equals("")) {
+                writeMultilinesTo(outputLines, "msgctxt ", strToWrite.get(i)
                         .getContext());
             }
             
-            if (!strings.get(i).getUntranslatedString().equals("")) {
-                writeMultilinesTo(outputLines, "msgid ", strings.get(i)
+            if (!strToWrite.get(i).getUntranslatedString().equals("")) {
+                writeMultilinesTo(outputLines, "msgid ", strToWrite.get(i)
                         .getUntranslatedString());
             }
             
-            if (!strings.get(i).getUntranslatedStringPlural().equals("")) {
-                writeMultilinesTo(outputLines, "msgid_plural ", strings.get(i)
+            if (!strToWrite.get(i).getUntranslatedStringPlural().equals("")) {
+                writeMultilinesTo(outputLines, "msgid_plural ", strToWrite.get(i)
                         .getUntranslatedStringPlural());
             }
             
-            if (strings.get(i).getTranslatedString().size() > 0) {
-                if (strings.get(i).getTranslatedString().size() == 1) {
-                    writeMultilinesTo(outputLines, "msgstr ", strings.get(i)
+            if (strToWrite.get(i).getTranslatedString().size() > 0) {
+                if (strToWrite.get(i).getTranslatedString().size() == 1) {
+                    writeMultilinesTo(outputLines, "msgstr ", strToWrite.get(i)
                             .getTranslatedString().get(0));
                 } else {
-                    for (int j = 0; j < strings.get(i).getTranslatedString()
+                    for (int j = 0; j < strToWrite.get(i).getTranslatedString()
                             .size(); j++)
                         writeMultilinesTo(outputLines, "msgstr[" + j + "] ",
-                                strings.get(i).getTranslatedString().get(j));
+                                strToWrite.get(i).getTranslatedString().get(j));
                 }
             }
         }
@@ -355,6 +356,4 @@ public class TranslatableStringCollection {
             outputLines.add(prefix + "\"" + writeString + "\"");
         }
     }
-    
-    //System.out.println("Version name (string): " + getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
 }

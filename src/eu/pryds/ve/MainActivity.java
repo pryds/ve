@@ -69,6 +69,17 @@ public class MainActivity extends Activity {
             updateScreen(currentString);
             
             enableInitiallyDisabledViews(true);
+            return true;
+        case R.id.action_save:
+            String[] poLines = str.toPoFile(this);
+            
+            //TODO: the following is a temporary hack to show resulting file
+            StringBuffer temp = new StringBuffer();
+            for (int i = 0; i < poLines.length; i++)
+                temp.append(poLines[i] + '\n');
+            TextView origStr = (TextView) findViewById(R.id.orig_str);
+            origStr.setText(temp);
+            return true;
         default:
             return super.onOptionsItemSelected(item);
         }
@@ -78,7 +89,7 @@ public class MainActivity extends Activity {
         TranslatableString currentStr = str.getString(stringIndex);
         
         Switch approved = (Switch) findViewById(R.id.approved);
-        approved.setChecked(currentStr.isFuzzy());
+        approved.setChecked(!currentStr.isFuzzy());
         
         TextView origStr = (TextView) findViewById(R.id.orig_str);
         origStr.setText(currentStr.getUntranslatedString());
@@ -105,7 +116,6 @@ public class MainActivity extends Activity {
                 (currentStr.getReferences().size() == 0 ?
                 "" : currentStr.getReferencesAsString()) + '\n'
                 );
-        // TODO: Update metadata view
     }
     
     private void enableInitiallyDisabledViews(boolean enable) {

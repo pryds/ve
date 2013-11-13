@@ -6,6 +6,11 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.preference.PreferenceManager;
+
 public class TranslatableString {
     private String translatorComments;
     private String extractedComments;
@@ -70,21 +75,43 @@ public class TranslatableString {
         return DEFAULT_PLURAL_FORM_COUNT;
     }
     
-    public void initiateHeaderInfo() {
+    public void initiateHeaderInfo(Activity activity) {
+        String version = "";
+        try {
+            version = activity.getPackageManager().getPackageInfo(
+                    activity.getPackageName(), 0).versionName;
+        } catch (NameNotFoundException e) { }
+        SharedPreferences pref =
+                PreferenceManager.getDefaultSharedPreferences(activity);
+        
+        //TODO: Give warning if preferences (name, email, etc.) are not set
+        
         translatedString = new Hashtable<Integer, String>();
         translatedString.put(0,
                 "PO-Revision-Date: " + (new SimpleDateFormat(
-                    "yyyy-MM-dd HH:mmZ").format(new Date())) + BSLASHN_NL +
-                "Last-Translator: " + BSLASHN_NL + //TODO: Fill with real values
-                "Language-Team: " + BSLASHN_NL +
+                "yyyy-MM-dd HH:mmZ").format(new Date())) + BSLASHN_NL +
+                
+                "Last-Translator: " + pref.getString("pref_name", "") + " <" +
+                pref.getString("pref_email", "") + ">" + BSLASHN_NL +
+                
+                "Language-Team: " + BSLASHN_NL + //TODO: Fill with real values
+                
                 "Language: " + BSLASHN_NL +
+                
                 "MIME-Version: 1.0" + BSLASHN_NL +
+                
                 "Content-Type: text/plain; charset=UTF-8" + BSLASHN_NL +
+                
                 "Content-Transfer-Encoding: 8bit" + BSLASHN_NL +
+                
                 "Plural-Forms: nplurals=" + DEFAULT_PLURAL_FORM_COUNT +
-                    "; plural=;" + BSLASHN_NL +
-                "X-Generator: " + "\\n"
+                "; plural=;" + BSLASHN_NL +
+                
+                "X-Generator: Vé " + version + "\\n"
                 );
+        translatorComments = pref.getString("pref_name", "") + " <" +
+                pref.getString("pref_email", "") + ">, " +
+                (new SimpleDateFormat("yyyy").format(new Date())) + ".";
     }
     
     public void updateHeaderInfo() {
