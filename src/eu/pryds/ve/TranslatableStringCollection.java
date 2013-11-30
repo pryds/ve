@@ -185,7 +185,7 @@ public class TranslatableStringCollection {
             header = new TranslatableString();
             header.initiateHeaderInfo(activity);
         } else { // otherwise, update existing header entry
-            //header; // TODO
+            header.updateHeaderInfo(activity);
         }
         
         Vector<TranslatableString> strToWrite = (Vector<TranslatableString>) strings.clone();

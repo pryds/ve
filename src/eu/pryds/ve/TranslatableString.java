@@ -1,6 +1,7 @@
 package eu.pryds.ve;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -54,7 +55,7 @@ public class TranslatableString {
         return (isEmpty(untranslatedString) && !this.isEmpty());
     }
     
-    private final int DEFAULT_PLURAL_FORM_COUNT = 100; //TODO: change to 2
+    private final int DEFAULT_PLURAL_FORM_COUNT = 2;
     private final String BSLASHN_NL = "\\n\n";
     
     public int getHeaderPluralFormCount() {
@@ -72,10 +73,16 @@ public class TranslatableString {
                 }
             }
         }
-        return DEFAULT_PLURAL_FORM_COUNT;
+        return DEFAULT_PLURAL_FORM_COUNT; //TODO get this from list instead
     }
     
     public void initiateHeaderInfo(Activity activity) {
+        translatedString = new Hashtable<Integer, String>();
+        translatedString.put(0, "");
+        updateHeaderInfo(activity);
+    }
+    
+    public void updateHeaderInfo(Activity activity) {
         String version = "";
         try {
             version = activity.getPackageManager().getPackageInfo(
@@ -86,36 +93,102 @@ public class TranslatableString {
         
         //TODO: Give warning if preferences (name, email, etc.) are not set
         
-        translatedString = new Hashtable<Integer, String>();
-        translatedString.put(0,
-                "PO-Revision-Date: " + (new SimpleDateFormat(
-                "yyyy-MM-dd HH:mmZ").format(new Date())) + BSLASHN_NL +
+        String[] headerArray = translatedString.get(0).split("\n");
+        Vector<String> headerLines = new Vector<String>(Arrays.asList(headerArray));
+        
+        //last entry might end in a backslash-n. If so, remove those two chars:
+        for (int i = 0; i < headerLines.size(); i++) {
+            if (headerLines.get(i).trim().endsWith("\\n")) {
+                String item = headerLines.remove(i).trim();
+                headerLines.add(i, item.substring(0, item.length()-2));
+            }
+        }
+        
+        replaceOrAddString(headerLines, "PO-Revision-Date:",
+                (new SimpleDateFormat("yyyy-MM-dd HH:mmZ").format(new Date())));
+        
+        replaceOrAddString(headerLines, "Last-Translator:",
+                pref.getString("pref_name", "") + " <" +
+                pref.getString("pref_email", "") + ">");
+        
+        replaceOrAddString(headerLines, "Language-Team:",
+                "<" + pref.getString("pref_maillist", "") +
+                ">"); //TODO: Fill in language name)
+        
+        replaceOrAddString(headerLines, "Language:",
+                pref.getString("pref_lang", "en"));
+        
+        replaceOrAddString(headerLines, "MIME-Version:", "1.0");
+        
+        replaceOrAddString(headerLines, "Content-Type:",
+                "text/plain; charset=UTF-8");
+        
+        replaceOrAddString(headerLines, "Content-Transfer-Encoding:", "8bit");
+        
+        replaceOrAddString(headerLines, "Plural-Forms:",
+                "nplurals=" + DEFAULT_PLURAL_FORM_COUNT +
+                "; plural=;"); //TODO: Fill in plural form
+        
+        replaceOrAddString(headerLines, "X-Generator:", "Vé " + version);
+        
+        translatedString.put(0, implode(headerLines, BSLASHN_NL) + "\\n");
+        
+        
+        headerArray = translatorComments.split("\n");
+        headerLines = new Vector<String>(Arrays.asList(headerArray));
+        
+        int lineMatchingTranslatorInfo = -1;
+        for (int i = 0; i < headerLines.size(); i++) {
+            if (headerLines.get(i).matches(
+                    pref.getString("pref_name", "") + " *<" +
+                    pref.getString("pref_email", "") + ">.*"
+                    )) {
+                lineMatchingTranslatorInfo = i;
+                break;
+            }
+        }
+        String thisYear = new SimpleDateFormat("yyyy").format(new Date());
+        if (lineMatchingTranslatorInfo == -1) {
+            headerLines.add(pref.getString("pref_name", "") + " <" +
+                pref.getString("pref_email", "") + ">, " + thisYear + ".");
+        } else {
+            String fullStr = headerLines.get(lineMatchingTranslatorInfo);
+            String yearsStr = fullStr.substring(fullStr.indexOf(">, ")+3, fullStr.length()-1);
+            String[] years = yearsStr.trim().split(",");
+            boolean yearIsAlreadyThere = false;
+            for (int i = 0; i < years.length; i++) {
                 
-                "Last-Translator: " + pref.getString("pref_name", "") + " <" +
-                pref.getString("pref_email", "") + ">" + BSLASHN_NL +
-                
-                "Language-Team: " + BSLASHN_NL + //TODO: Fill with real values
-                
-                "Language: " + BSLASHN_NL +
-                
-                "MIME-Version: 1.0" + BSLASHN_NL +
-                
-                "Content-Type: text/plain; charset=UTF-8" + BSLASHN_NL +
-                
-                "Content-Transfer-Encoding: 8bit" + BSLASHN_NL +
-                
-                "Plural-Forms: nplurals=" + DEFAULT_PLURAL_FORM_COUNT +
-                "; plural=;" + BSLASHN_NL +
-                
-                "X-Generator: Vé " + version + "\\n"
-                );
-        translatorComments = pref.getString("pref_name", "") + " <" +
-                pref.getString("pref_email", "") + ">, " +
-                (new SimpleDateFormat("yyyy").format(new Date())) + ".";
+                if (years[i].trim().equals(thisYear)) {
+                    yearIsAlreadyThere = true;
+                    break;
+                }
+            }
+            if (!yearIsAlreadyThere) {
+                yearsStr = yearsStr.trim() + ", " + thisYear;
+                headerLines.remove(lineMatchingTranslatorInfo);
+                headerLines.add(lineMatchingTranslatorInfo,
+                        pref.getString("pref_name", "") + " <" +
+                        pref.getString("pref_email", "") + ">, " +
+                        yearsStr + ".");
+            }
+        }
+        translatorComments = implode(headerLines, "\n");
     }
     
-    public void updateHeaderInfo() {
-        //TODO
+    private void replaceOrAddString(Vector<String> strings, String strHeader,
+            String strContent) {
+        int index = -1;
+        int l = strings.size();
+        for (int i = 0; i < l; i++) {
+            if (strings.get(i).startsWith(strHeader)) {
+                index = i;
+                break;
+            }
+        }
+        if (index != -1)
+            strings.remove(index);
+        strings.add(index == -1 ? strings.size() : index,
+                strHeader + " " + strContent);
     }
     
     public boolean isFuzzy() {
@@ -233,6 +306,16 @@ public class TranslatableString {
     
     public String toString() {
         return "[" + untranslatedString + "|" + untranslatedStringPlural + "]";
+    }
+    
+    private static String implode(Vector<String> array, String separator) {
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < array.size(); i++) {
+            if (str.length() != 0)
+                str.append(separator);
+            str.append(array.get(i));
+        }
+        return str.toString();
     }
     
     private static boolean isEmpty(Vector<String> v) {
