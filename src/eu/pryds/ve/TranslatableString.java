@@ -55,10 +55,10 @@ public class TranslatableString {
         return (isEmpty(untranslatedString) && !this.isEmpty());
     }
     
-    private final int DEFAULT_PLURAL_FORM_COUNT = 2;
     private final String BSLASHN_NL = "\\n\n";
     
-    public int getHeaderPluralFormCount() {
+    /*
+    public int getHeaderPluralFormCount(Activity activity) {
         if (!this.containsHeaderInfo())
             return -1;
         String[] headerLines = translatedString.get(0).split(BSLASHN_NL);
@@ -73,8 +73,11 @@ public class TranslatableString {
                 }
             }
         }
-        return DEFAULT_PLURAL_FORM_COUNT; //TODO get this from list instead
+        SharedPreferences pref =
+                PreferenceManager.getDefaultSharedPreferences(activity);
+        return Languages.getNplurals(pref.getString("pref_lang", "en"));
     }
+    */
     
     public void initiateHeaderInfo(Activity activity) {
         translatedString = new Hashtable<Integer, String>();
@@ -111,12 +114,12 @@ public class TranslatableString {
                 pref.getString("pref_name", "") + " <" +
                 pref.getString("pref_email", "") + ">");
         
+        String langcode = pref.getString("pref_lang", "en");
         replaceOrAddString(headerLines, "Language-Team:",
-                "<" + pref.getString("pref_maillist", "") +
-                ">"); //TODO: Fill in language name)
+                Languages.getName(langcode) +
+                " <" + pref.getString("pref_maillist", "") + ">");
         
-        replaceOrAddString(headerLines, "Language:",
-                pref.getString("pref_lang", "en"));
+        replaceOrAddString(headerLines, "Language:", langcode);
         
         replaceOrAddString(headerLines, "MIME-Version:", "1.0");
         
@@ -126,8 +129,8 @@ public class TranslatableString {
         replaceOrAddString(headerLines, "Content-Transfer-Encoding:", "8bit");
         
         replaceOrAddString(headerLines, "Plural-Forms:",
-                "nplurals=" + DEFAULT_PLURAL_FORM_COUNT +
-                "; plural=;"); //TODO: Fill in plural form
+                "nplurals=" + Languages.getNplurals(langcode) +
+                "; plural=" + Languages.getPlural(langcode) + ";");
         
         replaceOrAddString(headerLines, "X-Generator:", "Vé " + version);
         
