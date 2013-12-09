@@ -60,6 +60,11 @@ public class MainActivity extends Activity {
         case R.id.action_settings:
             openSettings();
             return true;
+        case R.id.action_about:
+            //TODO show about dialog
+            AboutDialogFragment about = new AboutDialogFragment();
+            about.show(getFragmentManager(), "AboutFragment");
+            return true;
         case R.id.action_load:
             str = new TranslatableStringCollection();
             File sdDir = Environment.getExternalStorageDirectory();
