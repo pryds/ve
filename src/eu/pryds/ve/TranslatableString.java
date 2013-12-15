@@ -57,7 +57,6 @@ public class TranslatableString {
     
     private final String BSLASHN_NL = "\\n\n";
     
-    /*
     public int getHeaderPluralFormCount(Activity activity) {
         if (!this.containsHeaderInfo())
             return -1;
@@ -77,7 +76,6 @@ public class TranslatableString {
                 PreferenceManager.getDefaultSharedPreferences(activity);
         return Languages.getNplurals(pref.getString("pref_lang", "en"));
     }
-    */
     
     public void initiateHeaderInfo(Activity activity) {
         translatedString = new Hashtable<Integer, String>();
@@ -199,6 +197,11 @@ public class TranslatableString {
             if (flags.get(i).toLowerCase().equals("fuzzy"))
                 return true;
         return false;
+    }
+    
+    public boolean isPluralString() {
+        return !(untranslatedStringPlural == null ||
+                untranslatedStringPlural.equals(""));
     }
     
     public String getTranslatorComments() {

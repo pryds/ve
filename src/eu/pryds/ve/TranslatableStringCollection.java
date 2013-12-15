@@ -20,11 +20,15 @@ public class TranslatableStringCollection {
         return strings.get(id);
     }
     
+    public TranslatableString getHeader() {
+        return header;
+    }
+    
     public int size() {
         return strings.size();
     }
     
-    public void parse(File poFile) {
+    public void parse(File poFile, Activity activity) {
         Vector<String> poFileLines = new Vector<String>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(poFile));
@@ -178,15 +182,17 @@ public class TranslatableStringCollection {
                 break;
             }
         }
+        
+        // If no header entry was found, create one now
+        if (header == null) {
+            header = new TranslatableString();
+            header.initiateHeaderInfo(activity);
+        }
     }
     
     public String[] toPoFile(Activity activity) {
-        if (header == null) { // if there was no header entry, create one now
-            header = new TranslatableString();
-            header.initiateHeaderInfo(activity);
-        } else { // otherwise, update existing header entry
-            header.updateHeaderInfo(activity);
-        }
+        // update existing header entry
+        header.updateHeaderInfo(activity);
         
         Vector<TranslatableString> strToWrite = (Vector<TranslatableString>) strings.clone();
         strToWrite.add(0, header);

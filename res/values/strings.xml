@@ -33,5 +33,11 @@
     <string name="about_translate_credits">Translated into English by Thomas Pryds</string>
     <string name="about_license">Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site.</string>
     <string name="ok">OK</string>
+    <string name="plural_form_1">Plural form 1</string>
+    <string name="plural_form_2">2</string>
+    <string name="plural_form_3">3</string>
+    <string name="plural_form_4">4</string>
+    <string name="plural_form_5">5</string>
+    <string name="plural_form_6">6</string>
     
 </resources>

@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ public class MainActivity extends Activity {
     private TranslatableStringCollection str;
     private Menu menu;
     private int currentString = 0;
+    private int currentPluralForm = 0;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,19 +52,21 @@ public class MainActivity extends Activity {
             currentString--;
             if (currentString < 0)
                 currentString = str.size() - 1;
-            updateScreen(currentString);
+            currentPluralForm = 0;
+            updateScreen();
             return true;
         case R.id.action_next:
             currentString++;
             if (currentString >= str.size())
                 currentString = 0;
-            updateScreen(currentString);
+            currentPluralForm = 0;
+            updateScreen();
             return true;
         case R.id.action_settings:
             openSettings();
             return true;
         case R.id.action_about:
-            //TODO show about dialog
+            //show about dialog
             AboutDialogFragment about = new AboutDialogFragment();
             about.show(getFragmentManager(), "AboutFragment");
             return true;
@@ -69,9 +74,9 @@ public class MainActivity extends Activity {
             str = new TranslatableStringCollection();
             File sdDir = Environment.getExternalStorageDirectory();
             File file = new File(sdDir, "test.po"); // TODO: File chooser
-            str.parse(file); // TODO: In a separate thread
+            str.parse(file, this); // TODO: In a separate thread
             
-            updateScreen(currentString);
+            updateScreen();
             
             enableInitiallyDisabledViews(true);
             return true;
@@ -90,22 +95,75 @@ public class MainActivity extends Activity {
         }
     }
     
-    private void updateScreen(int stringIndex) {
-        TranslatableString currentStr = str.getString(stringIndex);
+    /** Called when the user touches one of the plural form buttons */
+    public void changePluralForm(View view) {
+        switch (view.getId()) {
+        case R.id.plural0:
+            currentPluralForm = 0;
+            updateScreen();
+            return;
+        case R.id.plural1:
+            currentPluralForm = 1;
+            updateScreen();
+            return;
+        case R.id.plural2:
+            currentPluralForm = 2;
+            updateScreen();
+            return;
+        case R.id.plural3:
+            currentPluralForm = 3;
+            updateScreen();
+            return;
+        case R.id.plural4:
+            currentPluralForm = 4;
+            updateScreen();
+            return;
+        case R.id.plural5:
+            currentPluralForm = 5;
+            updateScreen();
+            return;
+        default:
+            return;
+        }
+    }
+    
+    private void updateScreen() {
+        TranslatableString currentStr = str.getString(currentString);
         
         Switch approved = (Switch) findViewById(R.id.approved);
         approved.setChecked(!currentStr.isFuzzy());
         
+        Button[] plural = new Button[] {
+                (Button) findViewById(R.id.plural0),
+                (Button) findViewById(R.id.plural1),
+                (Button) findViewById(R.id.plural2),
+                (Button) findViewById(R.id.plural3),
+                (Button) findViewById(R.id.plural4),
+                (Button) findViewById(R.id.plural5)
+        };
+        
+        int pluralForms = str.getHeader().getHeaderPluralFormCount(this);
+        
+        for (int i = 0; i < plural.length; i++) {
+            if (i < pluralForms && currentStr.isPluralString())
+                plural[i].setVisibility(Button.VISIBLE);
+            else
+                plural[i].setVisibility(Button.GONE);
+        }
+        
         TextView origStr = (TextView) findViewById(R.id.orig_str);
-        origStr.setText(currentStr.getUntranslatedString());
+        origStr.setText(currentPluralForm > 0 ?
+                currentStr.getUntranslatedStringPlural() :
+                currentStr.getUntranslatedString()
+                );
         
         EditText translString = (EditText) findViewById(R.id.transl_str);
-        translString.setText(currentStr.getTranslatedString(0)); //TODO: Handle plural forms
+        translString.setText(currentStr.getTranslatedString(currentPluralForm));
         
         TextView metadata = (TextView) findViewById(R.id.metadata);
         metadata.setText(
                 getResources().getText(R.string.str_no) + " " +
-                (stringIndex+1) + "/" + str.size() + '\n' +
+                (currentString+1) + "/" + str.size() + '\n' +
                 
                 getResources().getText(R.string.context) + " " +
                 (currentStr.getContext().equals("") ?

@@ -18,6 +18,72 @@
         android:text="@string/approved"
         android:enabled="false" />
     
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <Button
+            android:id="@+id/plural0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textScaleX="0.5"
+            android:text="@string/plural_form_1"
+            android:visibility="gone"
+            android:onClick="changePluralForm" />
+        
+        <Button
+            android:id="@+id/plural1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textScaleX="0.5"
+            android:text="@string/plural_form_2"
+            android:visibility="gone"
+            android:onClick="changePluralForm" />
+        
+        <Button
+            android:id="@+id/plural2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textScaleX="0.5"
+            android:text="@string/plural_form_3"
+            android:visibility="gone"
+            android:onClick="changePluralForm" />
+        
+        <Button
+            android:id="@+id/plural3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textScaleX="0.5"
+            android:text="@string/plural_form_4"
+            android:visibility="gone"
+            android:onClick="changePluralForm" />
+        
+        <Button
+            android:id="@+id/plural4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textScaleX="0.5"
+            android:text="@string/plural_form_5"
+            android:visibility="gone"
+            android:onClick="changePluralForm" />
+        
+        <Button
+            android:id="@+id/plural5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textScaleX="0.5"
+            android:text="@string/plural_form_6"
+            android:visibility="gone"
+            android:onClick="changePluralForm" />
+        
+    </LinearLayout>
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    
     <TextView
         android:id="@+id/orig_str"
         android:layout_width="match_parent"
@@ -25,7 +91,8 @@
         android:layout_weight="1"
         android:maxHeight="300dp"
         android:scrollbars="vertical"
-        android:text="@string/orig_str" />
+        android:text="@string/orig_str"
+        android:textSize="14sp" />
     
     <View
         android:layout_width="fill_parent"
@@ -40,13 +107,15 @@
         android:scrollbars="vertical"
         android:gravity="top"
         android:hint="@string/transl_str"
-        android:enabled="false" />
+        android:enabled="false"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/metadata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="3"
-        android:text="@string/str_no" />
+        android:text="@string/str_no"
+        android:textSize="12sp" />
     
 </LinearLayout>
