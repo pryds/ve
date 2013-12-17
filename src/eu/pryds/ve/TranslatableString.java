@@ -10,9 +10,11 @@ import java.util.Vector;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.preference.PreferenceManager;
 
-public class TranslatableString {
+public class TranslatableString implements Parcelable {
     private String translatorComments;
     private String extractedComments;
     private Vector<String> reference;
@@ -348,4 +350,50 @@ public class TranslatableString {
     private static boolean isEmpty(String s) {
         return (s == null || s.trim().equals(""));
     }
+    
+    // Parcelable stuff
+    
+    private TranslatableString(Parcel in) {
+        translatorComments = in.readString();
+        extractedComments = in.readString();
+        reference = (Vector<String>) in.readSerializable();
+        flags = (Vector<String>) in.readSerializable();
+        previousContext = in.readString();
+        previousUntranslatedString = in.readString();
+        previousUntranslatedStringPlural = in.readString();
+        context = in.readString();
+        untranslatedString = in.readString();
+        untranslatedStringPlural = in.readString();
+        translatedString = (Hashtable<Integer, String>) in.readSerializable();
+    }
+    
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+    
+    @Override
+    public void writeToParcel(Parcel parcel, int parcelflags) {
+        parcel.writeString(translatorComments);
+        parcel.writeString(extractedComments);
+        parcel.writeSerializable(reference);
+        parcel.writeSerializable(flags);
+        parcel.writeString(previousContext);
+        parcel.writeString(previousUntranslatedString);
+        parcel.writeString(previousUntranslatedStringPlural);
+        parcel.writeString(context);
+        parcel.writeString(untranslatedString);
+        parcel.writeString(untranslatedStringPlural);
+        parcel.writeSerializable(translatedString);
+    }
+    
+    public static final Parcelable.Creator<TranslatableString> CREATOR =
+            new Parcelable.Creator<TranslatableString>() {
+        public TranslatableString createFromParcel(Parcel in) {
+            return new TranslatableString(in);
+        }
+        public TranslatableString[] newArray(int size) {
+            return new TranslatableString[size];
+        }
+    };
 }

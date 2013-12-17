@@ -3,11 +3,14 @@ package eu.pryds.ve;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.Hashtable;
 import java.util.Vector;
 
 import android.app.Activity;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class TranslatableStringCollection {
+public class TranslatableStringCollection implements Parcelable {
     Vector<TranslatableString> strings;
     TranslatableString header; //contains po header info
     
@@ -362,4 +365,44 @@ public class TranslatableStringCollection {
             outputLines.add(prefix + "\"" + writeString + "\"");
         }
     }
+    
+    // Parcelable stuff
+    
+    private TranslatableStringCollection(Parcel in) {
+        in.readTypedList(strings, TranslatableString.CREATOR);
+        header = (TranslatableString) in.readParcelable(
+                TranslatableString.class.getClassLoader());
+    }
+    
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+    
+    @Override
+    public void writeToParcel(Parcel parcel, int parcelflags) {
+        parcel.writeTypedList(strings);
+        parcel.writeParcelable(header, PARCELABLE_WRITE_RETURN_VALUE);
+    }
+    
+    public static final Parcelable.Creator<TranslatableStringCollection> CREATOR =
+            new Parcelable.Creator<TranslatableStringCollection>() {
+        public TranslatableStringCollection createFromParcel(Parcel in) {
+            return new TranslatableStringCollection(in);
+        }
+        public TranslatableStringCollection[] newArray(int size) {
+            return new TranslatableStringCollection[size];
+        }
+    };
+    
+    /*
+     * Useful resources on Parcelable:
+     * http://theopentutorials.com/tutorials/android/android-sending-object-from-one-activity-to-another-using-parcelable/
+     * http://stackoverflow.com/questions/7042272/how-to-properly-implement-parcelable-with-an-arraylistparcelable
+     * http://developer.android.com/reference/android/os/Parcelable.html
+     * 
+     * Useful resources on instance bundles (in which can be saved Parcelable objects):
+     * http://developer.android.com/training/basics/activity-lifecycle/recreating.html
+     * http://www.intertech.com/Blog/saving-and-retrieving-android-instance-state-part-1/
+     */
 }
