@@ -3,7 +3,6 @@ package eu.pryds.ve;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.Hashtable;
 import java.util.Vector;
 
 import android.app.Activity;

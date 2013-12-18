@@ -19,9 +19,9 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
     
     private TranslatableStringCollection str;
-    private Menu menu;
     private int currentString = 0;
     private int currentPluralForm = 0;
+    private Menu menu;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +37,34 @@ public class MainActivity extends Activity {
     }
     
     @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putParcelable("str", str);
+        savedInstanceState.putInt("currentString", currentString);
+        savedInstanceState.putInt("currentPluralForm", currentPluralForm);
+        
+        super.onSaveInstanceState(savedInstanceState);
+    }
+    
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        
+        if (savedInstanceState != null) {
+            str = (TranslatableStringCollection) savedInstanceState.getParcelable("str");
+            currentString = savedInstanceState.getInt("currentString");
+            currentPluralForm = savedInstanceState.getInt("currentPluralForm");
+            
+            updateScreen();
+        }
+    }
+    
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         this.menu = menu;
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_activity_actions, menu);
+        
+        if (str != null)
+            enableInitiallyDisabledViews(true);
         return super.onCreateOptionsMenu(menu);
     }
     
