@@ -201,6 +201,27 @@ public class TranslatableString implements Parcelable {
         return false;
     }
     
+    public void setFuzzy(boolean fuzzy) {
+        if (fuzzy) {
+            if (!isFuzzy()) {
+                flags.add("fuzzy");
+            }
+        } else {
+            removeFlag("fuzzy");
+        }
+    }
+    
+    public boolean isUntranslated() {
+        if (translatedString == null)
+            return true;
+        
+        for (int i = 0; i < translatedString.size(); i++) {
+            if (translatedString.get(i).trim().length() > 0)
+                return false;
+        }
+        return true;
+    }
+    
     public boolean isPluralString() {
         return !(untranslatedStringPlural == null ||
                 untranslatedStringPlural.equals(""));
@@ -238,6 +259,16 @@ public class TranslatableString implements Parcelable {
     
     public Vector<String> getFlags() {
         return flags;
+    }
+    
+    public void removeFlag(String flag) {
+        flag = flag.trim();
+        for (int i = 0; i < flags.size(); i++) {
+            if (flags.get(i).equals(flag)) {
+                flags.remove(i);
+                return;
+            }
+        }
     }
     
     public String getPreviousContext() {
@@ -306,6 +337,13 @@ public class TranslatableString implements Parcelable {
     
     public String getTranslatedString(int index) {
         return translatedString.get(index);
+    }
+    
+    public void setTranslatedString(int index, String string) {
+        if (translatedString == null)
+            resetTranslatedString();
+        
+        translatedString.put(index, string);
     }
     
     public void resetTranslatedString() {

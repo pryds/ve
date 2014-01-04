@@ -5,10 +5,18 @@
     <string name="app_name">Vé</string>
     <string name="orig_str">Untranslated string</string>
     <string name="transl_str">Translated string</string>
-    <string name="str_no">String number:</string>
-    <string name="context">Context:</string>
-    <string name="notes">Notes:</string>
-    <string name="files">Files:</string>
+    <string name="meta_str_no">String number:</string>
+    <plurals name="meta_not_ready">
+        <item quantity="one">%d not ready,</item>
+        <item quantity="other">%d not ready,</item>
+    </plurals>
+    <plurals name="meta_untranslated">
+        <item quantity="one">%d untranslated</item>
+        <item quantity="other">%d untranslated</item>
+    </plurals>
+    <string name="meta_context">Context:</string>
+    <string name="meta_notes">Notes:</string>
+    <string name="meta_files">Files:</string>
     <string name="action_previous">Previous</string>
     <string name="action_next">Next</string>
     <string name="action_load">Load</string>

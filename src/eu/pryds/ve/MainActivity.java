@@ -7,11 +7,15 @@ import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.content.Intent;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -29,8 +33,34 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         
+        Switch approved = (Switch) findViewById(R.id.approved);
+        approved.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                TranslatableString currStr = str.getString(currentString);
+                currStr.setFuzzy(!isChecked);
+                updateMetadata();
+            }
+        });
+        
         TextView origStr = (TextView) findViewById(R.id.orig_str);
         origStr.setMovementMethod(new ScrollingMovementMethod()); //make scrollable
+        
+        final EditText translStr = (EditText) findViewById(R.id.transl_str);
+        translStr.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+               String changedText = translStr.getText().toString();
+               TranslatableString currStr = str.getString(currentString);
+               currStr.setTranslatedString(currentPluralForm, changedText);
+               updateMetadata();
+            }
+        });
         
         TextView metadata = (TextView) findViewById(R.id.metadata);
         metadata.setMovementMethod(new ScrollingMovementMethod());
@@ -184,22 +214,36 @@ public class MainActivity extends Activity {
         EditText translString = (EditText) findViewById(R.id.transl_str);
         translString.setText(currentStr.getTranslatedString(currentPluralForm));
         
+        updateMetadata();
+    }
+    
+    private void updateMetadata() {
+        TranslatableString currentStr = str.getString(currentString);
         TextView metadata = (TextView) findViewById(R.id.metadata);
+        int fuzzyCount = str.countFuzzyStrings();
+        int untransCount = str.countUntranslatedStrings();
+        
         metadata.setText(
-                getResources().getText(R.string.str_no) + " " +
-                (currentString+1) + "/" + str.size() + '\n' +
+                getResources().getText(R.string.meta_str_no) + " " +
+                (currentString+1) + "/" + str.size() +
                 
-                getResources().getText(R.string.context) + " " +
+                " (" +
+                getResources().getQuantityString(R.plurals.meta_not_ready, fuzzyCount, fuzzyCount) +
+                " " +
+                getResources().getQuantityString(R.plurals.meta_untranslated, untransCount, untransCount) +
+                ")" + '\n' +
+                
+                getResources().getText(R.string.meta_context) + " " +
                 (currentStr.getContext().equals("") ?
                 "" : currentStr.getContext()) + '\n' +
                 
-                getResources().getText(R.string.notes) + " " +
+                getResources().getText(R.string.meta_notes) + " " +
                 (currentStr.getTranslatorComments().equals("") ?
                 "" : currentStr.getTranslatorComments() + '\n') +
                 (currentStr.getExtractedComments().equals("") ?
                 "" : currentStr.getExtractedComments()) + '\n' +
                 
-                getResources().getText(R.string.files) + " " +
+                getResources().getText(R.string.meta_files) + " " +
                 (currentStr.getReferences().size() == 0 ?
                 "" : currentStr.getReferencesAsString()) + '\n'
                 );

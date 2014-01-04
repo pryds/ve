@@ -30,6 +30,22 @@ public class TranslatableStringCollection implements Parcelable {
         return strings.size();
     }
     
+    public int countFuzzyStrings() {
+        int count = 0;
+        for (int i = 0; i < strings.size(); i++)
+            if (strings.get(i).isFuzzy())
+                count++;
+        return count;
+    }
+    
+    public int countUntranslatedStrings() {
+        int count = 0;
+        for (int i = 0; i < strings.size(); i++)
+            if (strings.get(i).isUntranslated())
+                count++;
+        return count;
+    }
+    
     public void parse(File poFile, Activity activity) {
         Vector<String> poFileLines = new Vector<String>();
         try {

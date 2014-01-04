@@ -115,7 +115,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="3"
-        android:text="@string/str_no"
+        android:text="@string/meta_str_no"
         android:textSize="12sp" />
     
 </LinearLayout>
