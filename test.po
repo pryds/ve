@@ -1,0 +1,121 @@
+# Meta data
+# Thomas Pryds <thomas@pryds.eu>, 2013.
+msgid ""
+msgstr ""
+"This is meta data"
+"Last-Translator: Thomas Pryds <spam@pryds.eu>\n"
+"PO-Revision-Date: 2013-11-06 09:30+0100\n"
+"Project-Id-Version: \n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. freed by _destroy_style_shortcut_callback
+#: ../src/common/styles.c:228 ../src/common/styles.c:232
+#: ../src/common/styles.c:302 ../src/common/styles.c:363
+#: ../src/common/styles.c:507 ../src/common/styles.c:1018
+#: ../src/common/styles.c:1042
+#, c-format
+msgctxt "accel"
+msgid "styles/apply %s"
+msgstr "stile/anvend %s"
+
+#: ../src/control/jobs/camera_jobs.c:415
+#, c-format
+msgid "importing %d image from camera"
+msgid_plural "importing %d images from camera"
+msgstr[0] "importerer %d billede fra kamera"
+msgstr[1] "importerer %d billeder fra kamera"
+
+#: ../src/develop/blend_gui.c:950
+msgid ""
+"adjustment based on input received by this module:\n"
+"* range defined by upper markers: blend fully\n"
+"* range defined by lower markers: do not blend at all\n"
+"* range between adjacent upper/lower markers: blend gradually"
+msgstr ""
+"justering baseret på input fra dette modul:\n"
+"* interval defineret af øvre markører: blend fuldt\n"
+"* interval defineret af nedre markører: blend slet ikke\n"
+"* interval mellem nærliggende øvre/nedre markører: blend gradvist"
+
+#: ../src/control/jobs/control_jobs.c:898
+#, c-format
+msgid ""
+"do you really want to physically move the %d selected image to %s?\n"
+"(all unselected duplicates will be moved along)"
+msgid_plural ""
+"do you really want to physically move %d selected images to %s?\n"
+"(all unselected duplicates will be moved along)"
+msgstr[0] ""
+"vil du virkelig fysisk flytte %d valgt billede til %s?\n"
+"(alle ikke-valgte duplikater vil flytte med)"
+msgstr[1] ""
+"vil du virkelig fysisk flytte %d valgte billeder til %s?\n"
+"(alle ikke-valgte duplikater vil flytte med)"
+
+#: ../src/develop/blend_gui.c:945
+msgid " H "
+msgstr " H "
+
+#: ../src/common/styles.c:309 ../src/gui/styles_dialog.c:145
+#, c-format
+msgid "style named '%s' successfully created"
+msgstr "stil ved navn '%s' succesfuldt oprettet"
+
+#. fail :(
+#: ../src/common/styles.c:391 ../src/common/styles.c:410
+#: ../src/views/darkroom.c:459
+msgid "no image selected!"
+msgstr "intet billede valgt!"
+
+#: ../src/common/styles.c:665
+#, fuzzy, c-format
+msgid "failed to overwrite style file for %s"
+msgstr "fejlede under overskrivning af stil-fil for %s"
+
+#: ../src/common/styles.c:671
+#, c-format
+msgid "style file for %s exists"
+msgstr "stil-fil for %s eksisterer"
+
+#: ../src/common/styles.c:909
+#, c-format
+msgid "style %s was successfully imported"
+msgstr "stil %s blev succesfuldt importeret"
+
+#: ../src/common/variables.c:220 ../src/iop/clipping.c:1460
+#: ../src/iop/clipping.c:1702 ../src/iop/clipping.c:1720
+#: ../src/iop/clipping.c:1763 ../src/iop/clipping.c:1782
+#: ../src/iop/lens.c:1741 ../src/libs/export.c:644 ../src/libs/live_view.c:324
+#: ../src/libs/live_view.c:336 ../src/libs/live_view.c:354
+#, c-format
+msgid "none"
+msgstr "intet"
+
+#  Oversætterens kommentarer. Oh this is a very long comment put in by the translater. Whatever will we do if this does not fit in one line?
+# Forced line break in translator's comments?
+#. These comments have been extracted
+#: ref1 ref2 ref3
+#, fuzzy, here, are some, flags
+#| msgctxt "This context is a previous one"
+#| msgid "This string was once this, and in fact it's a rather long one. It might not even fit in one single line."
+#| msgid "Line two of previous untranslated string?"
+#| msgid_plural "This is the earlier version of a plural string. It also seems too long to fit in one line, just like its singular counterpart."
+msgctxt ""
+"This is the context of the string. It takes a lot of space to explain the "
+"context of this very complex string; so much that this will span several "
+"lines."
+msgid "Here is the current untranslated string."
+msgid_plural "This is the current PLURAL untranslated string."
+msgstr[0] "The current translated string looks like this for id 0."
+msgstr[1] ""
+"Id 1 of the currently translated string is here. Thusd suog uig hsuiagkugs "
+"kug sgbsd ydjsdf askjf kf sfyb sjg sjgsjfb yfb sy bsajgyb sjgb jsfb sifbs "
+"bagb sigb sdfb jfbsf bfisb sygbsdgfv bh bfh bsjfb sdbhsd."
+
+

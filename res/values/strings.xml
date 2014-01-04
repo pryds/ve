@@ -47,5 +47,16 @@
     <string name="plural_form_4">4</string>
     <string name="plural_form_5">5</string>
     <string name="plural_form_6">6</string>
+    <string name="play_description">Vé is an editor for translating gettext PO files on Android.
+
+PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app).
+
+Vé enables you to load such a PO file into a simple interface, translate complete (or partial) apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard, etc.)
+
+Vé is named after one of Odin\'s two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities.
+
+Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes.</string>
+    <string name="play_promotional">Edit PO files on your Android device.</string>
+    <string name="play_recent_changes">Initial release.</string>
     
 </resources>
