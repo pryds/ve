@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -36,9 +38,11 @@ public class MainActivity extends Activity {
         Switch approved = (Switch) findViewById(R.id.approved);
         approved.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                TranslatableString currStr = str.getString(currentString);
-                currStr.setFuzzy(!isChecked);
-                updateMetadata();
+                if (str != null) {
+                    TranslatableString currStr = str.getString(currentString);
+                    currStr.setFuzzy(!isChecked);
+                    updateMetadata();
+                }
             }
         });
         
@@ -56,9 +60,11 @@ public class MainActivity extends Activity {
             @Override
             public void afterTextChanged(Editable editable) {
                String changedText = translStr.getText().toString();
-               TranslatableString currStr = str.getString(currentString);
-               currStr.setTranslatedString(currentPluralForm, changedText);
-               updateMetadata();
+               if (str != null) {
+                   TranslatableString currStr = str.getString(currentString);
+                   currStr.setTranslatedString(currentPluralForm, changedText);
+                   updateMetadata();
+               }
             }
         });
         
@@ -128,6 +134,21 @@ public class MainActivity extends Activity {
             str = new TranslatableStringCollection();
             File sdDir = Environment.getExternalStorageDirectory();
             File file = new File(sdDir, "test.po"); // TODO: File chooser
+            if (!file.exists() || !file.canRead()) {
+                int errorMsg = (!file.exists()
+                        ? R.string.file_notexist : R.string.file_notreadable);
+                new AlertDialog.Builder(this)
+                    .setTitle(R.string.error)
+                    .setMessage(errorMsg)
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // do nothing
+                        }
+                    })
+                    .show();
+                return true;
+            }
             str.parse(file, this); // TODO: In a separate thread
             
             updateScreen();
@@ -182,6 +203,8 @@ public class MainActivity extends Activity {
     }
     
     private void updateScreen() {
+        if (str == null)
+            return;
         TranslatableString currentStr = str.getString(currentString);
         
         Switch approved = (Switch) findViewById(R.id.approved);

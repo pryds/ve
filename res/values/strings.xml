@@ -26,6 +26,9 @@
     <string name="approved">Approved:</string>
     <string name="ready">Ready</string>
     <string name="needs_review">Needs review</string>
+    <string name="error">Error</string>
+    <string name="file_notexist">The file does not exist.</string>
+    <string name="file_notreadable">The file cannot be read.</string>
     <string name="title_activity_settings">Settings</string>
     <string name="pref_name">Name</string>
     <string name="pref_name_summ">Your name in English</string>
