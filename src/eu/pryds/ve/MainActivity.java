@@ -28,6 +28,8 @@ public class MainActivity extends Activity {
     private int currentString = 0;
     private int currentPluralForm = 0;
     private Menu menu;
+    public final static int CHOOSE_FILE_REQUEST = 1;
+    public final static String CHOOSE_FILE_MESSAGE = "eu.pryds.ve.choosefile";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,28 +134,10 @@ public class MainActivity extends Activity {
             return true;
         case R.id.action_load:
             str = new TranslatableStringCollection();
-            File sdDir = Environment.getExternalStorageDirectory();
-            File file = new File(sdDir, "test.po"); // TODO: File chooser
-            if (!file.exists() || !file.canRead()) {
-                int errorMsg = (!file.exists()
-                        ? R.string.file_notexist : R.string.file_notreadable);
-                new AlertDialog.Builder(this)
-                    .setTitle(R.string.error)
-                    .setMessage(errorMsg)
-                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            // do nothing
-                        }
-                    })
-                    .show();
-                return true;
-            }
-            str.parse(file, this); // TODO: In a separate thread
             
-            updateScreen();
+            Intent intent = new Intent(this, FileChooser.class);
+            startActivityForResult(intent, CHOOSE_FILE_REQUEST);
             
-            enableInitiallyDisabledViews(true);
             return true;
         case R.id.action_save:
             String[] poLines = str.toPoFile(this);
@@ -168,6 +152,40 @@ public class MainActivity extends Activity {
         default:
             return super.onOptionsItemSelected(item);
         }
+    }
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CHOOSE_FILE_REQUEST) {
+            if (resultCode == RESULT_OK) {
+                String filePath = data.getStringExtra(CHOOSE_FILE_MESSAGE);
+                
+                File file = new File(filePath);
+                if (!file.exists() || !file.canRead()) {
+                    int errorMsg = (!file.exists()
+                            ? R.string.file_notexist : R.string.file_notreadable);
+                    new AlertDialog.Builder(this)
+                        .setTitle(R.string.error)
+                        .setMessage(errorMsg)
+                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .show();
+                    return;
+                }
+                str.parse(file, this); // TODO: In a separate thread
+                //TODO: Abort and warn if not a (proper) po file
+                updateScreen();
+                
+                enableInitiallyDisabledViews(true);
+            }
+        }
+        /*
+        
+        */
     }
     
     /** Called when the user touches one of the plural form buttons */
