@@ -2,7 +2,9 @@ package eu.pryds.ve;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Vector;
 
 import android.app.Activity;
@@ -13,6 +15,12 @@ public class TranslatableStringCollection implements Parcelable {
     Vector<TranslatableString> strings;
     TranslatableString header; //contains po header info
     StringBuffer removedStrings = new StringBuffer(); // strings in bottom of file, prefixed "#~ "
+    
+    public static final int ERROR_NONE = 0;
+    public static final int ERROR_FILE_EMPTY = 1;
+    public static final int ERROR_NOT_PO_FILE = 2;
+    public static final int ERROR_FILE_NOT_FOUND = 3;
+    public static final int ERROR_IO = 4;
     
     public TranslatableStringCollection() {
         strings = new Vector<TranslatableString>();
@@ -47,7 +55,7 @@ public class TranslatableStringCollection implements Parcelable {
         return count;
     }
     
-    public boolean parse(File poFile, Activity activity) {
+    public int parse(File poFile, Activity activity) {
         Vector<String> poFileLines = new Vector<String>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(poFile));
@@ -57,12 +65,16 @@ public class TranslatableStringCollection implements Parcelable {
                 poFileLines.add(line);
             }
             reader.close();
-        } catch (Exception e) {
-            e.printStackTrace(); // TODO: Proper exception handling
+        } catch (FileNotFoundException e) {
+            return ERROR_FILE_NOT_FOUND;
+        } catch (IOException e) {
+            return ERROR_IO;
         }
         
-        if (poFileLines.size() == 0 || !poFileLines.get(0).startsWith("#"))
-            return false;
+        if (poFileLines.size() == 0)
+            return ERROR_FILE_EMPTY;
+        if (!poFileLines.get(0).startsWith("#"))
+            return ERROR_NOT_PO_FILE;
         
         TranslatableString str = new TranslatableString();
         
@@ -218,7 +230,7 @@ public class TranslatableStringCollection implements Parcelable {
             header = new TranslatableString();
             header.initiateHeaderInfo(activity);
         }
-        return true;
+        return ERROR_NONE;
     }
     
     public String[] toPoFile(Activity activity) {

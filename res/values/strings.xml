@@ -52,10 +52,13 @@
     <string name="file_parent_dir">[Parent directory]</string>
     <string name="file_current_dir">Current directory:</string>
     <string name="error">Error</string>
-    <string name="file_filenotexist">The file does not exist:</string>
+    <string name="file_filenotexist">The file does not exist.</string>
     <string name="file_notpofile">The file does not seem to be a PO file.</string>
-    <string name="file_cannotreadfile">Cannot read file:</string>
-    <string name="file_cannotreaddir">Cannot read from directory:</string>
+    <string name="file_fileempty">The file is empty.</string>
+    <string name="file_ioerror">There was an I/O file error.</string>
+    <string name="file_unknownerror">An unknown error occurred while reading from or writing to file.</string>
+    <string name="file_cannotreadfile">Cannot read file.</string>
+    <string name="file_cannotreaddir">Cannot read from directory.</string>
     <string name="play_description">Vé is an editor for translating gettext PO files on Android.
 
 PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app).

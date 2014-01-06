@@ -3,7 +3,6 @@ package eu.pryds.ve;
 import java.io.File;
 
 import android.os.Bundle;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -176,11 +175,32 @@ public class MainActivity extends Activity {
                         .show();
                     return;
                 }
-                boolean parseResult = str.parse(file, this); // TODO: In a separate thread
-                if (!parseResult) {
+                int parseResult = str.parse(file, this); // TODO: In a separate thread
+                if (parseResult != TranslatableStringCollection.ERROR_NONE) {
+                    int error;
+                    
+                    switch (parseResult) {
+                    case TranslatableStringCollection.ERROR_NOT_PO_FILE:
+                        error = R.string.file_notpofile;
+                        break;
+                    case TranslatableStringCollection.ERROR_FILE_EMPTY:
+                        error = R.string.file_fileempty;
+                        break;
+                    case TranslatableStringCollection.ERROR_FILE_NOT_FOUND:
+                        error = R.string.file_filenotexist;
+                        break;
+                    case TranslatableStringCollection.ERROR_IO:
+                        error = R.string.file_ioerror;
+                        break;
+                    default:
+                        error = R.string.file_unknownerror;
+                        break;
+                    }
+                            
+                    
                     new AlertDialog.Builder(this)
                     .setTitle(R.string.error)
-                    .setMessage(R.string.file_notpofile)
+                    .setMessage(error)
                     .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
