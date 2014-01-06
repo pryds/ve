@@ -12,6 +12,7 @@ import android.os.Parcelable;
 public class TranslatableStringCollection implements Parcelable {
     Vector<TranslatableString> strings;
     TranslatableString header; //contains po header info
+    StringBuffer removedStrings = new StringBuffer(); // strings in bottom of file, prefixed "#~ "
     
     public TranslatableStringCollection() {
         strings = new Vector<TranslatableString>();
@@ -46,7 +47,7 @@ public class TranslatableStringCollection implements Parcelable {
         return count;
     }
     
-    public void parse(File poFile, Activity activity) {
+    public boolean parse(File poFile, Activity activity) {
         Vector<String> poFileLines = new Vector<String>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(poFile));
@@ -60,6 +61,9 @@ public class TranslatableStringCollection implements Parcelable {
             e.printStackTrace(); // TODO: Proper exception handling
         }
         
+        if (poFileLines.size() == 0 || !poFileLines.get(0).startsWith("#"))
+            return false;
+        
         TranslatableString str = new TranslatableString();
         
         final int MSGID = 0;
@@ -68,9 +72,13 @@ public class TranslatableStringCollection implements Parcelable {
         final int MSGCTXT = 3;
         int lastWrittenMultiliner = MSGID;
         int lastWrittenMsgstrIndex = 0;
+        boolean removedStringsReached = false;
         
         for (int i = 0; i < poFileLines.size(); i++) {
-            if (poFileLines.get(i) == null || poFileLines.get(i).trim().equals("")) {
+            if (removedStringsReached) {
+                removedStrings.append(poFileLines.get(i)).append('\n');
+            
+            } else if (poFileLines.get(i) == null || poFileLines.get(i).trim().equals("")) {
                 strings.add(str);
                 str = new TranslatableString();
                 
@@ -150,6 +158,10 @@ public class TranslatableStringCollection implements Parcelable {
                 lastWrittenMultiliner = MSGSTR;
                 lastWrittenMsgstrIndex = 0;
                 
+            } else if (poFileLines.get(i).startsWith("#~ ")) {
+                removedStrings.append(poFileLines.get(i)).append('\n');
+                removedStringsReached = true;
+                
             } else if (poFileLines.get(i).startsWith("\"")) {
                 if (lastWrittenMultiliner == MSGID) {
                     if (!str.getUntranslatedString().equals(""))
@@ -179,8 +191,8 @@ public class TranslatableStringCollection implements Parcelable {
                 }
                 
             } else {
-                System.out.println("Unexpected line " + (i + 1) + ": "
-                        + poFileLines.get(i));
+                //System.out.println("Unexpected line " + (i + 1) + ": "
+                //        + poFileLines.get(i));
             }
         }
         strings.add(str);
@@ -206,6 +218,7 @@ public class TranslatableStringCollection implements Parcelable {
             header = new TranslatableString();
             header.initiateHeaderInfo(activity);
         }
+        return true;
     }
     
     public String[] toPoFile(Activity activity) {
@@ -313,6 +326,11 @@ public class TranslatableStringCollection implements Parcelable {
                 }
             }
         }
+        if (removedStrings.length() > 0) {
+            outputLines.add("");
+            outputLines.add(removedStrings.toString().trim());
+        }
+        
         return outputLines.toArray(new String[] {});
     }
     

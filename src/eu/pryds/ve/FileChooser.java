@@ -4,7 +4,9 @@ import java.io.File;
 
 import android.os.Bundle;
 import android.os.Environment;
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,15 +33,26 @@ public class FileChooser extends ListActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (fileList[position].isDirectory()) {
-                    updateFileList(fileList[position]);
+                    if (!fileList[position].canRead()) {
+                        Toast.makeText(getApplicationContext(),
+                                getResources().getText(R.string.file_cannotreaddir) +
+                                "\n" + fileList[position], Toast.LENGTH_LONG).show();
+                    } else {
+                        updateFileList(fileList[position]);
+                    }
                 } else {
-                    
-                    Toast.makeText(getApplicationContext(), "" + fileList[position], Toast.LENGTH_LONG).show();
-                    
-                    Intent returnIntent = new Intent();
-                    returnIntent.putExtra(MainActivity.CHOOSE_FILE_MESSAGE, fileList[position].getAbsolutePath());
-                    setResult(RESULT_OK, returnIntent);
-                    finish();
+                    if (!fileList[position].canRead()) {
+                        Toast.makeText(getApplicationContext(),
+                                getResources().getText(R.string.file_cannotreadfile) +
+                                "\n" + fileList[position], Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "" + fileList[position], Toast.LENGTH_LONG).show();
+                        
+                        Intent returnIntent = new Intent();
+                        returnIntent.putExtra(MainActivity.CHOOSE_FILE_MESSAGE, fileList[position].getAbsolutePath());
+                        setResult(RESULT_OK, returnIntent);
+                        finish();
+                    }
                 }
             }
         });

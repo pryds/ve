@@ -163,10 +163,10 @@ public class MainActivity extends Activity {
                 File file = new File(filePath);
                 if (!file.exists() || !file.canRead()) {
                     int errorMsg = (!file.exists()
-                            ? R.string.file_notexist : R.string.file_notreadable);
+                            ? R.string.file_filenotexist : R.string.file_cannotreadfile);
                     new AlertDialog.Builder(this)
                         .setTitle(R.string.error)
-                        .setMessage(errorMsg)
+                        .setMessage(errorMsg + '\n' + file.getName())
                         .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -176,8 +176,21 @@ public class MainActivity extends Activity {
                         .show();
                     return;
                 }
-                str.parse(file, this); // TODO: In a separate thread
-                //TODO: Abort and warn if not a (proper) po file
+                boolean parseResult = str.parse(file, this); // TODO: In a separate thread
+                if (!parseResult) {
+                    new AlertDialog.Builder(this)
+                    .setTitle(R.string.error)
+                    .setMessage(R.string.file_notpofile)
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // do nothing
+                        }
+                    })
+                    .show();
+                    return;
+                }
+                
                 updateScreen();
                 
                 enableInitiallyDisabledViews(true);

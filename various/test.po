@@ -118,4 +118,22 @@ msgstr[1] ""
 "kug sgbsd ydjsdf askjf kf sfyb sjg sjgsjfb yfb sy bsajgyb sjgb jsfb sifbs "
 "bagb sigb sdfb jfbsf bfisb sygbsdgfv bh bfh bsjfb sdbhsd."
 
+#~ msgid "cc-by-nc-nd"
+#~ msgstr "cc-by-nc-nd"
+
+#~ msgid "delete originals after import"
+#~ msgstr "slet originaler efter importering"
+
+#~ msgid ""
+#~ "check this option if you want to delete images on camera after download "
+#~ "to computer"
+#~ msgstr ""
+#~ "markér denne valgmulighed hvis du vil slette billeder fra kameraet efter "
+#~ "download til computeren"
+
+#~ msgid "Friends"
+#~ msgstr "Venner"
+
+#~ msgid "Public"
+#~ msgstr "Offentlig"
 
