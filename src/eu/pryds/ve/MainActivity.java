@@ -1,6 +1,9 @@
 package eu.pryds.ve;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -8,6 +11,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.ScrollingMovementMethod;
@@ -20,6 +24,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     
@@ -27,6 +32,7 @@ public class MainActivity extends Activity {
     private int currentString = 0;
     private int currentPluralForm = 0;
     private Menu menu;
+    private File openedFile;
     public final static int CHOOSE_FILE_REQUEST = 1;
     public final static String CHOOSE_FILE_MESSAGE = "eu.pryds.ve.choosefile";
     
@@ -139,18 +145,69 @@ public class MainActivity extends Activity {
             
             return true;
         case R.id.action_save:
-            String[] poLines = str.toPoFile(this);
+            SharedPreferences pref =
+                PreferenceManager.getDefaultSharedPreferences(this);
+            String prefName = pref.getString("pref_name", "");
+            String prefEmail = pref.getString("pref_email", "");
+            String prefMaillist = pref.getString("pref_maillist", "");
             
-            //TODO: the following is a temporary hack to show resulting file
-            StringBuffer temp = new StringBuffer();
-            for (int i = 0; i < poLines.length; i++)
-                temp.append(poLines[i] + '\n');
-            TextView origStr = (TextView) findViewById(R.id.orig_str);
-            origStr.setText(temp);
+            if (prefName.length() == 0 || prefEmail.length() == 0 ||
+                    prefMaillist.length() == 0) {
+                Toast.makeText(getApplicationContext(),
+                        getResources().getText(R.string.not_all_fields_filled),
+                        Toast.LENGTH_LONG).show();
+            }
+            
+            // Generate PO file syntax:
+            String[] poLines = str.toPoFile(this); // TODO: In separate thread(?)
+            
+            if (!openedFile.exists()) {
+                showErrorMessage(R.string.file_filenotexist, openedFile.getName());
+                return true;
+            }
+            if (!openedFile.canWrite()) {
+                showErrorMessage(R.string.file_cannotwritefile, openedFile.getName());
+                return true;
+            }
+            
+            try {
+                // Write PO lines to file:
+                BufferedWriter writer = new BufferedWriter(new FileWriter(openedFile));
+                
+                for (int i = 0; i < poLines.length; i++) {
+                    writer.write(poLines[i]);
+                    writer.write('\n');
+                }
+                writer.flush();
+                writer.close();
+            } catch (IOException e) {
+                showErrorMessage(R.string.file_ioerror, openedFile.getName());
+                return true;
+            }
+            Toast.makeText(getApplicationContext(),
+                    getResources().getText(R.string.file_saved),
+                    Toast.LENGTH_SHORT).show();
             return true;
         default:
             return super.onOptionsItemSelected(item);
         }
+    }
+    
+    private void showErrorMessage(int errorMsg, String optionalFileName) {
+        // if optionalFileName is null or an empty string, ignore it
+        boolean showFileName = (optionalFileName != null && optionalFileName.length() > 0);
+        CharSequence errorMessage = getResources().getText(errorMsg);
+        
+        new AlertDialog.Builder(this)
+        .setTitle(R.string.error)
+        .setMessage(errorMessage + (showFileName ? '\n' + optionalFileName : "") )
+        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // do nothing
+            }
+        })
+        .show();
     }
     
     @Override
@@ -163,62 +220,43 @@ public class MainActivity extends Activity {
                 if (!file.exists() || !file.canRead()) {
                     int errorMsg = (!file.exists()
                             ? R.string.file_filenotexist : R.string.file_cannotreadfile);
-                    new AlertDialog.Builder(this)
-                        .setTitle(R.string.error)
-                        .setMessage(errorMsg + '\n' + file.getName())
-                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // do nothing
-                            }
-                        })
-                        .show();
+                    showErrorMessage(errorMsg, file.getName());
                     return;
                 }
-                int parseResult = str.parse(file, this); // TODO: In a separate thread
+                
+                // Read PO file and parse syntax into internal data structure (TranslatableStringCollection):
+                TranslatableStringCollection tempCollection = new TranslatableStringCollection();
+                int parseResult = tempCollection.parse(file, this); // TODO: In a separate thread
+                
                 if (parseResult != TranslatableStringCollection.ERROR_NONE) {
-                    int error;
-                    
                     switch (parseResult) {
                     case TranslatableStringCollection.ERROR_NOT_PO_FILE:
-                        error = R.string.file_notpofile;
+                        showErrorMessage(R.string.file_notpofile, null);
                         break;
                     case TranslatableStringCollection.ERROR_FILE_EMPTY:
-                        error = R.string.file_fileempty;
+                        showErrorMessage(R.string.file_fileempty, null);
                         break;
                     case TranslatableStringCollection.ERROR_FILE_NOT_FOUND:
-                        error = R.string.file_filenotexist;
+                        showErrorMessage(R.string.file_filenotexist, null);
                         break;
                     case TranslatableStringCollection.ERROR_IO:
-                        error = R.string.file_ioerror;
+                        showErrorMessage(R.string.file_ioerror, null);
                         break;
                     default:
-                        error = R.string.file_unknownerror;
+                        showErrorMessage(R.string.file_unknownerror, null);
                         break;
                     }
-                            
                     
-                    new AlertDialog.Builder(this)
-                    .setTitle(R.string.error)
-                    .setMessage(error)
-                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            // do nothing
-                        }
-                    })
-                    .show();
-                    return;
+                    return; // Return without saving result or updating screen (upon error)
                 }
                 
-                updateScreen();
+                str = tempCollection;
+                openedFile = file;
                 
+                updateScreen();
                 enableInitiallyDisabledViews(true);
             }
         }
-        /*
-        
-        */
     }
     
     /** Called when the user touches one of the plural form buttons */

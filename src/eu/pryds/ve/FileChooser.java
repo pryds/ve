@@ -4,9 +4,7 @@ import java.io.File;
 
 import android.os.Bundle;
 import android.os.Environment;
-import android.app.AlertDialog;
 import android.app.ListActivity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
