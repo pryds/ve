@@ -21,3 +21,5 @@ or [poedit](http://sourceforge.net/projects/poedit/). Translations will be possi
 
 Donations of any amount that you see fit are kindly accepted through Bitcoin address 12FPDWwNYyn6wRfybncM5VcJpM4ZP6QNnM. At some point in the future, in-app donations through Google Play will be possible.
 
+![Donate Bitcoins](https://raw.github.com/pryds/ve/master/various/ve-donations-qr.png)
+
