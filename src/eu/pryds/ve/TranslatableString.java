@@ -94,8 +94,6 @@ public class TranslatableString implements Parcelable {
         SharedPreferences pref =
                 PreferenceManager.getDefaultSharedPreferences(activity);
         
-        //TODO: Give warning if preferences (name, email, etc.) are not set
-        
         String[] headerArray = translatedString.get(0).split("\n");
         Vector<String> headerLines = new Vector<String>(Arrays.asList(headerArray));
         
@@ -220,6 +218,10 @@ public class TranslatableString implements Parcelable {
                 return false;
         }
         return true;
+    }
+    
+    public boolean needsWork() {
+        return isUntranslated() || isFuzzy();
     }
     
     public boolean isPluralString() {

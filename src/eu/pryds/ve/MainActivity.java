@@ -129,6 +129,11 @@ public class MainActivity extends Activity {
             currentPluralForm = 0;
             updateScreen();
             return true;
+        case R.id.action_nextunfinished:
+            currentString = str.getNextStringInNeedOfWork(currentString);
+            currentPluralForm = 0;
+            updateScreen();
+            return true;
         case R.id.action_settings:
             openSettings();
             return true;
@@ -367,6 +372,9 @@ public class MainActivity extends Activity {
         
         MenuItem actionNext = menu.findItem(R.id.action_next);
         actionNext.setEnabled(enable);
+        
+        MenuItem actionNextUnfinished = menu.findItem(R.id.action_nextunfinished);
+        actionNextUnfinished.setEnabled(enable);
         
         MenuItem actionSave = menu.findItem(R.id.action_save);
         actionSave.setEnabled(enable);

@@ -14,6 +14,12 @@
           android:icon="@drawable/ic_action_next_item"
           android:showAsAction="ifRoom"
           android:enabled="false" />
+    
+    <item android:id="@+id/action_nextunfinished"
+          android:title="@string/action_nextunfinished"
+          android:icon="@drawable/ic_action_forward"
+          android:showAsAction="ifRoom"
+          android:enabled="false" />
 
     <item android:id="@+id/action_load"
           android:title="@string/action_load"

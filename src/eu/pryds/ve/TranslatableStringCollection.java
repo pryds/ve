@@ -55,6 +55,29 @@ public class TranslatableStringCollection implements Parcelable {
         return count;
     }
     
+    public int getNextStringInNeedOfWork(int startingFrom) {
+        if (startingFrom > strings.size())
+            startingFrom = strings.size();
+        
+        if (startingFrom < strings.size()-1) {
+            for (int i = startingFrom+1; i < strings.size(); i++) {
+                if (strings.get(i).needsWork())
+                    return i;
+            }
+        }
+        
+        //if we reach here, no strings needing work were found from startingFrom
+        //and onwards. So, start from 0 instead.
+        for (int i = 0; i < startingFrom; i++) {
+            if (strings.get(i).needsWork())
+                return i;
+        }
+        
+        //if we reach here, no strings needing work were found in the entire
+        //collection.
+        return startingFrom;
+    }
+    
     public int parse(File poFile, Activity activity) {
         Vector<String> poFileLines = new Vector<String>();
         try {

@@ -19,6 +19,7 @@
     <string name="meta_files">Files:</string>
     <string name="action_previous">Previous</string>
     <string name="action_next">Next</string>
+    <string name="action_nextunfinished">Next unfinished</string>
     <string name="action_load">Load</string>
     <string name="action_save">Save</string>
     <string name="action_settings">Settings</string>
