@@ -1,6 +1,8 @@
 Vé
 ==
 
+[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](http://play.google.com/store/apps/details?id=eu.pryds.ve)
+
 Vé is an editor for translating gettext PO files on Android. It is still in an early development phase, so you might still experience bugs and missing features. If you do, you are very welcome to help out by reporting the bug or missing feature through Vé's issue tracker.
 
 PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app).
