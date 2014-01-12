@@ -16,8 +16,8 @@ Contributing to Vé
 
 As with much other open source software, Vé is based on voluntary work. If you want, you can contribute to the development of Vé. This might be either through reporting bugs in the issue tracker, contributing code, translating Vé into your own language, and/or donating an amount of your choice. Generally, code contributions (except translations) are accepted through Github pull requests.
 
-If you want to help by providing a translation of Vé into your language, I ask you to have a bit of patience, still. Translations are to be handled by The Translation Project, via PO files. You can, of course, use Vé to translate Vé, or you can use a PO editor for desktop computers, such as [lokalize](http://userbase.kde.org/Lokalize)
-or [poedit](http://sourceforge.net/projects/poedit/). Translations will be possible a while before the first version of Vé is released.
+Translations are handled by The Translation Project, via PO files. Download the PO file of your language from [Vé's TranslationProject page](http://translationproject.org/domain/ve.html) and edit it with your favourite PO editor, such as Vé on Android (), [lokalize](http://userbase.kde.org/Lokalize)
+or [poedit](http://sourceforge.net/projects/poedit/) on desktop computers. When you're done, the file needs to be sent to the [Translation Project Robot](http://translationproject.org/html/robot.html). Beware that your language might already have a language team, and if so, you should coordinate your efforts with them. The Translation Project [has a list](http://translationproject.org/team/index.html) of translation teams, complete with contact info.
 
 Donations of any amount that you see fit are kindly accepted through Bitcoin address 12FPDWwNYyn6wRfybncM5VcJpM4ZP6QNnM. At some point in the future, in-app donations through Google Play will be possible.
 

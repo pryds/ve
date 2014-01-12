@@ -1,0 +1,287 @@
+# Translations template for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-01-12 20:53+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0dev\n"
+
+msgctxt "locale_of_this_translation"
+msgid "en"
+msgstr ""
+
+msgctxt "app_name"
+msgid "Vé"
+msgstr ""
+
+msgctxt "orig_str"
+msgid "Untranslated string"
+msgstr ""
+
+msgctxt "transl_str"
+msgid "Translated string"
+msgstr ""
+
+msgctxt "meta_str_no"
+msgid "String number:"
+msgstr ""
+
+#, c-format
+msgctxt "meta_not_ready"
+msgid "%d not ready,"
+msgid_plural "%d not ready,"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgctxt "meta_untranslated"
+msgid "%d untranslated"
+msgid_plural "%d untranslated"
+msgstr[0] ""
+msgstr[1] ""
+
+msgctxt "meta_context"
+msgid "Context:"
+msgstr ""
+
+msgctxt "meta_notes"
+msgid "Notes:"
+msgstr ""
+
+msgctxt "meta_files"
+msgid "Files:"
+msgstr ""
+
+msgctxt "action_previous"
+msgid "Previous"
+msgstr ""
+
+msgctxt "action_next"
+msgid "Next"
+msgstr ""
+
+msgctxt "action_nextunfinished"
+msgid "Next unfinished"
+msgstr ""
+
+msgctxt "action_load"
+msgid "Load"
+msgstr ""
+
+msgctxt "action_save"
+msgid "Save"
+msgstr ""
+
+msgctxt "action_settings"
+msgid "Settings"
+msgstr ""
+
+msgctxt "action_about"
+msgid "About Vé"
+msgstr ""
+
+msgctxt "approved"
+msgid "Approved:"
+msgstr ""
+
+msgctxt "ready"
+msgid "Ready"
+msgstr ""
+
+msgctxt "needs_review"
+msgid "Needs review"
+msgstr ""
+
+msgctxt "title_activity_settings"
+msgid "Settings"
+msgstr ""
+
+msgctxt "pref_name"
+msgid "Name"
+msgstr ""
+
+msgctxt "pref_name_summ"
+msgid "Your name in English"
+msgstr ""
+
+msgctxt "pref_email"
+msgid "Email"
+msgstr ""
+
+msgctxt "pref_email_summ"
+msgid "Your email address"
+msgstr ""
+
+msgctxt "pref_lang"
+msgid "Default language"
+msgstr ""
+
+msgctxt "pref_lang_summ"
+msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
+msgstr ""
+
+msgctxt "pref_maillist"
+msgid "Mailing list"
+msgstr ""
+
+msgctxt "pref_maillist_summ"
+msgid "The email address of your language team's mailing list"
+msgstr ""
+
+msgctxt "about_title"
+msgid "About Vé"
+msgstr ""
+
+#, c-format
+msgctxt "about_version"
+msgid "Vé version %1$s"
+msgstr ""
+
+msgctxt "about_author"
+msgid "By Thomas Pryds"
+msgstr ""
+
+msgctxt "about_translate_credits"
+msgid "Translated into English by Thomas Pryds"
+msgstr ""
+
+msgctxt "about_license"
+msgid ""
+"Vé is open source software, released under the GPL licence, which means "
+"that you can use it for free for any purpose. You can even redistribute "
+"it, modified or not, provided you do so under the same licence, which "
+"means you have to provide your source files for any changes. The complete"
+" license text comes with this program. The complete source code for this "
+"program is available at the above mentioned web site."
+msgstr ""
+
+msgctxt "ok"
+msgid "OK"
+msgstr ""
+
+msgctxt "plural_form_1"
+msgid "Plural form 1"
+msgstr ""
+
+msgctxt "plural_form_2"
+msgid "2"
+msgstr ""
+
+msgctxt "plural_form_3"
+msgid "3"
+msgstr ""
+
+msgctxt "plural_form_4"
+msgid "4"
+msgstr ""
+
+msgctxt "plural_form_5"
+msgid "5"
+msgstr ""
+
+msgctxt "plural_form_6"
+msgid "6"
+msgstr ""
+
+msgctxt "title_activity_file_chooser"
+msgid "Choose File"
+msgstr ""
+
+msgctxt "file_directory_postfix"
+msgid "[dir]"
+msgstr ""
+
+msgctxt "file_parent_dir"
+msgid "[Parent directory]"
+msgstr ""
+
+msgctxt "file_current_dir"
+msgid "Current directory:"
+msgstr ""
+
+msgctxt "error"
+msgid "Error"
+msgstr ""
+
+msgctxt "file_filenotexist"
+msgid "The file does not exist."
+msgstr ""
+
+msgctxt "file_notpofile"
+msgid "The file does not seem to be a PO file."
+msgstr ""
+
+msgctxt "file_fileempty"
+msgid "The file is empty."
+msgstr ""
+
+msgctxt "file_ioerror"
+msgid "There was an I/O file error."
+msgstr ""
+
+msgctxt "file_unknownerror"
+msgid "An unknown error occurred while reading from or writing to file."
+msgstr ""
+
+msgctxt "file_cannotreadfile"
+msgid "Cannot read file."
+msgstr ""
+
+msgctxt "file_cannotwritefile"
+msgid "Cannot write to file."
+msgstr ""
+
+msgctxt "file_cannotreaddir"
+msgid "Cannot read from directory."
+msgstr ""
+
+msgctxt "file_saved"
+msgid "File was saved."
+msgstr ""
+
+msgctxt "not_all_fields_filled"
+msgid "Note: You did not fill in all fields in the Settings."
+msgstr ""
+
+msgctxt "play_description"
+msgid ""
+"Vé is an editor for translating gettext PO files on Android. PO files are"
+" the de-facto standard for localization (translation) of especially open "
+"source programs that run on several platforms, including Linux, Windows "
+"and MacOS, but also Android apps may be localized by means of PO files "
+"(including this very app). Vé enables you to load such a PO file into a "
+"simple interface, fully (or partially) translate apps or programs into "
+"your own language, and save an updated PO file for implementation by the "
+"app/program developer. While providing the essential features for "
+"translation and localization of apps and programs, Vé is simple in design"
+" to compensate for the limitations of a mobile platform like Android "
+"(small screen, no physical keyboard, etc.) Vé is named after one of "
+"Odin's two brothers in Norse mythology. The three brothers, Odin, Vili "
+"and Vé were thought to be the Gods who gave life to the first humans, Ask"
+" and Embla. Vé was the one who gave them speech, among other "
+"capabilities. Vé is open source software, released under the GPL licence,"
+" which means you can use it for free, for personal or other purposes. You"
+" can even redistribute it, modified or not, provided you do so under the "
+"same licence, which means you have to provide your source files for any "
+"changes."
+msgstr ""
+
+msgctxt "play_promotional"
+msgid "Edit PO files on your Android device."
+msgstr ""
+
+msgctxt "play_recent_changes"
+msgid "Initial release."
+msgstr ""
+
