@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textOn="@string/ready"
-        android:textOff="@string/needs_review"
+        android:textOff="@string/unfinished"
         android:text="@string/approved"
         android:enabled="false" />
     
