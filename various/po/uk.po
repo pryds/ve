@@ -1,0 +1,281 @@
+# Ukrainian translation for Vé.
+# Copyright (C) 2014  Free Software Foundation, Inc.
+# This file is distributed under the same license as the ve package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: ve-0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-01-13 20:22+0100\n"
+"PO-Revision-Date: 2014-01-14 19:04+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.5\n"
+
+msgctxt "locale_of_this_translation"
+msgid "en"
+msgstr "uk"
+
+msgctxt "app_name"
+msgid "Vé"
+msgstr "Vé"
+
+msgctxt "orig_str"
+msgid "Original string"
+msgstr "Початковий рядок"
+
+msgctxt "transl_str"
+msgid "Translated string"
+msgstr "Перекладений рядок"
+
+msgctxt "meta_str_no"
+msgid "String number:"
+msgstr "Номер рядка:"
+
+#, c-format
+msgctxt "meta_not_ready"
+msgid "%d not ready,"
+msgid_plural "%d not ready,"
+msgstr[0] "%d неготовий,"
+msgstr[1] "%d неготових,"
+msgstr[2] "%d неготових,"
+
+#, c-format
+msgctxt "meta_untranslated"
+msgid "%d untranslated"
+msgid_plural "%d untranslated"
+msgstr[0] "%d неперекладений"
+msgstr[1] "%d неперекладених"
+msgstr[2] "%d неперекладених"
+
+msgctxt "meta_context"
+msgid "Context:"
+msgstr "Контекст:"
+
+msgctxt "meta_notes"
+msgid "Notes:"
+msgstr "Нотатки:"
+
+msgctxt "meta_files"
+msgid "Files:"
+msgstr "Файли:"
+
+msgctxt "action_previous"
+msgid "Previous"
+msgstr "Назад"
+
+msgctxt "action_next"
+msgid "Next"
+msgstr "Далі"
+
+msgctxt "action_nextunfinished"
+msgid "Next unfinished"
+msgstr "Наступний незавершений"
+
+msgctxt "action_load"
+msgid "Load"
+msgstr "Завантажити"
+
+msgctxt "action_save"
+msgid "Save"
+msgstr "Зберегти"
+
+msgctxt "action_settings"
+msgid "Settings"
+msgstr "Параметри"
+
+msgctxt "action_about"
+msgid "About Vé"
+msgstr "Про Vé"
+
+msgctxt "approved"
+msgid "Approved:"
+msgstr "Схвалено:"
+
+msgctxt "ready"
+msgid "Ready"
+msgstr "Готово"
+
+msgctxt "unfinished"
+msgid "Unfinished"
+msgstr "Не завершено"
+
+msgctxt "title_activity_settings"
+msgid "Settings"
+msgstr "Параметри"
+
+msgctxt "pref_name"
+msgid "Name"
+msgstr "Ім’я"
+
+msgctxt "pref_name_summ"
+msgid "Your name"
+msgstr "Ваше ім’я"
+
+msgctxt "pref_email"
+msgid "Email"
+msgstr "Ел. пошта"
+
+msgctxt "pref_email_summ"
+msgid "Your email address"
+msgstr "Адреса вашої електронної пошти"
+
+msgctxt "pref_lang"
+msgid "Target language"
+msgstr "Мова перекладу"
+
+msgctxt "pref_lang_summ"
+msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
+msgstr "Код мови, якою виконується переклад, наприклад «en» або «uk_UA»"
+
+msgctxt "pref_maillist"
+msgid "Mailing list"
+msgstr "Список листування"
+
+msgctxt "pref_maillist_summ"
+msgid "The email address of your language team's mailing list"
+msgstr "Адреса електронної пошти списку листування вашої команди перекладачів"
+
+msgctxt "about_title"
+msgid "About Vé"
+msgstr "Про Vé"
+
+#, c-format
+msgctxt "about_version"
+msgid "Vé version %1$s"
+msgstr "Vé версії %1$s"
+
+msgctxt "about_author"
+msgid "By Thomas Pryds"
+msgstr "Автор — Thomas Pryds"
+
+msgctxt "about_translate_credits"
+msgid "Translated into YourLanguage by YourName"
+msgstr "Перекладено українською Юрієм Чорноіваном"
+
+msgctxt "about_license"
+msgid "Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site."
+msgstr "Vé — програмне забезпечення з відкритим кодом, випущене за умов дотримання GPL. Це означає, що ви можете використовувати його безкоштовно для особистих або інших потреб. Ви можете поширювати цю програму, з внесеними змінами або без них, якщо поширення відбуватиметься за умов дотримання тієї самої ліцензійної угоди, тобто ви маєте надавати усім охочим файли з початковим кодом і будь-якими внесеними вами змінами. Текст ліцензійної угоди постачається разом з програмою. Початковий код програми повністю можна отримати за допомогою вказаної вище сторінки."
+
+msgctxt "ok"
+msgid "OK"
+msgstr "Гаразд"
+
+msgctxt "plural_form_1"
+msgid "Plural form 1"
+msgstr "Форма множини 1"
+
+msgctxt "plural_form_2"
+msgid "2"
+msgstr "2"
+
+msgctxt "plural_form_3"
+msgid "3"
+msgstr "3"
+
+msgctxt "plural_form_4"
+msgid "4"
+msgstr "4"
+
+msgctxt "plural_form_5"
+msgid "5"
+msgstr "5"
+
+msgctxt "plural_form_6"
+msgid "6"
+msgstr "6"
+
+msgctxt "title_activity_file_chooser"
+msgid "Choose File"
+msgstr "Виберіть файл"
+
+msgctxt "file_directory_postfix"
+msgid "[dir]"
+msgstr "[каталог]"
+
+msgctxt "file_parent_dir"
+msgid "[Parent directory]"
+msgstr "[Батьківський каталог]"
+
+msgctxt "file_current_dir"
+msgid "Current directory:"
+msgstr "Поточний каталог:"
+
+msgctxt "error"
+msgid "Error"
+msgstr "Помилка"
+
+msgctxt "file_filenotexist"
+msgid "The file does not exist."
+msgstr "Файла не існує."
+
+msgctxt "file_notpofile"
+msgid "The file does not seem to be a PO file."
+msgstr "Здається, файл не є файлом PO."
+
+msgctxt "file_fileempty"
+msgid "The file is empty."
+msgstr "Файл є порожнім."
+
+msgctxt "file_ioerror"
+msgid "There was an I/O file error."
+msgstr "Сталася помилка введення-виведення даних до файла."
+
+msgctxt "file_unknownerror"
+msgid "An unknown error occurred while reading from or writing to file."
+msgstr "Під час спроби прочитати дані з файла або записати дані до файла сталася помилка."
+
+msgctxt "file_cannotreadfile"
+msgid "Cannot read file."
+msgstr "Не вдалося прочитати файл."
+
+msgctxt "file_cannotwritefile"
+msgid "Cannot write to file."
+msgstr "Не вдалося виконати запис до файла."
+
+msgctxt "file_cannotreaddir"
+msgid "Cannot read from directory."
+msgstr "Не вдалося прочитати дані з каталогу."
+
+msgctxt "file_saved"
+msgid "File was saved."
+msgstr "Файл збережено."
+
+msgctxt "not_all_fields_filled"
+msgid "Note: You did not fill in all fields in the Settings."
+msgstr "Зауваження: вами не було заповнено усі поля у параметрах роботи програми."
+
+msgctxt "play_description1"
+msgid "Vé is an editor for translating gettext PO files on Android."
+msgstr "Vé — редактор для перекладу файлів PO gettext у операційній системі Android."
+
+msgctxt "play_description2"
+msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
+msgstr "Файли PO є фактичним стандартом локалізації (перекладу), зокрема програм з відкритим кодом, які можуть працювати на декількох апаратних та програмних платформах, зокрема у Linux, Windows та MacOS. Програми для Android (зокрема і цю програму) також може бути перекладено за допомогою файлів PO."
+
+msgctxt "play_description3"
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard, and so on)."
+msgstr "Ви можете завантажити файл PO до простого інтерфейсу Vé, повністю або частково перекласти програму або програми вашою мовою, а потім зберегти оновлений файл PO для того, щоб згодом надіслати його розробникові для впровадження до пакунків з програмою. Хоча програма надає усі основні можливості для перекладу програм, Vé є доволі простою програмою через обмеження у роботі мобільних платформ, зокрема Android (невеличкий екран, немає фізичної клавіатури тощо)."
+
+msgctxt "play_description4"
+msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
+msgstr "Vé названо на честь одного з двох братів Одіна у давньоскандинавській міфології. За легендою, три брати, Одін, Вілі та Ве, є богами, яким завдячують життям перші люди, Аск та Ембла. Ве подарував людям можливість говорити."
+
+msgctxt "play_description5"
+msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
+msgstr "Vé — програмне забезпечення з відкритим кодом, випущене за умов дотримання GPL. Це означає, що ви можете використовувати його безкоштовно для особистих або інших потреб. Ви можете поширювати цю програму, з внесеними змінами або без них, якщо поширення відбуватиметься за умов дотримання тієї самої ліцензійної угоди, тобто ви маєте надавати усім охочим файли з початковим кодом і будь-якими внесеними вами змінами."
+
+msgctxt "play_promotional"
+msgid "Edit PO files on your Android device."
+msgstr "Редагуйте файли PO на вашому пристрої під керуванням Android."
+
+msgctxt "play_recent_changes"
+msgid "Initial release."
+msgstr "Початковий випуск."
