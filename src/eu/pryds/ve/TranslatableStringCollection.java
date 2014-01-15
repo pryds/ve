@@ -360,6 +360,12 @@ public class TranslatableStringCollection implements Parcelable {
                         .getUntranslatedStringPlural());
             }
             
+            // if both msgid and msgid_plural are empty (this will be the case
+            // for header lines), write empty msgid:
+            if (strToWrite.get(i).getUntranslatedString().equals("") &&
+                    strToWrite.get(i).getUntranslatedStringPlural().equals(""))
+                writeMultilinesTo(outputLines, "msgid ", "");
+            
             if (strToWrite.get(i).getTranslatedString().size() > 0) {
                 if (strToWrite.get(i).getTranslatedString().size() == 1) {
                     writeMultilinesTo(outputLines, "msgstr ", strToWrite.get(i)
