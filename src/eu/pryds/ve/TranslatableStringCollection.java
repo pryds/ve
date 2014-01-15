@@ -198,31 +198,32 @@ public class TranslatableStringCollection implements Parcelable {
                 removedStringsReached = true;
                 
             } else if (poFileLines.get(i).startsWith("\"")) {
+                String strToWrite = trimQuotes(poFileLines.get(i));
+                
                 if (lastWrittenMultiliner == MSGID) {
                     if (!str.getUntranslatedString().equals(""))
                         str.addtoUntranslatedString("" + '\n');
-                    str.addtoUntranslatedString(trimQuotes(poFileLines.get(i)));
+                    str.addtoUntranslatedString(strToWrite);
                     
                 } else if (lastWrittenMultiliner == MSGID_PLURAL) {
                     if (!str.getUntranslatedStringPlural().equals(""))
                         str.addtoUntranslatedStringPlural("" + '\n');
-                    str.addtoUntranslatedStringPlural(trimQuotes(poFileLines.get(i)));
+                    str.addtoUntranslatedStringPlural(strToWrite);
                     
                 } else if (lastWrittenMultiliner == MSGSTR) {
                     String existingData = str.getTranslatedString().get(
                             lastWrittenMsgstrIndex);
                     if (existingData.equals(""))
                         str.getTranslatedString().put(lastWrittenMsgstrIndex,
-                                trimQuotes(poFileLines.get(i)));
+                                strToWrite);
                     else
                         str.getTranslatedString().put(
                                 lastWrittenMsgstrIndex,
-                                existingData + '\n'
-                                        + trimQuotes(poFileLines.get(i)));
+                                existingData + '\n' + strToWrite);
                 } else if (lastWrittenMultiliner == MSGCTXT) {
                     if (!str.getContext().equals(""))
                         str.addtoContext("" + '\n');
-                    str.addtoContext(trimQuotes(poFileLines.get(i)));
+                    str.addtoContext(strToWrite);
                 }
                 
             } else {
@@ -380,7 +381,9 @@ public class TranslatableStringCollection implements Parcelable {
     }
     
     private static String trimQuotes(String str) {
-        return str.trim().replaceAll("^\"|\"$", "");
+        return str.trim()
+                .replaceAll("^\"|\"$", "")  // remove initial and trailing double quotes
+                .replace("\\\"","\""); // de-escape double quotes
     }
     
     public static String[] wordWrapToArray(String input, int width) {
@@ -437,10 +440,13 @@ public class TranslatableStringCollection implements Parcelable {
             String[] wrappedLines = wordWrapToArray(writeString, LINE_WIDTH
                     - "\"\"".length());
             outputLines.add(prefix + "\"\"");
-            for (int i = 0; i < wrappedLines.length; i++)
-                outputLines.add("\"" + wrappedLines[i] + "\"");
+            for (int i = 0; i < wrappedLines.length; i++) {
+                wrappedLines[i] = wrappedLines[i].replace("\"", "\\\""); // escape double quotes in string
+                outputLines.add("\"" + wrappedLines[i] + "\""); // surround string by double quotes
+            }
         } else {
-            outputLines.add(prefix + "\"" + writeString + "\"");
+            writeString = writeString.replace("\"", "\\\""); // escape double quotes in string
+            outputLines.add(prefix + "\"" + writeString + "\""); // surround string by double quotes
         }
     }
     
