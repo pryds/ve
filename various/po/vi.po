@@ -1,0 +1,276 @@
+# Vietnamese translations for Vé.
+# Bản dịch Tiếng Việt dành cho Vé.
+# This file is distributed under the same license as the ve package.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ve 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-01-13 20:22+0100\n"
+"PO-Revision-Date: 2014-01-15 08:43+0700\n"
+"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
+"Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0dev\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "locale_of_this_translation"
+msgid "en"
+msgstr "vi"
+
+msgctxt "app_name"
+msgid "Vé"
+msgstr "Vé"
+
+msgctxt "orig_str"
+msgid "Original string"
+msgstr "Chuỗi gốc"
+
+msgctxt "transl_str"
+msgid "Translated string"
+msgstr "Chuỗi dịch"
+
+msgctxt "meta_str_no"
+msgid "String number:"
+msgstr "Số chuỗi:"
+
+#, c-format
+msgctxt "meta_not_ready"
+msgid "%d not ready,"
+msgid_plural "%d not ready,"
+msgstr[0] "%d chưa sẵn sàng,"
+
+#, c-format
+msgctxt "meta_untranslated"
+msgid "%d untranslated"
+msgid_plural "%d untranslated"
+msgstr[0] "%d chuỗi chưa dịch"
+
+msgctxt "meta_context"
+msgid "Context:"
+msgstr "Ngữ cảnh:"
+
+msgctxt "meta_notes"
+msgid "Notes:"
+msgstr "Ghi chú:"
+
+msgctxt "meta_files"
+msgid "Files:"
+msgstr "Tập tin:"
+
+msgctxt "action_previous"
+msgid "Previous"
+msgstr "Trước"
+
+msgctxt "action_next"
+msgid "Next"
+msgstr "Tiếp"
+
+msgctxt "action_nextunfinished"
+msgid "Next unfinished"
+msgstr "Chuỗi chưa hoàn thiện kế tiếp"
+
+msgctxt "action_load"
+msgid "Load"
+msgstr "Tải"
+
+msgctxt "action_save"
+msgid "Save"
+msgstr "Ghi lại"
+
+msgctxt "action_settings"
+msgid "Settings"
+msgstr "Các cài đặt"
+
+msgctxt "action_about"
+msgid "About Vé"
+msgstr "Giới thiệu về Vé"
+
+msgctxt "approved"
+msgid "Approved:"
+msgstr "Được chấp nhận:"
+
+msgctxt "ready"
+msgid "Ready"
+msgstr "Sẵn sàng"
+
+msgctxt "unfinished"
+msgid "Unfinished"
+msgstr "Chưa hoàn tất"
+
+msgctxt "title_activity_settings"
+msgid "Settings"
+msgstr "Cài đặt"
+
+msgctxt "pref_name"
+msgid "Name"
+msgstr "Tên"
+
+msgctxt "pref_name_summ"
+msgid "Your name"
+msgstr "Tên của bạn"
+
+msgctxt "pref_email"
+msgid "Email"
+msgstr "Thư điện tử"
+
+msgctxt "pref_email_summ"
+msgid "Your email address"
+msgstr "Địa chỉ thư điện tử của bạn"
+
+msgctxt "pref_lang"
+msgid "Target language"
+msgstr "Ngôn ngữ đích"
+
+msgctxt "pref_lang_summ"
+msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
+msgstr "Mã ngôn ngữ mà bạn dịch ra, ví dụ 'en' hay 'vi_VN'"
+
+msgctxt "pref_maillist"
+msgid "Mailing list"
+msgstr "Hộp thư chung"
+
+msgctxt "pref_maillist_summ"
+msgid "The email address of your language team's mailing list"
+msgstr "Địa chỉ thư điện tử của hộp thư chung của nhóm dịch"
+
+msgctxt "about_title"
+msgid "About Vé"
+msgstr "Giới thiệu về Vé"
+
+#, c-format
+msgctxt "about_version"
+msgid "Vé version %1$s"
+msgstr "Vé phiên bản %1$s"
+
+msgctxt "about_author"
+msgid "By Thomas Pryds"
+msgstr "Bởi Thomas Pryds"
+
+msgctxt "about_translate_credits"
+msgid "Translated into YourLanguage by YourName"
+msgstr "Dịch sang NGÔN_NGỮ của bạn bởi BẠN"
+
+msgctxt "about_license"
+msgid "Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site."
+msgstr "Vé là phần mềm nguồn mở, phát hành dưới giấy phép Công GPL, điều đó có nghĩa là bạn có thể dùng nó miễn phí cho bất kỳ đích nào. Bạn có thể phân phối lại nó, có thay đổi hoặc không, miễn là làm điều này dưới cùng giấy phép, có nghĩa là bạn phải cung cấp các tập tin mã nguồn mà bạn đã thay đổi. Toàn bộ văn bản của giấy phép được đi kèm cùng với chương trình này. Toàn bộ mã nguồn của chương trình này sẵn có tại trang web được nói đến ở trên."
+
+msgctxt "ok"
+msgid "OK"
+msgstr "Đồng ý"
+
+msgctxt "plural_form_1"
+msgid "Plural form 1"
+msgstr "Dạng số nhiều 1"
+
+msgctxt "plural_form_2"
+msgid "2"
+msgstr "2"
+
+msgctxt "plural_form_3"
+msgid "3"
+msgstr "3"
+
+msgctxt "plural_form_4"
+msgid "4"
+msgstr "4"
+
+msgctxt "plural_form_5"
+msgid "5"
+msgstr "5"
+
+msgctxt "plural_form_6"
+msgid "6"
+msgstr "6"
+
+msgctxt "title_activity_file_chooser"
+msgid "Choose File"
+msgstr "Chọn tập tin"
+
+msgctxt "file_directory_postfix"
+msgid "[dir]"
+msgstr "[thmục]"
+
+msgctxt "file_parent_dir"
+msgid "[Parent directory]"
+msgstr "[Thư mục cha mẹ]"
+
+msgctxt "file_current_dir"
+msgid "Current directory:"
+msgstr "Thư mục hiện tại:"
+
+msgctxt "error"
+msgid "Error"
+msgstr "Lỗi"
+
+msgctxt "file_filenotexist"
+msgid "The file does not exist."
+msgstr "Tập tin này không tồn tại."
+
+msgctxt "file_notpofile"
+msgid "The file does not seem to be a PO file."
+msgstr "Tập tin có vẻ như không phải có định dạng PO."
+
+msgctxt "file_fileempty"
+msgid "The file is empty."
+msgstr "Tập tin rỗng."
+
+msgctxt "file_ioerror"
+msgid "There was an I/O file error."
+msgstr "Có lỗi V/R tập tin."
+
+msgctxt "file_unknownerror"
+msgid "An unknown error occurred while reading from or writing to file."
+msgstr "Không hiểu lỗi gì đã xảy ra trong khi đọc hay ghi tập tin."
+
+msgctxt "file_cannotreadfile"
+msgid "Cannot read file."
+msgstr "Không thể đọc tập tin."
+
+msgctxt "file_cannotwritefile"
+msgid "Cannot write to file."
+msgstr "Không thể ghi vào tập tin."
+
+msgctxt "file_cannotreaddir"
+msgid "Cannot read from directory."
+msgstr "Không thể đọc từ thư mục."
+
+msgctxt "file_saved"
+msgid "File was saved."
+msgstr "Tập tin đã được lưu."
+
+msgctxt "not_all_fields_filled"
+msgid "Note: You did not fill in all fields in the Settings."
+msgstr "Chú ý: Bạn đã không điền đầy đủ thông tin ở phần cài đặt."
+
+msgctxt "play_description1"
+msgid "Vé is an editor for translating gettext PO files on Android."
+msgstr "Vé là một phần mềm biên soạn dành cho việc dịch các tập tin PO gettext trên Android."
+
+msgctxt "play_description2"
+msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
+msgstr "Tập tin PO là tiêu chuẩn không chính thức dành cho việc bản địa hóa (dịch) các phần mềm nguồn mở cái mà có thể chạy trên nhiều nền tảng khác nhau, bao gồm Linux, Windows và MacOS, nhưng ứng dụng Android cũng đồng thời có thể được bản địa hóa bằng PO (bao gồm ứng dụng này)."
+
+msgctxt "play_description3"
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard, and so on)."
+msgstr "Vé cho phép bạn tải những tập tin như kiểu PO vào một giao diện đơn giản, dịch đầy đủ (hoặc từng phần) của ứng dụng hay chương trình sang ngôn ngữ của bạn, và lưu lại tập tin PO đã cập nhật đó để bổ xung vào bởi người phát triển ứng dụng hay chương trình. Trong khi cung cấp các tính năng cơ bản dành cho việc dịch và bản địa hóa các ứng dụng và chương trình, Vé đơn giản trong thiết kế để phù hợp với những giới hạn của nền tảng di động như là Android (màn hình nhỏ, không có bàn phím vật lý, và nhiều thứ khác nữa)."
+
+msgctxt "play_description4"
+msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
+msgstr "Vé là tên người sau một trong số hai anh em Odin trong thần thoại Na-uy. Ba anh em, Odin, Vili và Vé được cho là Chúa, người mà đã mang đến cuộc sống cho những con người đầu tiên, Ask và Embla. Vé là người đã mang lại cho họ tiếng nói, giữa những khả năng khác."
+
+msgctxt "play_description5"
+msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
+msgstr "Vé là phần mềm nguồn mở, phát hành dưới giấy phép Công GPL, điều đó có nghĩa là bạn có thể dùng nó miễn phí, cho cá nhân cũng như các mục đích khác. Bạn có thể phân phối lại nó, có thay đổi hoặc không, miễn là làm điều này dưới cùng giấy phép, có nghĩa là bạn phải cung cấp các tập tin mã nguồn mà bạn đã thay đổi."
+
+msgctxt "play_promotional"
+msgid "Edit PO files on your Android device."
+msgstr "Sửa tập tin PO bằng thiết bị Android của bạn."
+
+msgctxt "play_recent_changes"
+msgid "Initial release."
+msgstr "Phát hành khởi tạo."
