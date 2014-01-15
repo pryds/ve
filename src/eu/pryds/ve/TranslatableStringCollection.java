@@ -253,6 +253,10 @@ public class TranslatableStringCollection implements Parcelable {
             header = new TranslatableString();
             header.initiateHeaderInfo(activity);
         }
+        
+        // Remove the "fuzzy" tag from headers (default from new pot files)
+        header.removeFlag("fuzzy");
+        
         return ERROR_NONE;
     }
     
@@ -271,8 +275,14 @@ public class TranslatableStringCollection implements Parcelable {
             if (!strToWrite.get(i).getTranslatorComments().equals("")) {
                 String[] transCommLines = strToWrite.get(i)
                         .getTranslatorComments().split("\n");
-                for (int j = 0; j < transCommLines.length; j++)
-                    outputLines.add("#  " + transCommLines[j]);
+                for (int j = 0; j < transCommLines.length; j++) {
+                    if (i == 0 && transCommLines[j].contains("FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.")) {
+                        // Ignore default author comment line from new pot files
+                        // (Vé creates its own on the same format)
+                    } else {
+                        outputLines.add("#  " + transCommLines[j]);
+                    }
+                }
             }
             
             if (!strToWrite.get(i).getExtractedComments().equals("")) {

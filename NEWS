@@ -1,5 +1,16 @@
+Changes between 0.1 and 0.1.1
+=============================
+
+- Bug fixes:
+  - "fuzzy" was not removed from header
+- New translations:
+  - Brazilian Portuguese
+  - Dutch
+  - Esperanto
+  - Ukranian
+  - Vietnamese
+
 Version 0.1
 ===========
 
 Initial release.
-

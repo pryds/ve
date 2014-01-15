@@ -161,6 +161,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(getApplicationContext(),
                         getResources().getText(R.string.not_all_fields_filled),
                         Toast.LENGTH_LONG).show();
+                return true;
             }
             
             // Generate PO file syntax:
