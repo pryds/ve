@@ -3,6 +3,7 @@ Changes between 0.1 and 0.1.1
 
 - Bug fixes:
   - "fuzzy" was not removed from header
+  - Double quotes inside strings were not escaped
 - New translations:
   - Brazilian Portuguese
   - Dutch
