@@ -281,7 +281,7 @@ public class TranslatableStringCollection implements Parcelable {
                         // Ignore default author comment line from new pot files
                         // (Vé creates its own on the same format)
                     } else {
-                        outputLines.add("#  " + transCommLines[j]);
+                        outputLines.add("# " + transCommLines[j]);
                     }
                 }
             }
