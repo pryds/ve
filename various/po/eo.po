@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ve 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-01-13 20:22+0100\n"
-"PO-Revision-Date: 2014-01-14 13:34-0300\n"
+"PO-Revision-Date: 2014-01-15 10:17-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
 "Language: Esperanto\n"
@@ -37,7 +37,7 @@ msgstr "Tradukita ĉeno"
 
 msgctxt "meta_str_no"
 msgid "String number:"
-msgstr "Ĉeno numero:"
+msgstr "Ĉeno-numero:"
 
 #, c-format
 msgctxt "meta_not_ready"
@@ -127,7 +127,7 @@ msgstr "Via retadreso"
 
 msgctxt "pref_lang"
 msgid "Target language"
-msgstr "Celata lingvo"
+msgstr "Cela lingvo"
 
 msgctxt "pref_lang_summ"
 msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
@@ -139,7 +139,7 @@ msgstr "Dissendo-listo"
 
 msgctxt "pref_maillist_summ"
 msgid "The email address of your language team's mailing list"
-msgstr "La retadreso de la dissendo-liso de via lingva teamo"
+msgstr "La retadreso de la dissendo-listo de via lingva teamo"
 
 msgctxt "about_title"
 msgid "About Vé"
@@ -216,7 +216,7 @@ msgstr "La dosiero ne ekzistas."
 
 msgctxt "file_notpofile"
 msgid "The file does not seem to be a PO file."
-msgstr "La dosiero ne ŝajnas esti po-dosiero."
+msgstr "La dosiero ne ŝajnas esti PO-dosiero."
 
 msgctxt "file_fileempty"
 msgid "The file is empty."
@@ -252,19 +252,19 @@ msgstr "Rimarku: vi ne kompletigis ĉiujn kampojn en Agordaro."
 
 msgctxt "play_description1"
 msgid "Vé is an editor for translating gettext PO files on Android."
-msgstr "Vé estas redaktilo por traduki po-dosieroj ĉe Androjdo."
+msgstr "Vé estas redaktilo por traduki PO-dosieroj ĉe Androjdo."
 
 msgctxt "play_description2"
 msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
-msgstr "Po-dosiero estas la ple ĝenerala normo por lokigo (traduko) de specialaj malfermit-kodaj programoj kiuj funkcias en pluraj platformoj, inkluzive Linukso, Vindozo kaj MacOS, kaj ankaŭ Androjdaj aplikaĵoj povas esti tradukataj per po-dosieroj (inkluzive tiu ĉi kiun vi uzas nun)."
+msgstr "PO-dosiero estas la plej ĝenerala normo por lokigo (traduko) precipe de malferm-kodaj programoj kiuj funkcias en pluraj platformoj, inkluzive Linukso, Vindozo kaj MacOS, kaj ankaŭ Androjdaj aplikaĵoj povas esti tradukataj per PO-dosieroj (inkluzive tiu ĉi kiun vi uzas nun)."
 
 msgctxt "play_description3"
 msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard, and so on)."
-msgstr "Vé ebligas al vi ŝargi tia po-dosiero en simplan interfacon, entute (aŭ parte) traduki aplikaĵojn aŭ programojn en vian propran lingvon, kaj konservi ĝisdatigita po-dosieron por realigo de la aplikaĵ-programisto. Dum ĝi provizas la ĉefaj trajtoj por tradukado kaj lokigo de applikaĵoj, Vé estas simpla laŭ fasonado por ekvilibrigi limojn de movebla platformo kiel Androjdo (eta ekrano, neniu fizika klavaro, ktp)."
+msgstr "Vé ebligas al vi ŝargi tia PO-dosiero en simplan interfacon, entute (aŭ parte) traduki aplikaĵojn aŭ programojn en vian propran lingvon, kaj konservi ĝisdatigitan PO-dosieron por realigo de la aplikaĵ-programisto. Dum ĝi provizas la ĉefajn trajtojn por tradukado kaj lokigo de aplikaĵoj, Vé estas simpla laŭ fasonado por ekvilibrigi limojn de movebla platformo kiel Androjdo (eta ekrano, neniu fizika klavaro, ktp)."
 
 msgctxt "play_description4"
 msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
-msgstr "Vé estas nomita kiel unu el du fratoj de Odino, en Nordia mitologio. La tri fratoj, Odino, Vilio kaj Veo estis rigardataj kiel Diojn donantajn vivon al la unuaj homoj, Asko kaj Emblo. Vé estis tiu kiu donis al ili parolon, inter aliaj kapabloj."
+msgstr "Vé estas nomita kiel unu el la du fratoj de Odino, en Nordia mitologio. La tri fratoj, Odino, Vilio kaj Veo estis rigardataj kiel Dioj kiuj donis vivon al la unuaj homoj, Asko kaj Emblo. Veo estis tiu kiu donis al ili parolon, inter aliaj kapabloj."
 
 msgctxt "play_description5"
 msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
@@ -272,7 +272,7 @@ msgstr "Vé estas malferma programaro, publikigita sub la GPL-permeso, kio signi
 
 msgctxt "play_promotional"
 msgid "Edit PO files on your Android device."
-msgstr "Redakti po-dosierojn ĉe via aparato Androjdo."
+msgstr "Redakti PO-dosierojn ĉe via aparato Androjdo."
 
 msgctxt "play_recent_changes"
 msgid "Initial release."
