@@ -451,8 +451,12 @@ public class TranslatableStringCollection implements Parcelable {
                 outputLines.add("\"" + wrappedLines[i] + "\""); // surround string by double quotes
             }
         } else {
-            writeString = writeString.replace("\"", "\\\""); // escape double quotes in string
-            outputLines.add(prefix + "\"" + writeString + "\""); // surround string by double quotes
+            String[] writeArr = writeString.split("\n");
+            for (int i = 0; i < writeArr.length; i++) {
+                writeArr[i] = writeArr[i].replace("\"", "\\\""); // escape double quotes in string
+                writeArr[i] = "\"" + writeArr[i] + "\""; // surround string by double quotes
+                outputLines.add((i == 0 ? prefix : "") + writeArr[i]);
+            }
         }
     }
     
