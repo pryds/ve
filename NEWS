@@ -1,3 +1,15 @@
+Changes between 0.1.1 and 0.1.2
+===============================
+
+- Bug fixes:
+  - Empty msgid was not written for header
+  - Translator comments were written with prefix "#  " (two spaces), where only
+    "# " (one space) is accepted.
+  - Short strings with newline characters were not correctly surrounded by
+    double quotes.
+- Updated translations:
+  - Esperanto
+
 Changes between 0.1 and 0.1.1
 =============================
 
