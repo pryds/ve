@@ -30,8 +30,23 @@ public class EditTextPreferenceShowValue extends EditTextPreference {
     @Override
     public CharSequence getSummary() {
         // if something is filled in, show that; otherwise get summary from strings.xml
-        return (super.getText().trim().length() == 0 ?
-                getContext().getResources().getText(R.string.pref_name_summ) :
-                super.getText() );
+        CharSequence summaryText;
+        if (super.getText().trim().length() == 0) {
+            if (super.getKey().equals("pref_name")) {
+                summaryText = getContext().getResources().getText(R.string.pref_name_summ);
+            } else if (super.getKey().equals("pref_email")) {
+                summaryText = getContext().getResources().getText(R.string.pref_email_summ);
+            } else if (super.getKey().equals("pref_lang")) {
+                summaryText = getContext().getResources().getText(R.string.pref_lang_summ);
+            } else if (super.getKey().equals("pref_maillist")) {
+                summaryText = getContext().getResources().getText(R.string.pref_maillist_summ);
+            } else {
+                summaryText = "";
+            }
+        } else {
+            summaryText = getText();
+        }
+        
+        return summaryText;
     }
 }

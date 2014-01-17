@@ -1,4 +1,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- Remember to add new entries to EditTextPreferenceShowValue.java -->
 
     <eu.pryds.ve.EditTextPreferenceShowValue
         android:key="pref_name"
