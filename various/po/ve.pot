@@ -1,14 +1,14 @@
-# Translations template for PROJECT.
-# Copyright (C) 2014 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
+# Translations template for Vé.
+# Copyright (C) 2014 Thomas Pryds
+# This file is distributed under the same license as the Vé project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-01-13 20:22+0100\n"
+"Project-Id-Version: Vé 0.1.2\n"
+"Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
+"POT-Creation-Date: 2014-01-18 20:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -254,6 +254,10 @@ msgctxt "not_all_fields_filled"
 msgid "Note: You did not fill in all fields in the Settings."
 msgstr ""
 
+msgctxt "play_title"
+msgid "Vé – PO Editor"
+msgstr ""
+
 msgctxt "play_description1"
 msgid "Vé is an editor for translating gettext PO files on Android."
 msgstr ""
@@ -273,8 +277,8 @@ msgid ""
 " updated PO file for implementation by the app/program developer. While "
 "providing the essential features for translation and localization of apps"
 " and programs, Vé is simple in design to compensate for the limitations "
-"of a mobile platform like Android (small screen, no physical keyboard, "
-"etc.)"
+"of a mobile platform like Android (small screen, no physical keyboard and"
+" so on)."
 msgstr ""
 
 msgctxt "play_description4"
