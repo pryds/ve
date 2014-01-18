@@ -62,7 +62,7 @@
     <string name="file_cannotwritefile">Cannot write to file.</string>
     <string name="file_cannotreaddir">Cannot read from directory.</string>
     <string name="file_saved">File was saved.</string>
-    <string name="not_all_fields_filled">Note: You did not fill in all fields in the Settings.</string>
+    <string name="not_all_fields_filled">Error: You did not fill in all fields in the Settings. The file has not been saved.</string>
     <string name="play_title">Vé – PO Editor</string>
     <string name="play_description1">Vé is an editor for translating gettext PO files on Android.</string>
     <string name="play_description2">PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app).</string>
