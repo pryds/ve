@@ -1,6 +1,7 @@
 package eu.pryds.ve;
 
 import java.io.File;
+import java.util.Arrays;
 
 import android.os.Bundle;
 import android.os.Environment;
@@ -83,6 +84,8 @@ public class FileChooser extends ListActivity {
     private File[] listFilesIncludingParentDir(File dir) {
         File parent = dir.getParentFile();
         File[] dirList = dir.listFiles();
+        Arrays.sort(dirList);
+        
         if (parent == null) {
             return dirList;
         } else {
