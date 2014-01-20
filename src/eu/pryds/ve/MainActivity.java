@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import eu.pryds.ve.GotoStringNumberDialogFragment.GotoStringNumberDialogListener;
+
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.app.Activity;
@@ -26,7 +28,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements GotoStringNumberDialogListener {
     
     private TranslatableStringCollection str;
     private int currentString = 0;
@@ -133,6 +135,13 @@ public class MainActivity extends Activity {
             currentString = str.getNextStringInNeedOfWork(currentString);
             currentPluralForm = 0;
             updateScreen();
+            return true;
+        case R.id.action_gotostringnumber:
+            GotoStringNumberDialogFragment gotoStr = new GotoStringNumberDialogFragment();
+            Bundle bundle = new Bundle();
+            bundle.putInt(GotoStringNumberDialogFragment.STRING_COUNT, str.size());
+            gotoStr.setArguments(bundle);
+            gotoStr.show(getFragmentManager(), "gotostringnumber");
             return true;
         case R.id.action_settings:
             openSettings();
@@ -265,6 +274,14 @@ public class MainActivity extends Activity {
         }
     }
     
+    @Override
+    public void onReturnValue(int value) {
+        // Returned value from GotoStringNumberDialogFragment
+        currentString = value;
+        currentPluralForm = 0;
+        updateScreen();
+    }
+    
     /** Called when the user touches one of the plural form buttons */
     public void changePluralForm(View view) {
         switch (view.getId()) {
@@ -377,6 +394,9 @@ public class MainActivity extends Activity {
         MenuItem actionNextUnfinished = menu.findItem(R.id.action_nextunfinished);
         actionNextUnfinished.setEnabled(enable);
         
+        MenuItem actionGotostringnumber = menu.findItem(R.id.action_gotostringnumber);
+        actionGotostringnumber.setEnabled(enable);
+        
         MenuItem actionSave = menu.findItem(R.id.action_save);
         actionSave.setEnabled(enable);
         
@@ -394,5 +414,4 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
-    
 }

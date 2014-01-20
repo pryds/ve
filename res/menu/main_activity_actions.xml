@@ -20,6 +20,11 @@
           android:icon="@drawable/ic_action_forward"
           android:showAsAction="ifRoom"
           android:enabled="false" />
+    
+    <item android:id="@+id/action_gotostringnumber"
+          android:title="@string/action_gotostringnumber"
+          android:showAsAction="ifRoom"
+          android:enabled="false" />
 
     <item android:id="@+id/action_load"
           android:title="@string/action_load"

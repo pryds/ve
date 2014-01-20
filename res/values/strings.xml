@@ -20,8 +20,9 @@
     <string name="action_previous">Previous</string>
     <string name="action_next">Next</string>
     <string name="action_nextunfinished">Next unfinished</string>
-    <string name="action_load">Load</string>
-    <string name="action_save">Save</string>
+    <string name="action_gotostringnumber">Go to string number…</string>
+    <string name="action_load">Open file</string>
+    <string name="action_save">Save file</string>
     <string name="action_settings">Settings</string>
     <string name="action_about">About Vé</string>
     <string name="approved">Approved:</string>
@@ -42,6 +43,7 @@
     <string name="about_translate_credits">Translated into YourLanguage by YourName</string>
     <string name="about_license">Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site.</string>
     <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
     <string name="plural_form_1">Plural form 1</string>
     <string name="plural_form_2">2</string>
     <string name="plural_form_3">3</string>
