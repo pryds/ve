@@ -23,6 +23,7 @@
     
     <item android:id="@+id/action_gotostringnumber"
           android:title="@string/action_gotostringnumber"
+          android:icon="@drawable/goto_str_number"
           android:showAsAction="ifRoom"
           android:enabled="false" />
 
