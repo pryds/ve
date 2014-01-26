@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="eu.pryds.ve"
-    android:versionCode="4"
+    android:versionCode="7"
     android:versionName="0.1.2" >
     
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="com.android.vending.BILLING" />
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -36,6 +38,14 @@
         <activity
             android:name="eu.pryds.ve.FileChooser"
             android:label="@string/title_activity_file_chooser"
+            android:parentActivityName="eu.pryds.ve.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="eu.pryds.ve.MainActivity" />
+        </activity>
+        <activity
+            android:name="eu.pryds.ve.DonateActivity"
+            android:label="@string/title_activity_donate"
             android:parentActivityName="eu.pryds.ve.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

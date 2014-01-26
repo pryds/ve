@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="locale_of_this_translation">en</string>
     <string name="app_name">Vé</string>
     <string name="orig_str">Original string</string>
@@ -25,6 +24,7 @@
     <string name="action_save">Save file</string>
     <string name="action_settings">Settings</string>
     <string name="action_about">About Vé</string>
+    <string name="action_donate">Donate</string>
     <string name="approved">Approved:</string>
     <string name="ready">Ready</string>
     <string name="unfinished">Unfinished</string>
@@ -65,13 +65,27 @@
     <string name="file_cannotreaddir">Cannot read from directory.</string>
     <string name="file_saved">File was saved.</string>
     <string name="not_all_fields_filled">Error: You did not fill in all fields in the Settings. The file has not been saved.</string>
+    <string name="title_activity_donate">Donate to Vé</string>
+    <string name="donate_intro">If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app\'s website. Every donation through the app goes directly to the developer of Vé, except for Google\'s usual 30% share.</string>
+    <string name="donate_small_title">Small donation</string>
+    <string name="donate_small_description">A small donation, but remember: Any amount is highly appreciated!</string>
+    <string name="donate50_title">Larger donation</string>
+    <string name="donate50_description">Donate a larger amount.</string>
+    <string name="donate100_title">Large donation</string>
+    <string name="donate100_description">Donate the largest amount.</string>
+    <string name="donate_contacting_play_store">Contacting the Play Store…</string>
+    <string name="donate_button">Donate</string>
+    <string name="donate_init_error">There was an error setting up in-app billing. Donation will not be possible at this time. Details:</string>
+    <string name="donate_query_error">There was an error querying the Google Play In-App Billing service. Donation will not be possible at this time. Details:</string>
+    <string name="donate_purchase_consume_error">There was an error completing the purchase:</string>
+    <string name="donate_thanks">Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé.</string>
     <string name="play_title">Vé – PO Editor</string>
     <string name="play_description1">Vé is an editor for translating gettext PO files on Android.</string>
     <string name="play_description2">PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app).</string>
     <string name="play_description3">Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on).</string>
     <string name="play_description4">Vé is named after one of Odin\'s two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities.</string>
+    <string name="play_description4b">You can download and use Vé for free without restrictions. However, if you like it, please consider donating an amount of your choise through the in-app purchasing feature.</string>
     <string name="play_description5">Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes.</string>
     <string name="play_promotional">Edit PO files on your Android device.</string>
     <string name="play_recent_changes">Initial release.</string>
-
 </resources>

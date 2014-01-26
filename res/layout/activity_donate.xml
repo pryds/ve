@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DonateActivity"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/donate_intro" />
+    
+    <!-- SMALL DONATION STARTS HERE -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+            android:id="@+id/donate_small_title"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="wrap_content"
+	        android:text="@string/donate_contacting_play_store"
+	        android:textStyle="bold" />
+	    
+	    <TextView 
+	        android:id="@+id/donate_small_price"
+	        android:layout_width="0dp"
+	        android:layout_weight=".3"
+	        android:layout_height="wrap_content"
+	        android:textAlignment="viewEnd" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+            android:id="@+id/donate_small_desc"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="wrap_content" />
+        
+        <Button
+            android:id="@+id/donate_small_button"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/donate_button"
+            android:enabled="false" />
+    </LinearLayout>
+     
+    <!-- LARGER DONATION STARTS HERE -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+            android:id="@+id/donate_larger_title"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+        
+        <TextView 
+            android:id="@+id/donate_larger_price"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+            android:id="@+id/donate_larger_desc"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="wrap_content" />
+        
+        <Button
+            android:id="@+id/donate_larger_button"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/donate_button"
+            android:enabled="false" />
+    </LinearLayout>
+    
+    <!-- LARGE DONATION STARTS HERE -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+            android:id="@+id/donate_large_title"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+        
+        <TextView 
+            android:id="@+id/donate_large_price"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+            android:id="@+id/donate_large_desc"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="wrap_content" />
+        
+        <Button
+            android:id="@+id/donate_large_button"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/donate_button"
+            android:enabled="false" />
+    </LinearLayout>
+    
+
+</LinearLayout>

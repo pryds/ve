@@ -151,11 +151,15 @@ public class MainActivity extends Activity implements GotoStringNumberDialogList
             AboutDialogFragment about = new AboutDialogFragment();
             about.show(getFragmentManager(), "AboutFragment");
             return true;
+        case R.id.action_donate:
+            Intent donateIntent = new Intent(this, DonateActivity.class);
+            startActivity(donateIntent);
+            return true;
         case R.id.action_load:
             str = new TranslatableStringCollection();
             
-            Intent intent = new Intent(this, FileChooser.class);
-            startActivityForResult(intent, CHOOSE_FILE_REQUEST);
+            Intent loadIntent = new Intent(this, FileChooser.class);
+            startActivityForResult(loadIntent, CHOOSE_FILE_REQUEST);
             
             return true;
         case R.id.action_save:
