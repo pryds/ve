@@ -3,16 +3,33 @@ package eu.pryds.ve;
 import java.util.Hashtable;
 
 public class Languages {
+    public static final String DEFAULT_LANG_CODE = "en"; // use this if not found
+    
     public static String getName(String code) {
+        if (!langCodeIsSupported(code))
+            return getName(DEFAULT_LANG_CODE);
+        
         return l.get(code)[0];
     }
 
     public static int getNplurals(String code) {
+        if (!langCodeIsSupported(code))
+            return getNplurals(DEFAULT_LANG_CODE);
+
         return Integer.parseInt(l.get(code)[1]);
     }
     
     public static String getPlural(String code) {
+        if (!langCodeIsSupported(code))
+            return getPlural(DEFAULT_LANG_CODE);
+        
         return l.get(code)[2];
+    }
+    
+    private static boolean langCodeIsSupported(String code) {
+        if (code == null || code.length() == 0)
+            return false;
+        return l.get(code) != null;
     }
     
     private static final Hashtable<String, String[]> l = new Hashtable<String, String[]>() {{

@@ -76,7 +76,7 @@ public class TranslatableString implements Parcelable {
         }
         SharedPreferences pref =
                 PreferenceManager.getDefaultSharedPreferences(activity);
-        return Languages.getNplurals(pref.getString("pref_lang", "en"));
+        return Languages.getNplurals(pref.getString("pref_lang", Languages.DEFAULT_LANG_CODE));
     }
     
     public void initiateHeaderInfo(Activity activity) {
@@ -112,7 +112,10 @@ public class TranslatableString implements Parcelable {
                 pref.getString("pref_name", "") + " <" +
                 pref.getString("pref_email", "") + ">");
         
-        String langcode = pref.getString("pref_lang", "en");
+        String langcode = pref.getString("pref_lang", Languages.DEFAULT_LANG_CODE);
+        if (langcode == null || langcode.length() == 0)
+            langcode = Languages.DEFAULT_LANG_CODE;
+        
         replaceOrAddString(headerLines, "Language-Team:",
                 Languages.getName(langcode) +
                 " <" + pref.getString("pref_maillist", "") + ">");
