@@ -1,0 +1,278 @@
+# German translation for ve.
+# Copyright (C) 2014 prdys.
+# This file is distributed under the same license as the ve package.
+# Roland Illig <roland.illig@gmx.de>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ve 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-01-13 20:22+0100\n"
+"PO-Revision-Date: 2014-02-23 10:53+0100\n"
+"Last-Translator: Roland Illig <roland.illig@gmx.de>\n"
+"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.4\n"
+
+msgctxt "locale_of_this_translation"
+msgid "en"
+msgstr "de"
+
+msgctxt "app_name"
+msgid "Vé"
+msgstr "Vé"
+
+msgctxt "orig_str"
+msgid "Original string"
+msgstr "Quelltext"
+
+msgctxt "transl_str"
+msgid "Translated string"
+msgstr "Übersetzung"
+
+msgctxt "meta_str_no"
+msgid "String number:"
+msgstr "Text Nummer:"
+
+#, c-format
+msgctxt "meta_not_ready"
+msgid "%d not ready,"
+msgid_plural "%d not ready,"
+msgstr[0] "%d nicht bereit,"
+msgstr[1] "%d nicht bereit,"
+
+#, c-format
+msgctxt "meta_untranslated"
+msgid "%d untranslated"
+msgid_plural "%d untranslated"
+msgstr[0] "%d nicht übersetzt"
+msgstr[1] "%d nicht übersetzt"
+
+msgctxt "meta_context"
+msgid "Context:"
+msgstr "Kontext:"
+
+msgctxt "meta_notes"
+msgid "Notes:"
+msgstr "Anmerkungen:"
+
+msgctxt "meta_files"
+msgid "Files:"
+msgstr "Dateien:"
+
+msgctxt "action_previous"
+msgid "Previous"
+msgstr "Vorheriger"
+
+msgctxt "action_next"
+msgid "Next"
+msgstr "Nächster"
+
+msgctxt "action_nextunfinished"
+msgid "Next unfinished"
+msgstr "Nächster unfertiger"
+
+msgctxt "action_load"
+msgid "Load"
+msgstr "Öffnen"
+
+msgctxt "action_save"
+msgid "Save"
+msgstr "Speichern"
+
+msgctxt "action_settings"
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgctxt "action_about"
+msgid "About Vé"
+msgstr "Über Vé"
+
+msgctxt "approved"
+msgid "Approved:"
+msgstr "Genehmigt:"
+
+msgctxt "ready"
+msgid "Ready"
+msgstr "Bereit"
+
+msgctxt "unfinished"
+msgid "Unfinished"
+msgstr "Unfertig"
+
+msgctxt "title_activity_settings"
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgctxt "pref_name"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "pref_name_summ"
+msgid "Your name"
+msgstr "Ihr Name"
+
+msgctxt "pref_email"
+msgid "Email"
+msgstr "Email"
+
+msgctxt "pref_email_summ"
+msgid "Your email address"
+msgstr "Ihre Emailadresse"
+
+msgctxt "pref_lang"
+msgid "Target language"
+msgstr "Zielsprache"
+
+msgctxt "pref_lang_summ"
+msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
+msgstr "Code der Sprache, in die Sie übersetzen, zum Beispiel »de« oder »de_AT«"
+
+msgctxt "pref_maillist"
+msgid "Mailing list"
+msgstr "Mailingliste"
+
+msgctxt "pref_maillist_summ"
+msgid "The email address of your language team's mailing list"
+msgstr "Die Emailadresse der Mailingliste Ihres Sprachteams"
+
+msgctxt "about_title"
+msgid "About Vé"
+msgstr "Über Vé"
+
+#, c-format
+msgctxt "about_version"
+msgid "Vé version %1$s"
+msgstr "Vé Version %s"
+
+msgctxt "about_author"
+msgid "By Thomas Pryds"
+msgstr "Von Thomas Pryds"
+
+msgctxt "about_translate_credits"
+msgid "Translated into YourLanguage by YourName"
+msgstr "Ins Deutsche übersetzt von Roland Illig"
+
+msgctxt "about_license"
+msgid "Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site."
+msgstr "Vé ist Open Source Software und wird unter der GPL veröffentlicht. Das bedeutet, Sie dürfen Vé kostenlos für alle Zwecke benutzen. Sie dürfen es sogar weiterverbreiten (verändert oder auch nicht), unter der Voraussetzung, dass Sie die Lizenz beibehalten. Das wiederum bedeutet, dass Sie Ihre Änderungen mitverteilen oder aber zur Verfügung stellen müssen. Der vollständige Lizenztext ist diesem Programm beigelegt. Der vollständige Quelltext für dieses Programm ist auf der oben angegebenen Website erhältlich."
+
+msgctxt "ok"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "plural_form_1"
+msgid "Plural form 1"
+msgstr "Pluralform 1"
+
+msgctxt "plural_form_2"
+msgid "2"
+msgstr "2"
+
+msgctxt "plural_form_3"
+msgid "3"
+msgstr "3"
+
+msgctxt "plural_form_4"
+msgid "4"
+msgstr "4"
+
+msgctxt "plural_form_5"
+msgid "5"
+msgstr "5"
+
+msgctxt "plural_form_6"
+msgid "6"
+msgstr "6"
+
+msgctxt "title_activity_file_chooser"
+msgid "Choose File"
+msgstr "Datei auswählen"
+
+msgctxt "file_directory_postfix"
+msgid "[dir]"
+msgstr "Verzeichnis"
+
+msgctxt "file_parent_dir"
+msgid "[Parent directory]"
+msgstr "Übergeordnetes Verzeichnis"
+
+msgctxt "file_current_dir"
+msgid "Current directory:"
+msgstr "Aktuelles Verzeichnis"
+
+msgctxt "error"
+msgid "Error"
+msgstr "Fehler"
+
+msgctxt "file_filenotexist"
+msgid "The file does not exist."
+msgstr "Die Datei existiert nicht."
+
+msgctxt "file_notpofile"
+msgid "The file does not seem to be a PO file."
+msgstr "Die Datei scheint keine PO-Datei zu sein."
+
+msgctxt "file_fileempty"
+msgid "The file is empty."
+msgstr "Die Datei ist leer."
+
+msgctxt "file_ioerror"
+msgid "There was an I/O file error."
+msgstr "Es ist ein E/A-Fehler aufgetreten."
+
+msgctxt "file_unknownerror"
+msgid "An unknown error occurred while reading from or writing to file."
+msgstr "Ein unbekannter Fehler ist beim Lesen oder Schreiben der Datei aufgetreten."
+
+msgctxt "file_cannotreadfile"
+msgid "Cannot read file."
+msgstr "Kann Datei nicht einlesen."
+
+msgctxt "file_cannotwritefile"
+msgid "Cannot write to file."
+msgstr "Kann Datei nicht speichern."
+
+msgctxt "file_cannotreaddir"
+msgid "Cannot read from directory."
+msgstr "Kann nicht aus Verzeichnis lesen."
+
+msgctxt "file_saved"
+msgid "File was saved."
+msgstr "Datei wurde gespeichert."
+
+msgctxt "not_all_fields_filled"
+msgid "Note: You did not fill in all fields in the Settings."
+msgstr "Hinweis: Sie haben nicht alle Felder in den Einstellungen ausgefüllt."
+
+msgctxt "play_description1"
+msgid "Vé is an editor for translating gettext PO files on Android."
+msgstr "Vé ist ein Editor, um PO-Dateien auf Android zu übersetzen."
+
+msgctxt "play_description2"
+msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
+msgstr "PO-Dateien sind der De-Facto-Standard für Übersetzungen (und Lokalisierungen), vor allem im Bereich von Open-Source-Software, die auf mehreren Plattformen läuft, zum Beispiel Windows, Linux und Mac OS. Aber auch Android-Apps können mit PO-Dateien übersetzt werden (so wie diese App)."
+
+msgctxt "play_description3"
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard, and so on)."
+msgstr "Mit Vé können Sie so eine PO-Datei in eine simple Benutzeroberfläche laden und dort Apps oder Programme komplett (oder teilweise) in Ihre eigene Sprache übersetzen, und dann die bearbeitete PO-Datei speichern, um sie dem Autoren der App oder des Programms zu schicken. Vé stellt alle notwendigen Features zum Übersetzen bereit, ist jedoch bewusst einfach gehalten, damit es auf mobilen Plattformen wie Android (mit kleinem Bildschirm, ohne eigene Tastatur, und so weiter) benutzbar ist."
+
+msgctxt "play_description4"
+msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
+msgstr "Vé wurde nach einem der zwei Brüder Odins aus der norwegischen Mythologie benannt. Der Sage nach hauchten die drei Brüder, Odin, Vili und Vé den ersten Menschen, Ask und Embla, das Leben ein. Vé war derjenige, der ihnen unter anderem die Sprache gab."
+
+msgctxt "play_description5"
+msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
+msgstr "Vé ist Open-Source-Software und wird unter der GPL veröffentlicht. Das bedeutet, Sie dürfen Vé kostenlos für alle Zwecke benutzen. Sie dürfen es sogar weiterverbreiten (verändert oder auch nicht), unter der Voraussetzung, dass Sie die Lizenz beibehalten. Das wiederum bedeutet, dass Sie Ihre Änderungen mitverteilen oder aber zur Verfügung stellen müssen."
+
+msgctxt "play_promotional"
+msgid "Edit PO files on your Android device."
+msgstr "Bearbeiten Sie PO-Dateien auf Ihrem Android-Gerät."
+
+msgctxt "play_recent_changes"
+msgid "Initial release."
+msgstr "Erstes Release."
