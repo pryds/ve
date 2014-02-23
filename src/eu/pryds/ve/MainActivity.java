@@ -37,6 +37,7 @@ public class MainActivity extends Activity implements GotoStringNumberDialogList
     private File openedFile;
     public final static int CHOOSE_FILE_REQUEST = 1;
     public final static String CHOOSE_FILE_MESSAGE = "eu.pryds.ve.choosefile";
+    public final static String PREFS_NAME = "VePrefs";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,8 +164,7 @@ public class MainActivity extends Activity implements GotoStringNumberDialogList
             
             return true;
         case R.id.action_save:
-            SharedPreferences pref =
-                PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences pref = getSharedPreferences(PREFS_NAME, 0);
             String prefName = pref.getString("pref_name", "");
             String prefEmail = pref.getString("pref_email", "");
             String prefMaillist = pref.getString("pref_maillist", "");

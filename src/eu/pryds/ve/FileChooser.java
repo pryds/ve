@@ -6,6 +6,7 @@ import java.util.Arrays;
 import android.os.Bundle;
 import android.os.Environment;
 import android.app.ListActivity;
+import android.app.backup.BackupManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.View;
@@ -26,7 +27,7 @@ public class FileChooser extends ListActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_file_chooser);
         
-        SharedPreferences settings = getPreferences(0);
+        SharedPreferences settings = getSharedPreferences(MainActivity.PREFS_NAME, 0);
         String lastDirStr = settings.getString(LAST_DIR, "");
         File lastDir = new File(lastDirStr);
         
@@ -64,10 +65,12 @@ public class FileChooser extends ListActivity {
                         Toast.makeText(getApplicationContext(), "" + fileList[position], Toast.LENGTH_LONG).show();
                         
                         // Save directory path for next file chooser instance:
-                        SharedPreferences settings = getPreferences(0);
+                        SharedPreferences settings = getSharedPreferences(MainActivity.PREFS_NAME, 0);
                         SharedPreferences.Editor editor = settings.edit();
                         editor.putString(LAST_DIR, fileList[position].getParentFile().getAbsolutePath());
                         editor.commit();
+                        BackupManager bm = new BackupManager(FileChooser.this);
+                        bm.dataChanged();
                         
                         // Create and send return intent containing file path:
                         Intent returnIntent = new Intent();

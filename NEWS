@@ -8,6 +8,8 @@ Changes between 0.1.2 and 0.1.3
   - For translators: Headers in the .pot file are now generated to contain
     usable information rather than standard strings.
   - It is now possible to jump directly to a specific string number.
+  - Settings are now stored on user's Google account so they are maintained
+    even if user changes device.
 - Bug fixes:
   - Fixed: Crash on opening file with empty language code in header
 - Translations:
