@@ -18,6 +18,7 @@ public class SettingsFragment extends PreferenceFragment {
         super.onStop();
         
         // Request backup, data might have changed.
-        BackupManager.dataChanged(MainActivity.PREFS_NAME);
+        BackupManager bm = new BackupManager(getActivity());
+        bm.dataChanged();
     }
 }

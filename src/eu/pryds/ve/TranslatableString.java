@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 
 public class TranslatableString implements Parcelable {
     private String translatorComments;
@@ -73,7 +74,8 @@ public class TranslatableString implements Parcelable {
                 }
             }
         }
-        SharedPreferences pref = activity.getSharedPreferences(MainActivity.PREFS_NAME, 0);
+        SharedPreferences pref =
+                PreferenceManager.getDefaultSharedPreferences(activity);
         return Languages.getNplurals(pref.getString("pref_lang", Languages.DEFAULT_LANG_CODE));
     }
     
@@ -89,7 +91,8 @@ public class TranslatableString implements Parcelable {
             version = activity.getPackageManager().getPackageInfo(
                     activity.getPackageName(), 0).versionName;
         } catch (NameNotFoundException e) { }
-        SharedPreferences pref = activity.getSharedPreferences(MainActivity.PREFS_NAME, 0);
+        SharedPreferences pref =
+                PreferenceManager.getDefaultSharedPreferences(activity);
         
         String[] headerArray = translatedString.get(0).split("\n");
         Vector<String> headerLines = new Vector<String>(Arrays.asList(headerArray));
