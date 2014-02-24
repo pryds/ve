@@ -1,0 +1,350 @@
+# Serbian translation for Vé.
+# Copyright (C) 2014  Free Software Foundation, Inc.
+# This file is distributed under the same license as the ve package.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: ve-0.1.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
+"POT-Creation-Date: 2014-02-23 13:21+0100\n"
+"PO-Revision-Date: 2014-02-24 11:10+0200\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian <(nothing)>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Generated-By: Babel 1.0dev\n"
+
+msgctxt "locale_of_this_translation"
+msgid "en"
+msgstr "sr"
+
+msgctxt "app_name"
+msgid "Vé"
+msgstr "Ве"
+
+msgctxt "orig_str"
+msgid "Original string"
+msgstr "Изворна ниска"
+
+msgctxt "transl_str"
+msgid "Translated string"
+msgstr "Преведена ниска"
+
+msgctxt "meta_str_no"
+msgid "String number:"
+msgstr "Број ниске:"
+
+#, c-format
+msgctxt "meta_not_ready"
+msgid "%d not ready,"
+msgid_plural "%d not ready,"
+msgstr[0] "%d није спреман,"
+msgstr[1] "%d нису спремне,"
+msgstr[2] "%d није спремно,"
+
+#, c-format
+msgctxt "meta_untranslated"
+msgid "%d untranslated"
+msgid_plural "%d untranslated"
+msgstr[0] "%d непреведена"
+msgstr[1] "%d непреведене"
+msgstr[2] "%d непреведених"
+
+msgctxt "meta_context"
+msgid "Context:"
+msgstr "Појава:"
+
+msgctxt "meta_notes"
+msgid "Notes:"
+msgstr "Напомене:"
+
+msgctxt "meta_files"
+msgid "Files:"
+msgstr "Датотеке:"
+
+msgctxt "action_previous"
+msgid "Previous"
+msgstr "Претходна"
+
+msgctxt "action_next"
+msgid "Next"
+msgstr "Следећа"
+
+msgctxt "action_nextunfinished"
+msgid "Next unfinished"
+msgstr "Следећа недовршена"
+
+msgctxt "action_gotostringnumber"
+msgid "Go to string number…"
+msgstr "Иди на ниску број…"
+
+msgctxt "action_load"
+msgid "Open file"
+msgstr "Отвори датотеку"
+
+msgctxt "action_save"
+msgid "Save file"
+msgstr "Сачувај датотеку"
+
+msgctxt "action_settings"
+msgid "Settings"
+msgstr "Подешавања"
+
+msgctxt "action_about"
+msgid "About Vé"
+msgstr "О Веу"
+
+msgctxt "action_donate"
+msgid "Donate"
+msgstr "Приложите"
+
+msgctxt "approved"
+msgid "Approved:"
+msgstr "Одобрено:"
+
+msgctxt "ready"
+msgid "Ready"
+msgstr "Спремна"
+
+msgctxt "unfinished"
+msgid "Unfinished"
+msgstr "Недовршена"
+
+msgctxt "title_activity_settings"
+msgid "Settings"
+msgstr "Подешавања"
+
+msgctxt "pref_name"
+msgid "Name"
+msgstr "Име"
+
+msgctxt "pref_name_summ"
+msgid "Your name"
+msgstr "Ваше име"
+
+msgctxt "pref_email"
+msgid "Email"
+msgstr "Ел. пошта"
+
+msgctxt "pref_email_summ"
+msgid "Your email address"
+msgstr "Ваша адреса ел. поште"
+
+msgctxt "pref_lang"
+msgid "Target language"
+msgstr "Жељени језик"
+
+msgctxt "pref_lang_summ"
+msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
+msgstr "Код језика на који преводите, у овом случају, „sr“"
+
+msgctxt "pref_maillist"
+msgid "Mailing list"
+msgstr "Дописна листа"
+
+msgctxt "pref_maillist_summ"
+msgid "The email address of your language team's mailing list"
+msgstr "Адреса ел. поште дописне листе српског преводилачког тима"
+
+msgctxt "about_title"
+msgid "About Vé"
+msgstr "О програму Ве"
+
+#, c-format
+msgctxt "about_version"
+msgid "Vé version %1$s"
+msgstr "Ве издање %1$s"
+
+msgctxt "about_author"
+msgid "By Thomas Pryds"
+msgstr "Написао га је Томас Придс"
+
+msgctxt "about_translate_credits"
+msgid "Translated into YourLanguage by YourName"
+msgstr ""
+"Превод на српски језик:\n"
+" Мирослав Николић <miroslavnikolic@rocketmail.com>"
+
+msgctxt "about_license"
+msgid "Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site."
+msgstr "Ве је софтвер отвореног кода, објављен под ОЈЛ дозволом, што значи да можете бесплатно да га користите за било коју сврху. Можете чак и да га расподељујете, измењеног или не, под условом да то учини под истом дозволом, што значи да и ваше изворне датотеке могу бити измењене на било који начин. Читав текст дозволе долази уз овај програм. Читав изворни код овог програма је доступан на горе поменутој веб страници."
+
+msgctxt "ok"
+msgid "OK"
+msgstr "У реду"
+
+msgctxt "cancel"
+msgid "Cancel"
+msgstr "Откажи"
+
+msgctxt "plural_form_1"
+msgid "Plural form 1"
+msgstr "Облик множине 1"
+
+msgctxt "plural_form_2"
+msgid "2"
+msgstr "2"
+
+msgctxt "plural_form_3"
+msgid "3"
+msgstr "3"
+
+msgctxt "plural_form_4"
+msgid "4"
+msgstr "4"
+
+msgctxt "plural_form_5"
+msgid "5"
+msgstr "5"
+
+msgctxt "plural_form_6"
+msgid "6"
+msgstr "6"
+
+msgctxt "title_activity_file_chooser"
+msgid "Choose File"
+msgstr "Изаберите датотеку"
+
+msgctxt "file_directory_postfix"
+msgid "[dir]"
+msgstr "[дир]"
+
+msgctxt "file_parent_dir"
+msgid "[Parent directory]"
+msgstr "[Полазни директоријум]"
+
+msgctxt "file_current_dir"
+msgid "Current directory:"
+msgstr "Текући директоријум:"
+
+msgctxt "error"
+msgid "Error"
+msgstr "Грешка"
+
+msgctxt "file_filenotexist"
+msgid "The file does not exist."
+msgstr "Датотека не постоји."
+
+msgctxt "file_notpofile"
+msgid "The file does not seem to be a PO file."
+msgstr "Изгледа да ово није по датотека."
+
+msgctxt "file_fileempty"
+msgid "The file is empty."
+msgstr "Датотека је празна."
+
+msgctxt "file_ioerror"
+msgid "There was an I/O file error."
+msgstr "Дошло је до У/И грешке датотеке."
+
+msgctxt "file_unknownerror"
+msgid "An unknown error occurred while reading from or writing to file."
+msgstr "Дошло је до непознате грешке приликом читања или писања у датотеку."
+
+msgctxt "file_cannotreadfile"
+msgid "Cannot read file."
+msgstr "Не могу да прочитам датотеку."
+
+msgctxt "file_cannotwritefile"
+msgid "Cannot write to file."
+msgstr "Не могу да пишем у датотеку."
+
+msgctxt "file_cannotreaddir"
+msgid "Cannot read from directory."
+msgstr "Не могу да читам из директоријума."
+
+msgctxt "file_saved"
+msgid "File was saved."
+msgstr "Датотека је сачувана."
+
+msgctxt "not_all_fields_filled"
+msgid "Error: You did not fill in all fields in the Settings. The file has not been saved."
+msgstr "Грешка: Нисте попунили сва поља у подешавањима. Датотека није сачувана."
+
+msgctxt "title_activity_donate"
+msgid "Donate to Vé"
+msgstr "Дајте добровољан прилог Веу"
+
+#, c-format
+msgctxt "donate_intro"
+msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation through the app goes directly to the developer of Vé, except for Google's usual 30% share."
+msgstr "Ако вам се свиђа овај програм, размотрите могућност давања добровољног прилога у износу по вашем избору. Ве је у потпуности изграђен на добровољној основи, али ипак има неке новчане издатке. Ако желите да га користите бесплатно, слободни сте да то урадите. Ако желите да дате неки динар као подршку програмеру, можете то учинити путем Гугловог новчаника помоћу уграђене уплатнице у програму, или на веб страници програма. Сваки добровољан прилог путем програма иде програмеру Веа, осим уобичајених Гуглових 30%s учешћа."
+
+msgctxt "donate_small_title"
+msgid "Normal donation"
+msgstr "Мањи износ"
+
+msgctxt "donate_small_description"
+msgid "Any amount is highly appreciated!"
+msgstr "И један динар је добро дошао!"
+
+msgctxt "donate50_title"
+msgid "Larger donation"
+msgstr "Средњи износ"
+
+msgctxt "donate50_description"
+msgid "Donate a larger amount."
+msgstr "Ако имате може и мало више."
+
+msgctxt "donate100_title"
+msgid "Even larger donation"
+msgstr "Већи износ"
+
+msgctxt "donate100_description"
+msgid "Donate an even larger amount."
+msgstr "Ако можете, будите великодушни."
+
+msgctxt "donate_contacting_play_store"
+msgid "Contacting the Play Store…"
+msgstr "Ступам у везу са Играоницом…"
+
+msgctxt "donate_button"
+msgid "Donate"
+msgstr "Приложите"
+
+msgctxt "donate_init_error"
+msgid "There was an error setting up in-app billing. Donation will not be possible at this time. Details:"
+msgstr "Дошло је до грешке у подешавању програмске уплатнице. Давање добровољног прилога неће бити могуће у овом тренутку. Појединости:"
+
+msgctxt "donate_query_error"
+msgid "There was an error querying the Google Play In-App Billing service. Donation will not be possible at this time. Details:"
+msgstr "Дошло је до грешке пропитивања услуге наплаћивања Гуглове играонице. Давање добровољног прилога неће бити могуће у овом тренутку. Појединости:"
+
+msgctxt "donate_purchase_consume_error"
+msgid "There was an error completing the purchase:"
+msgstr "Дошло је до грешке довршавања набавке:"
+
+msgctxt "donate_thanks"
+msgid "Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé."
+msgstr "Од срца вам се захваљујемо на добровољном прилогу. Док је Ве бесплатно доступан за коришћење, ваш и други прилози чине лакшим налажење слободног времена за његов развој."
+
+msgctxt "play_title"
+msgid "Vé – PO Editor"
+msgstr "Ве – уређивач по датотека"
+
+msgctxt "play_description1"
+msgid "Vé is an editor for translating gettext PO files on Android."
+msgstr "Ве је уређивач за превођење геттекст по датотека на Андроиду."
+
+msgctxt "play_description2"
+msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
+msgstr "ПО датотеке су де-факто стандард за локализацију (превод) посебних програма отвореног кода који раде на више платформи, укључујући Линукс, Виндоуз и МекОС, али и програми за Андроид могу бити локализовани помоћу ПО датотека (укључујући и овај програм)."
+
+msgctxt "play_description3"
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on)."
+msgstr "Ве вам омогућава да учитате такву ПО датотеку у једноставном сучељу, да потпуно (или делимично) преведете апликације или програме на српски језик, и да сачувати ажурирану ПО датотеку за уградњу коју ће обавити програмер апликације/програма. Како пружа основне функције за превођење и локализацију апликација и програма, Ве је једноставан у дизајну да би надокнадио ограничења преносне платформе као што је Андроид (мали екран, без физичке тастатуре и тако даље)."
+
+msgctxt "play_description4"
+msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
+msgstr "Ве је добио име по једном од Одинова два брата у нордијској митологији. Три брата, Один, Вили и Ве су сматрани за богове који су дали живот првим људима, Аску и Ембли. Ве је био тај који им је дао говор, поред осталих способности."
+
+msgctxt "play_description4b"
+msgid "You can download and use Vé for free without restrictions. However, if you like it, please consider donating an amount of your choise through the in-app purchasing feature."
+msgstr "Ве можете преузети и користити бесплатно и без ограничења. Међутим, ако вам се свиђа, будите љубазни и размотрите давање добровољног прилога у износу по вашем избору кроз функцију набавке уграђене у програму."
+
+msgctxt "play_description5"
+msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
+msgstr "Ве је софтвер отвореног кода, објављен под ОЈЛ дозволом, што значи да можете да га користите слободно, за личне или друге сврхе. Можете чак и да га расподељујете, измењеног или не, под условом да то учини под истом дозволом, што значи да и ваше изворне датотеке могу бити измењене на било који начин."

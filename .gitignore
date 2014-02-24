@@ -4,11 +4,5 @@ gen/
 .project
 .settings/
 
-res/values-de/strings.xml
-res/values-eo/strings.xml
-res/values-es/strings.xml
-res/values-nl/strings.xml
-res/values-pt-rBR/strings.xml
-res/values-uk/strings.xml
-res/values-vi/strings.xml
+res/values-*/strings.xml
 
