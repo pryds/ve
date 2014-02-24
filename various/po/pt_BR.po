@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ve 0.1\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-01-13 20:22+0100\n"
-"PO-Revision-Date: 2014-01-14 15:33-0300\n"
+"Project-Id-Version: ve 0.1.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
+"POT-Creation-Date: 2014-02-23 13:21+0100\n"
+"PO-Revision-Date: 2014-02-24 12:45-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge.net>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 
 msgctxt "locale_of_this_translation"
 msgid "en"
@@ -76,13 +76,17 @@ msgctxt "action_nextunfinished"
 msgid "Next unfinished"
 msgstr "Próxima não finalizada"
 
+msgctxt "action_gotostringnumber"
+msgid "Go to string number…"
+msgstr "Ir para a mensagem com número…"
+
 msgctxt "action_load"
-msgid "Load"
-msgstr "Carregar"
+msgid "Open file"
+msgstr "Abrir arquivo"
 
 msgctxt "action_save"
-msgid "Save"
-msgstr "Salvar"
+msgid "Save file"
+msgstr "Salvar arquivo"
 
 msgctxt "action_settings"
 msgid "Settings"
@@ -91,6 +95,10 @@ msgstr "Configurações"
 msgctxt "action_about"
 msgid "About Vé"
 msgstr "Sobre Vé"
+
+msgctxt "action_donate"
+msgid "Donate"
+msgstr "Doar"
 
 msgctxt "approved"
 msgid "Approved:"
@@ -164,6 +172,10 @@ msgstr "Vé é um software de código aberto, lançado sob a licença GPL, o que
 msgctxt "ok"
 msgid "OK"
 msgstr "OK"
+
+msgctxt "cancel"
+msgid "Cancel"
+msgstr "Cancelar"
 
 msgctxt "plural_form_1"
 msgid "Plural form 1"
@@ -246,8 +258,69 @@ msgid "File was saved."
 msgstr "Arquivo foi salvo."
 
 msgctxt "not_all_fields_filled"
-msgid "Note: You did not fill in all fields in the Settings."
-msgstr "Nota: Você não preencheu todos os campos nas Configurações."
+msgid "Error: You did not fill in all fields in the Settings. The file has not been saved."
+msgstr "Erro: Você não preencheu todos os campos nas Configurações. O arquivo não foi salvo."
+
+msgctxt "title_activity_donate"
+msgid "Donate to Vé"
+msgstr "Doar para Vé"
+
+#, fuzzy, c-format
+msgctxt "donate_intro"
+msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation through the app goes directly to the developer of Vé, except for Google's usual 30% share."
+msgstr "Se você gosta deste aplicativo, por favor considere doar uma quantia de sua escolha para o desenvolvedor. Vé é construído de forma completamente voluntária e ele tem o preço que você quiser. Se você quiser usá-lo de graça, sinta-se à vontade para fazê-lo. Se você quiser pagar uma quantia para ajudar o desenvolvedor, você pode fazê-lo via Carteira Virtual do Google por meio da cobrança no telefone logo abaixo ou via o site do aplicativo. Toda doação vai diretamente para o desenvolvedor do Vé, exceto no caso de doações no aplicativo que estarão sujeitas à fatia de 30 porcento de costume que vai para o Google."
+
+msgctxt "donate_small_title"
+msgid "Normal donation"
+msgstr "Doação normal"
+
+msgctxt "donate_small_description"
+msgid "Any amount is highly appreciated!"
+msgstr "Qualquer quantia é muito bem-vinda!"
+
+msgctxt "donate50_title"
+msgid "Larger donation"
+msgstr "Doação grande"
+
+msgctxt "donate50_description"
+msgid "Donate a larger amount."
+msgstr "Doe uma quantia grande."
+
+msgctxt "donate100_title"
+msgid "Even larger donation"
+msgstr "Doação ainda maior"
+
+msgctxt "donate100_description"
+msgid "Donate an even larger amount."
+msgstr "Doe uma quantia ainda maior."
+
+msgctxt "donate_contacting_play_store"
+msgid "Contacting the Play Store…"
+msgstr "Contatando o Play Store…"
+
+msgctxt "donate_button"
+msgid "Donate"
+msgstr "Doar"
+
+msgctxt "donate_init_error"
+msgid "There was an error setting up in-app billing. Donation will not be possible at this time. Details:"
+msgstr "Houve um erro ao preparar a cobrança no aplicativo. Não foi possível fazer doação neste momento. Detalhes:"
+
+msgctxt "donate_query_error"
+msgid "There was an error querying the Google Play In-App Billing service. Donation will not be possible at this time. Details:"
+msgstr "Houve um erro ao consultar o serviço de cobrança no aplicativo pelo Google Play. Não foi possível fazer doação neste momento. Detalhes:"
+
+msgctxt "donate_purchase_consume_error"
+msgid "There was an error completing the purchase:"
+msgstr "Houve um erro ao completar a compra:"
+
+msgctxt "donate_thanks"
+msgid "Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé."
+msgstr "Muito obrigado pela sua doação para o desenvolvedor do Vé. Enquanto Vé está disponível gratuitamente para uso, a sua e outras contribuições tornam mais fácil encontrar tempo livre para o desenvolvimento do Vé."
+
+msgctxt "play_title"
+msgid "Vé – PO Editor"
+msgstr "Vé – Editor de PO"
 
 msgctxt "play_description1"
 msgid "Vé is an editor for translating gettext PO files on Android."
@@ -258,21 +331,29 @@ msgid "PO files are the de-facto standard for localization (translation) of espe
 msgstr "Arquivos PO são o padrão \"de fato\" para a localização (tradução) de programas especialmente de código aberto que executam em várias plataformas, includindo Linux, Windows e Mac OS, mas também aplicativos do Android podem ser localizado por meio de arquivos PO (incluindo este aplicativo)."
 
 msgctxt "play_description3"
-msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard, and so on)."
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on)."
 msgstr "Vé permite que você carregue um arquivo PO em uma interface simples, traduzir completamente (ou parcialmente) aplicativos ou programas para seu próprio idioma e salvar um arquivo PO atualizado para implementação por um desenvolvedor do programa/aplicativo. Ao mesmo tempo que fornece os recursos essenciais para tradução e localização de aplicativos e programas, Vé é simples em seu design para compensar as limitações de plataformas móveis, como o Android (tela pequena, nenhum teclado físico, etc.)."
 
 msgctxt "play_description4"
 msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
 msgstr "Vé é chamado assim por causa de um dos dois irmãos de Odin na mitologia nórdica. Os três irmãos - Odin, Vili e Vé - eram considerados os Deuses que deram vida aos primeiros humanos: Ask e Embla. Vé foi quem deu à humanidade a fala, além de outras capacidades."
 
+msgctxt "play_description4b"
+msgid "You can download and use Vé for free without restrictions. However, if you like it, please consider donating an amount of your choise through the in-app purchasing feature."
+msgstr "Você pode baixar e usar Vé de graça sem restrições. Porém, se você quiser, por favor considere em doar uma quantia de sua escolha por meio do recurso de compra no aplicativo."
+
 msgctxt "play_description5"
 msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
 msgstr "Vé é um software de código aberto, lançado sob a licença GPL, o que significa que você pode usá-lo sem custo para qualquer propósito. Você pode até mesmo redistribuí-lo, modificado ou não, desde que você o faça com a mesma licença, o que significa que você tem que fornecer seus arquivos fonte em qualquer alteração feita."
 
-msgctxt "play_promotional"
-msgid "Edit PO files on your Android device."
-msgstr "Edite arquivos PO em seu dispositivo Android."
+#~ msgctxt "action_load"
+#~ msgid "Load"
+#~ msgstr "Carregar"
 
-msgctxt "play_recent_changes"
-msgid "Initial release."
-msgstr "Lançamento inicial."
+#~ msgctxt "play_promotional"
+#~ msgid "Edit PO files on your Android device."
+#~ msgstr "Edite arquivos PO em seu dispositivo Android."
+
+#~ msgctxt "play_recent_changes"
+#~ msgid "Initial release."
+#~ msgstr "Lançamento inicial."

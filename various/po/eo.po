@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ve 0.1\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-01-13 20:22+0100\n"
-"PO-Revision-Date: 2014-01-15 10:17-0300\n"
+"Project-Id-Version: ve 0.1.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
+"POT-Creation-Date: 2014-02-23 13:21+0100\n"
+"PO-Revision-Date: 2014-02-24 14:53-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
 "Language: Esperanto\n"
@@ -77,13 +77,17 @@ msgctxt "action_nextunfinished"
 msgid "Next unfinished"
 msgstr "Sekva neplenumita"
 
+msgctxt "action_gotostringnumber"
+msgid "Go to string number…"
+msgstr "Iri al ĉeno-numero…"
+
 msgctxt "action_load"
-msgid "Load"
-msgstr "Ŝargi"
+msgid "Open file"
+msgstr "Malfermi dosieron"
 
 msgctxt "action_save"
-msgid "Save"
-msgstr "Konservi"
+msgid "Save file"
+msgstr "Konservi dosieron"
 
 msgctxt "action_settings"
 msgid "Settings"
@@ -92,6 +96,10 @@ msgstr "Agordaro"
 msgctxt "action_about"
 msgid "About Vé"
 msgstr "Pri Vé"
+
+msgctxt "action_donate"
+msgid "Donate"
+msgstr "Donacu"
 
 msgctxt "approved"
 msgid "Approved:"
@@ -123,7 +131,7 @@ msgstr "Retadreso"
 
 msgctxt "pref_email_summ"
 msgid "Your email address"
-msgstr "Via retadreso"
+msgstr "Via retpoŝtadreso"
 
 msgctxt "pref_lang"
 msgid "Target language"
@@ -135,11 +143,11 @@ msgstr "Kodo de la lingvo al kiu vi tradukas, ekz. 'en' aŭ 'pt_BR'"
 
 msgctxt "pref_maillist"
 msgid "Mailing list"
-msgstr "Dissendo-listo"
+msgstr "Dissendlisto"
 
 msgctxt "pref_maillist_summ"
 msgid "The email address of your language team's mailing list"
-msgstr "La retadreso de la dissendo-listo de via lingva teamo"
+msgstr "La retpoŝtadreso de la dissendlisto de via lingva teamo"
 
 msgctxt "about_title"
 msgid "About Vé"
@@ -165,6 +173,10 @@ msgstr "Vé estas malferma programaro, publikigita sub la GPL-permeso, kio signi
 msgctxt "ok"
 msgid "OK"
 msgstr "Certe"
+
+msgctxt "cancel"
+msgid "Cancel"
+msgstr "Rezigni"
 
 msgctxt "plural_form_1"
 msgid "Plural form 1"
@@ -247,8 +259,69 @@ msgid "File was saved."
 msgstr "La dosiero estis konservata."
 
 msgctxt "not_all_fields_filled"
-msgid "Note: You did not fill in all fields in the Settings."
-msgstr "Rimarku: vi ne kompletigis ĉiujn kampojn en Agordaro."
+msgid "Error: You did not fill in all fields in the Settings. The file has not been saved."
+msgstr "Eraro: vi ne kompletigis ĉiujn kampojn en la Agordaro. La dosiero ne estas konservita."
+
+msgctxt "title_activity_donate"
+msgid "Donate to Vé"
+msgstr "Donacu al Vé"
+
+#, c-format
+msgctxt "donate_intro"
+msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation through the app goes directly to the developer of Vé, except for Google's usual 30% share."
+msgstr "Se vi ŝatas tiun ĉi aplikaĵon, bonvolu konsideri donaci iom da mono al la programisto. Vé estas volontule skribita, kaj ĝi havos iun ajn prezon vi taksos. Se vi volas uzi ĝin senpage, sentu sin libera por tion fari. Se vi volas pagi iom por subteni la programiston, vi povas fari tion per Google Wallet, uzante la internan pagilon sube, aŭ per la retpaĝo de la aplikaĵo. Ĉiu donaco farita per la aplikaĵo iras rekte al la programisto de Vé, krom la ordinara \"30% share\" de Google."
+
+msgctxt "donate_small_title"
+msgid "Normal donation"
+msgstr "Normala donaco"
+
+msgctxt "donate_small_description"
+msgid "Any amount is highly appreciated!"
+msgstr "Iu ajn kvanto estas ege bonvena!"
+
+msgctxt "donate50_title"
+msgid "Larger donation"
+msgstr "Pli granda donaco"
+
+msgctxt "donate50_description"
+msgid "Donate a larger amount."
+msgstr "Donacu pli grandan kvanton."
+
+msgctxt "donate100_title"
+msgid "Even larger donation"
+msgstr "Eĉ pli granda donaco"
+
+msgctxt "donate100_description"
+msgid "Donate an even larger amount."
+msgstr "Donacu eĉ pli grandan kvanton."
+
+msgctxt "donate_contacting_play_store"
+msgid "Contacting the Play Store…"
+msgstr "Ni kontaktas la lud-butikon…"
+
+msgctxt "donate_button"
+msgid "Donate"
+msgstr "Donaco"
+
+msgctxt "donate_init_error"
+msgid "There was an error setting up in-app billing. Donation will not be possible at this time. Details:"
+msgstr "Okazis eraro dum agordo de la pagilo. Ne eblos fari la donacon nun. Detaloj:"
+
+msgctxt "donate_query_error"
+msgid "There was an error querying the Google Play In-App Billing service. Donation will not be possible at this time. Details:"
+msgstr "Okazis eraro dum peto al la servo Google Play In-App Billing. Ne eblos fari la donacon nun. Detaloj:"
+
+msgctxt "donate_purchase_consume_error"
+msgid "There was an error completing the purchase:"
+msgstr "Okazis eraro dum kompletigo de la aĉeto:"
+
+msgctxt "donate_thanks"
+msgid "Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé."
+msgstr "Dankegon pro via donaco al la programisto de Vé. Dum Vé estas libere disponebla por uzo, vi kaj aliaj kontribuojn faciligas trovi libertempon por la disvolvigo de Vé."
+
+msgctxt "play_title"
+msgid "Vé – PO Editor"
+msgstr "Vé – PO-redaktilo"
 
 msgctxt "play_description1"
 msgid "Vé is an editor for translating gettext PO files on Android."
@@ -259,21 +332,29 @@ msgid "PO files are the de-facto standard for localization (translation) of espe
 msgstr "PO-dosiero estas la plej ĝenerala normo por lokigo (traduko) precipe de malferm-kodaj programoj kiuj funkcias en pluraj platformoj, inkluzive Linukso, Vindozo kaj MacOS, kaj ankaŭ Androjdaj aplikaĵoj povas esti tradukataj per PO-dosieroj (inkluzive tiu ĉi kiun vi uzas nun)."
 
 msgctxt "play_description3"
-msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard, and so on)."
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on)."
 msgstr "Vé ebligas al vi ŝargi tia PO-dosiero en simplan interfacon, entute (aŭ parte) traduki aplikaĵojn aŭ programojn en vian propran lingvon, kaj konservi ĝisdatigitan PO-dosieron por realigo de la aplikaĵ-programisto. Dum ĝi provizas la ĉefajn trajtojn por tradukado kaj lokigo de aplikaĵoj, Vé estas simpla laŭ fasonado por ekvilibrigi limojn de movebla platformo kiel Androjdo (eta ekrano, neniu fizika klavaro, ktp)."
 
 msgctxt "play_description4"
 msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
 msgstr "Vé estas nomita kiel unu el la du fratoj de Odino, en Nordia mitologio. La tri fratoj, Odino, Vilio kaj Veo estis rigardataj kiel Dioj kiuj donis vivon al la unuaj homoj, Asko kaj Emblo. Veo estis tiu kiu donis al ili parolon, inter aliaj kapabloj."
 
+msgctxt "play_description4b"
+msgid "You can download and use Vé for free without restrictions. However, if you like it, please consider donating an amount of your choise through the in-app purchasing feature."
+msgstr "Vi povas elŝuti kaj uzi Vé senpage kaj senlime. Tamen, se vi deziras, bonvolu konsideri donaci iom ajn da mono per la interna pagilo."
+
 msgctxt "play_description5"
 msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
 msgstr "Vé estas malferma programaro, publikigita sub la GPL-permeso, kio signifas ke vi povas uzi ĝin senpage, por personaj aŭ aliaj celoj. Vi povas eĉ redisdoni ĝin, modifita aŭ ne, kondiĉe ke vi faru tion sub la sama permeso, kio signifas ke vi devas provizi vian modifitan kodumaron."
 
-msgctxt "play_promotional"
-msgid "Edit PO files on your Android device."
-msgstr "Redakti PO-dosierojn ĉe via aparato Androjdo."
+#~ msgctxt "action_load"
+#~ msgid "Load"
+#~ msgstr "Ŝargi"
 
-msgctxt "play_recent_changes"
-msgid "Initial release."
-msgstr "Komenca eldono."
+#~ msgctxt "play_promotional"
+#~ msgid "Edit PO files on your Android device."
+#~ msgstr "Redakti PO-dosierojn ĉe via aparato Androjdo."
+
+#~ msgctxt "play_recent_changes"
+#~ msgid "Initial release."
+#~ msgstr "Komenca eldono."
