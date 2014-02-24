@@ -66,7 +66,7 @@
     <string name="file_saved">File was saved.</string>
     <string name="not_all_fields_filled">Error: You did not fill in all fields in the Settings. The file has not been saved.</string>
     <string name="title_activity_donate">Donate to Vé</string>
-    <string name="donate_intro">If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app\'s website. Every donation through the app goes directly to the developer of Vé, except for Google\'s usual 30 percent share.</string>
+    <string name="donate_intro">If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app\'s website. Every donation goes directly to the developer of Vé, except for in-app donations which will be subject to Google\'s usual 30 percent share.</string>
     <string name="donate_small_title">Normal donation</string>
     <string name="donate_small_description">Any amount is highly appreciated!</string>
     <string name="donate50_title">Larger donation</string>
