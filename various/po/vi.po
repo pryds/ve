@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ve 0.1\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-01-13 20:22+0100\n"
-"PO-Revision-Date: 2014-01-15 08:43+0700\n"
+"Project-Id-Version: ve 0.1.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
+"POT-Creation-Date: 2014-02-23 13:21+0100\n"
+"PO-Revision-Date: 2014-02-24 08:01+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "Language: vi\n"
@@ -72,14 +72,18 @@ msgstr "Tiếp"
 
 msgctxt "action_nextunfinished"
 msgid "Next unfinished"
-msgstr "Chuỗi chưa hoàn thiện kế tiếp"
+msgstr "Chuỗi chưa xong kế tiếp"
+
+msgctxt "action_gotostringnumber"
+msgid "Go to string number…"
+msgstr "Nhảy đến chuỗi số…"
 
 msgctxt "action_load"
-msgid "Load"
-msgstr "Tải"
+msgid "Open file"
+msgstr "Mở tập tin"
 
 msgctxt "action_save"
-msgid "Save"
+msgid "Save file"
 msgstr "Ghi lại"
 
 msgctxt "action_settings"
@@ -90,9 +94,13 @@ msgctxt "action_about"
 msgid "About Vé"
 msgstr "Giới thiệu về Vé"
 
+msgctxt "action_donate"
+msgid "Donate"
+msgstr "Quyên góp"
+
 msgctxt "approved"
 msgid "Approved:"
-msgstr "Được chấp nhận:"
+msgstr "Đã phê chuẩn:"
 
 msgctxt "ready"
 msgid "Ready"
@@ -100,7 +108,7 @@ msgstr "Sẵn sàng"
 
 msgctxt "unfinished"
 msgid "Unfinished"
-msgstr "Chưa hoàn tất"
+msgstr "Chưa xong"
 
 msgctxt "title_activity_settings"
 msgid "Settings"
@@ -162,6 +170,10 @@ msgstr "Vé là phần mềm nguồn mở, phát hành dưới giấy phép Côn
 msgctxt "ok"
 msgid "OK"
 msgstr "Đồng ý"
+
+msgctxt "cancel"
+msgid "Cancel"
+msgstr "Thôi"
 
 msgctxt "plural_form_1"
 msgid "Plural form 1"
@@ -244,8 +256,69 @@ msgid "File was saved."
 msgstr "Tập tin đã được lưu."
 
 msgctxt "not_all_fields_filled"
-msgid "Note: You did not fill in all fields in the Settings."
-msgstr "Chú ý: Bạn đã không điền đầy đủ thông tin ở phần cài đặt."
+msgid "Error: You did not fill in all fields in the Settings. The file has not been saved."
+msgstr "Lỗi: Bạn đã không điền đầy đủ thông tin ở phần cài đặt. Tập tin không được ghi lại."
+
+msgctxt "title_activity_donate"
+msgid "Donate to Vé"
+msgstr "Quyên góp cho Vé"
+
+#, c-format
+msgctxt "donate_intro"
+msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation through the app goes directly to the developer of Vé, except for Google's usual 30% share."
+msgstr "Nếu bạn thích ứng dụng này, xin vui lòng quyên góp số tiền tùy chọn cho người phát triển. Vé được xây dựng trên cơ sở tự giác, và nó có giá như thế nào là tùy vào ý bạn. Nếu bạn muốn dùng nó miễn phí, cứ việc dùng. Nếu bạn muốn trả một số tiền nào đó để hỗ trợ người phát triển, bạn có thể làm vậy thông qua Google Wallet bằng hóa đơn phía dưới, hoặc thông qua trang ứng dụng. Mọi số tiền quyên góp cho ứng dụng sẽ chuyển trực tiếp đến người phát triển Vé, không kể đến 30% sẻ cho Google."
+
+msgctxt "donate_small_title"
+msgid "Normal donation"
+msgstr "Quyên góp bình thường"
+
+msgctxt "donate_small_description"
+msgid "Any amount is highly appreciated!"
+msgstr "Số tiền bao nhiêu cũng được!"
+
+msgctxt "donate50_title"
+msgid "Larger donation"
+msgstr "Quyên góp nhiều"
+
+msgctxt "donate50_description"
+msgid "Donate a larger amount."
+msgstr "Quyên góp với số tiền lớn."
+
+msgctxt "donate100_title"
+msgid "Even larger donation"
+msgstr "Thậm chí còn quyên góp nhiều hơn thế"
+
+msgctxt "donate100_description"
+msgid "Donate an even larger amount."
+msgstr "Thậm chí còn quyên góp nhiều hơn thế."
+
+msgctxt "donate_contacting_play_store"
+msgid "Contacting the Play Store…"
+msgstr "Đang liên lạc với Play Store…"
+
+msgctxt "donate_button"
+msgid "Donate"
+msgstr "Quyên góp"
+
+msgctxt "donate_init_error"
+msgid "There was an error setting up in-app billing. Donation will not be possible at this time. Details:"
+msgstr "Có lỗi xảy ra khi cài đặt hóa đơn. Việc quyên góp lúc này là không thể thực hiện được. Chi tiết:"
+
+msgctxt "donate_query_error"
+msgid "There was an error querying the Google Play In-App Billing service. Donation will not be possible at this time. Details:"
+msgstr "Có lỗi xảy ra khi truy vấn dịch vụ hóa đơn Google Play. Việc quyên góp lúc này là không thể thực hiện được. Chi tiết:"
+
+msgctxt "donate_purchase_consume_error"
+msgid "There was an error completing the purchase:"
+msgstr "Đã xảy ra lỗi khi hoàn tất việc mua:"
+
+msgctxt "donate_thanks"
+msgid "Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé."
+msgstr "Cảm ơn bạn rất nhiều vì đã quyên góp cho những người phát triển Vé. Trong khi Vé là miễn phí, phần đóng góp của bạn và những người khác làm việc dành thời gian phát triển Vé trở nên dễ dàng hơn."
+
+msgctxt "play_title"
+msgid "Vé – PO Editor"
+msgstr "Vé – Biên soạn PO"
 
 msgctxt "play_description1"
 msgid "Vé is an editor for translating gettext PO files on Android."
@@ -256,21 +329,29 @@ msgid "PO files are the de-facto standard for localization (translation) of espe
 msgstr "Tập tin PO là tiêu chuẩn không chính thức dành cho việc bản địa hóa (dịch) các phần mềm nguồn mở cái mà có thể chạy trên nhiều nền tảng khác nhau, bao gồm Linux, Windows và MacOS, nhưng ứng dụng Android cũng đồng thời có thể được bản địa hóa bằng PO (bao gồm ứng dụng này)."
 
 msgctxt "play_description3"
-msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard, and so on)."
-msgstr "Vé cho phép bạn tải những tập tin như kiểu PO vào một giao diện đơn giản, dịch đầy đủ (hoặc từng phần) của ứng dụng hay chương trình sang ngôn ngữ của bạn, và lưu lại tập tin PO đã cập nhật đó để bổ xung vào bởi người phát triển ứng dụng hay chương trình. Trong khi cung cấp các tính năng cơ bản dành cho việc dịch và bản địa hóa các ứng dụng và chương trình, Vé đơn giản trong thiết kế để phù hợp với những giới hạn của nền tảng di động như là Android (màn hình nhỏ, không có bàn phím vật lý, và nhiều thứ khác nữa)."
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on)."
+msgstr "Vé cho phép bạn tải những tập tin như kiểu PO vào một giao diện đơn giản, dịch toàn bộ (hoặc từng phần) của ứng dụng hay chương trình sang ngôn ngữ của bạn, và lưu lại tập tin PO đã cập nhật đó để bổ xung vào bởi người phát triển ứng dụng hay chương trình. Trong khi cung cấp các tính năng cơ bản dành cho việc dịch và bản địa hóa các ứng dụng và chương trình, Vé đơn giản trong thiết kế để phù hợp với những giới hạn của nền tảng di động như là Android (màn hình nhỏ, không có bàn phím vật lý, và nhiều thứ khác nữa)."
 
 msgctxt "play_description4"
 msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
 msgstr "Vé là tên người sau một trong số hai anh em Odin trong thần thoại Na-uy. Ba anh em, Odin, Vili và Vé được cho là Chúa, người mà đã mang đến cuộc sống cho những con người đầu tiên, Ask và Embla. Vé là người đã mang lại cho họ tiếng nói, giữa những khả năng khác."
 
+msgctxt "play_description4b"
+msgid "You can download and use Vé for free without restrictions. However, if you like it, please consider donating an amount of your choise through the in-app purchasing feature."
+msgstr "Bạn có thể tải về vầ sử dụng Vé miễn phí mà không bị hạn chế gì. Tuy nhiên, nếu thích nó, vui lòng quyên góp bằng cách chọn tính năng mua có sẵn của ứng dụng."
+
 msgctxt "play_description5"
 msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
 msgstr "Vé là phần mềm nguồn mở, phát hành dưới giấy phép Công GPL, điều đó có nghĩa là bạn có thể dùng nó miễn phí, cho cá nhân cũng như các mục đích khác. Bạn có thể phân phối lại nó, có thay đổi hoặc không, miễn là làm điều này dưới cùng giấy phép, có nghĩa là bạn phải cung cấp các tập tin mã nguồn mà bạn đã thay đổi."
 
-msgctxt "play_promotional"
-msgid "Edit PO files on your Android device."
-msgstr "Sửa tập tin PO bằng thiết bị Android của bạn."
+#~ msgctxt "action_load"
+#~ msgid "Load"
+#~ msgstr "Tải"
 
-msgctxt "play_recent_changes"
-msgid "Initial release."
-msgstr "Phát hành khởi tạo."
+#~ msgctxt "play_promotional"
+#~ msgid "Edit PO files on your Android device."
+#~ msgstr "Sửa tập tin PO bằng thiết bị Android của bạn."
+
+#~ msgctxt "play_recent_changes"
+#~ msgid "Initial release."
+#~ msgstr "Phát hành khởi tạo."
