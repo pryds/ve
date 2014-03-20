@@ -1,0 +1,349 @@
+# Polish translations for Vé.
+# Polskie tłumaczenia aplikacji Vé.
+# Copyright (C) 2014 Thomas Pryds
+# This file is distributed under the same license as the ve package.
+# Paweł Żołnowski <pawel@zolnowski.name>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ve 0.1.4-rc1\n"
+"Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
+"POT-Creation-Date: 2014-02-26 11:06+0100\n"
+"PO-Revision-Date: 2014-03-20 01:09+0100\n"
+"Last-Translator: Paweł Żołnowski <pawel@zolnowski.name>\n"
+"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0dev\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgctxt "locale_of_this_translation"
+msgid "en"
+msgstr "pl"
+
+msgctxt "app_name"
+msgid "Vé"
+msgstr "Vé"
+
+msgctxt "orig_str"
+msgid "Original string"
+msgstr "Ciąg oryginalny"
+
+msgctxt "transl_str"
+msgid "Translated string"
+msgstr "Tłumaczenie"
+
+msgctxt "meta_str_no"
+msgid "String number:"
+msgstr "Numer ciągu:"
+
+#, c-format
+msgctxt "meta_not_ready"
+msgid "%d not ready,"
+msgid_plural "%d not ready,"
+msgstr[0] "%d niegotowy,"
+msgstr[1] "%d niegotowe,"
+msgstr[2] "%d niegotowych,"
+
+#, c-format
+msgctxt "meta_untranslated"
+msgid "%d untranslated"
+msgid_plural "%d untranslated"
+msgstr[0] "%d przetłumaczony"
+msgstr[1] "%d przetłumaczone"
+msgstr[2] "%d przetłumaczonych"
+
+msgctxt "meta_context"
+msgid "Context:"
+msgstr "Kontekst:"
+
+msgctxt "meta_notes"
+msgid "Notes:"
+msgstr "Uwagi:"
+
+msgctxt "meta_files"
+msgid "Files:"
+msgstr "Pliki:"
+
+msgctxt "action_previous"
+msgid "Previous"
+msgstr "Poprzedni"
+
+msgctxt "action_next"
+msgid "Next"
+msgstr "Następny"
+
+msgctxt "action_nextunfinished"
+msgid "Next unfinished"
+msgstr "Następny niedokończony"
+
+msgctxt "action_gotostringnumber"
+msgid "Go to string number…"
+msgstr "Idź do ciągu o numerze…"
+
+msgctxt "action_load"
+msgid "Open file"
+msgstr "Otwórz plik"
+
+msgctxt "action_save"
+msgid "Save file"
+msgstr "Zapisz plik"
+
+msgctxt "action_settings"
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgctxt "action_about"
+msgid "About Vé"
+msgstr ""
+
+msgctxt "action_donate"
+msgid "Donate"
+msgstr "Złóż datek"
+
+msgctxt "approved"
+msgid "Approved:"
+msgstr "Zatwierdzony:"
+
+msgctxt "ready"
+msgid "Ready"
+msgstr "Gotowy"
+
+msgctxt "unfinished"
+msgid "Unfinished"
+msgstr "Niedokończony"
+
+msgctxt "title_activity_settings"
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgctxt "pref_name"
+msgid "Name"
+msgstr "Nazwa"
+
+msgctxt "pref_name_summ"
+msgid "Your name"
+msgstr "Nazwa użytkownika"
+
+msgctxt "pref_email"
+msgid "Email"
+msgstr "Adres e-mail"
+
+msgctxt "pref_email_summ"
+msgid "Your email address"
+msgstr "Adres e-mail użytkownika"
+
+msgctxt "pref_lang"
+msgid "Target language"
+msgstr "Język docelowy"
+
+msgctxt "pref_lang_summ"
+msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
+msgstr "Kod języka, na który dokonywane jest tłumaczenie, np. \"pl\" lub \"pl_PL\""
+
+msgctxt "pref_maillist"
+msgid "Mailing list"
+msgstr "Lista dyskusyjna"
+
+msgctxt "pref_maillist_summ"
+msgid "The email address of your language team's mailing list"
+msgstr "Adres e-mail listy dyskusyjnej zespołu tłumaczy dla podanego języka docelowego"
+
+msgctxt "about_title"
+msgid "About Vé"
+msgstr ""
+
+#, c-format
+msgctxt "about_version"
+msgid "Vé version %1$s"
+msgstr "Aplikacja Vé, wersja %1$s"
+
+msgctxt "about_author"
+msgid "By Thomas Pryds"
+msgstr "Autorstwa Thomasa Prydsa"
+
+msgctxt "about_translate_credits"
+msgid "Translated into YourLanguage by YourName"
+msgstr "Tłumaczenie: Paweł Żołnowski <pawel@zolnowski.name>"
+
+msgctxt "about_license"
+msgid "Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site."
+msgstr "Aplikacja Vé jest otwartym oprogramowaniem, objętym warunkami licencji GPL. Oznacza to, że można jej używać za darmo do jakichkolwiek celów. Można ją nawet rozpowszechniać, zmodyfikowaną lub nie, lecz tylko na warunkach tej samej licencji, czyli należy dostarczyć pliki źródłowe aplikacji z wszelkimi dokonanymi zmianami. Pełen tekst licencji jest dołączony do aplikacji, a jej kod źródłowy jest dostępny na podanej powyżej witrynie internetowej."
+
+msgctxt "ok"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "cancel"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "plural_form_1"
+msgid "Plural form 1"
+msgstr "Forma liczby mnogiej 1"
+
+msgctxt "plural_form_2"
+msgid "2"
+msgstr "2"
+
+msgctxt "plural_form_3"
+msgid "3"
+msgstr "3"
+
+msgctxt "plural_form_4"
+msgid "4"
+msgstr "4"
+
+msgctxt "plural_form_5"
+msgid "5"
+msgstr "5"
+
+msgctxt "plural_form_6"
+msgid "6"
+msgstr "6"
+
+msgctxt "title_activity_file_chooser"
+msgid "Choose File"
+msgstr "Wybór pliku"
+
+msgctxt "file_directory_postfix"
+msgid "[dir]"
+msgstr "[dir]"
+
+msgctxt "file_parent_dir"
+msgid "[Parent directory]"
+msgstr "[Parent directory]"
+
+msgctxt "file_current_dir"
+msgid "Current directory:"
+msgstr "Bieżący katalog:"
+
+msgctxt "error"
+msgid "Error"
+msgstr "Błąd"
+
+msgctxt "file_filenotexist"
+msgid "The file does not exist."
+msgstr "Plik nie istnieje."
+
+msgctxt "file_notpofile"
+msgid "The file does not seem to be a PO file."
+msgstr "Plik nie wygląda na format PO."
+
+msgctxt "file_fileempty"
+msgid "The file is empty."
+msgstr "Plik jest pusty."
+
+msgctxt "file_ioerror"
+msgid "There was an I/O file error."
+msgstr "Wystąpił błąd wejścia/wyjścia pliku."
+
+msgctxt "file_unknownerror"
+msgid "An unknown error occurred while reading from or writing to file."
+msgstr "Wystąpił nieznany błąd podczas odczytu lub zapisu pliku."
+
+msgctxt "file_cannotreadfile"
+msgid "Cannot read file."
+msgstr "Nie można odczytać pliku."
+
+msgctxt "file_cannotwritefile"
+msgid "Cannot write to file."
+msgstr "Nie można zapisać do pliku."
+
+msgctxt "file_cannotreaddir"
+msgid "Cannot read from directory."
+msgstr "Nie można odczytać katalogu."
+
+msgctxt "file_saved"
+msgid "File was saved."
+msgstr "Zapisano plik."
+
+msgctxt "not_all_fields_filled"
+msgid "Error: You did not fill in all fields in the Settings. The file has not been saved."
+msgstr "Błąd: nie wypełniono wszystkich pól w Ustawieniach. Plik nie został zapisany."
+
+msgctxt "title_activity_donate"
+msgid "Donate to Vé"
+msgstr "Datek na rzecz aplikacji Vé"
+
+msgctxt "donate_intro"
+msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation goes directly to the developer of Vé, except for in-app donations which will be subject to Google's usual 30 percent share."
+msgstr "Jeśli aplikacja przypadła Państwu do gustu, prosimy rozważyć złożenie dowolnego datku jej twórcy. Aplikacja Vé została stworzona zupełnie dobrowolnie, więc jej cena nie jest w żaden sposób określona, a nawet można jej swobodnie używać za darmo. Jeśli jednak zdecydują się Państwo wesprzeć twórcę aplikacji, można to zrobić poprzez system płatności mobilnych Google Wallet poniżej lub poprzez witrynę aplikacji. Każdy datek jest bezpośrednio przekazywany twórcy, oprócz tych dokonanych wewnątrz aplikacji (in-app donations), od których Google potrąca 30 procent."
+
+msgctxt "donate_small_title"
+msgid "Normal donation"
+msgstr "Zwykły datek"
+
+msgctxt "donate_small_description"
+msgid "Any amount is highly appreciated!"
+msgstr "Każda suma jest doceniana!"
+
+msgctxt "donate50_title"
+msgid "Larger donation"
+msgstr "Większy datek"
+
+msgctxt "donate50_description"
+msgid "Donate a larger amount."
+msgstr "Przekazanie większej sumy."
+
+msgctxt "donate100_title"
+msgid "Even larger donation"
+msgstr "Jeszcze większy datek"
+
+msgctxt "donate100_description"
+msgid "Donate an even larger amount."
+msgstr "Przekazanie jeszcze większej sumy."
+
+msgctxt "donate_contacting_play_store"
+msgid "Contacting the Play Store…"
+msgstr "Łączenie z Play Store…"
+
+msgctxt "donate_button"
+msgid "Donate"
+msgstr "Złóż datek"
+
+msgctxt "donate_init_error"
+msgid "There was an error setting up in-app billing. Donation will not be possible at this time. Details:"
+msgstr "Wystąpił błąd podczas konfigurowania płatności. Złożenie datku nie będzie teraz możliwe. Szczegóły:"
+
+msgctxt "donate_query_error"
+msgid "There was an error querying the Google Play In-App Billing service. Donation will not be possible at this time. Details:"
+msgstr "Wystąpił błąd podczas wysyłania zapytania do systemu płatności mobilnych Google Play. Złożenie datku nie będzie teraz możliwe. Szczegóły:"
+
+msgctxt "donate_purchase_consume_error"
+msgid "There was an error completing the purchase:"
+msgstr "Wystąpił błąd podczas dokonywania zakupu:"
+
+msgctxt "donate_thanks"
+msgid "Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé."
+msgstr "Dziękujemy serdecznie za złożenie datku twórcy aplikacji Vé. Chociaż jest ona zupełnie darmowa, dzięki datkom łatwiej jest znaleźć wolny czas na jej rozwijanie."
+
+msgctxt "play_title"
+msgid "Vé – PO Editor"
+msgstr "Vé – edytor plików PO"
+
+msgctxt "play_description1"
+msgid "Vé is an editor for translating gettext PO files on Android."
+msgstr "Aplikacja Vé służy do tłumaczenia plików PO gettexta na systemie Android."
+
+msgctxt "play_description2"
+msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
+msgstr "Pliki PO są standardem w lokalizacji (tłumaczeniu) przede wszystkim wolnego oprogramowania, które działa na wielu platformach, w tym: Linux, Windows i MacOS. Również aplikacje dla Androida mogą być lokalizowane przy użyciu plików PO (włączając w to aplikację Vé)."
+
+msgctxt "play_description3"
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on)."
+msgstr "Aplikacja Vé umożliwia wczytanie takiego pliku PO do jej prostego interfejsu, całkowite (lub częściowe) przetłumaczenie oprogramowania na własny język oraz zapisanie uaktualnionego pliku PO, który następnie może zostać zaimplementowany przez twórcę danego oprogramowania. Podczas gdy aplikacja Vé dostarcza podstawowe funkcje do tłumaczenia i lokalizacji oprogramowania, cechuje się ona prostotą, co rekompensuje ograniczenia platformy mobilnej, takiej jak Android (niewielki ekran, brak fizycznej klawiatury itd.)"
+
+msgctxt "play_description4"
+msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
+msgstr "Nazwa Vé pochodzi od imienia jednego z braci boga Odyna z nordyckiej mitologii. Ci trzej bracia: Odyn, Wili i We (Vé), uznani byli za bogów, którzy stworzyli pierwszych ludzi: Aska i Emblę. Bóg We był tym, który obdarzył ich między innymi mową."
+
+msgctxt "play_description4b"
+msgid "You can download and use Vé for free without restrictions. However, if you like it, please consider donating an amount of your choise through the in-app purchasing feature."
+msgstr "Można pobrać aplikację Vé i używać jej za darmo bez ograniczeń. Prosimy jednak rozważyć złożenie dowolnego datku poprzez funkcję płatności mobilnych (in-app purchasing)."
+
+msgctxt "play_description5"
+msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
+msgstr "Aplikacja Vé jest otwartym oprogramowaniem, objętym warunkami licencji GPL. Oznacza to, że można jej używać za darmo do jakichkolwiek celów. Można ją nawet rozpowszechniać, zmodyfikowaną lub nie, lecz tylko na warunkach tej samej licencji, czyli należy dostarczyć pliki źródłowe aplikacji ze wszelkimi dokonanymi zmianami."
