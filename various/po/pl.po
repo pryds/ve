@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ve 0.1.4-rc1\n"
 "Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
 "POT-Creation-Date: 2014-02-26 11:06+0100\n"
-"PO-Revision-Date: 2014-03-20 01:09+0100\n"
+"PO-Revision-Date: 2014-03-21 14:19+0100\n"
 "Last-Translator: Paweł Żołnowski <pawel@zolnowski.name>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -97,7 +97,7 @@ msgstr "Ustawienia"
 
 msgctxt "action_about"
 msgid "About Vé"
-msgstr ""
+msgstr "O aplikacji"
 
 msgctxt "action_donate"
 msgid "Donate"
@@ -153,12 +153,12 @@ msgstr "Adres e-mail listy dyskusyjnej zespołu tłumaczy dla podanego języka d
 
 msgctxt "about_title"
 msgid "About Vé"
-msgstr ""
+msgstr "O aplikacji"
 
 #, c-format
 msgctxt "about_version"
 msgid "Vé version %1$s"
-msgstr "Aplikacja Vé, wersja %1$s"
+msgstr "Vé, wersja %1$s"
 
 msgctxt "about_author"
 msgid "By Thomas Pryds"
@@ -170,7 +170,7 @@ msgstr "Tłumaczenie: Paweł Żołnowski <pawel@zolnowski.name>"
 
 msgctxt "about_license"
 msgid "Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site."
-msgstr "Aplikacja Vé jest otwartym oprogramowaniem, objętym warunkami licencji GPL. Oznacza to, że można jej używać za darmo do jakichkolwiek celów. Można ją nawet rozpowszechniać, zmodyfikowaną lub nie, lecz tylko na warunkach tej samej licencji, czyli należy dostarczyć pliki źródłowe aplikacji z wszelkimi dokonanymi zmianami. Pełen tekst licencji jest dołączony do aplikacji, a jej kod źródłowy jest dostępny na podanej powyżej witrynie internetowej."
+msgstr "Aplikacja Vé jest otwartym oprogramowaniem, objętym warunkami licencji GPL. Oznacza to, że można jej używać za darmo do jakichkolwiek celów. Można ją nawet rozpowszechniać, zmodyfikowaną lub nie, lecz tylko na warunkach tej samej licencji, co wiąże się z obowiązkiem dostarczenia plików źródłowych aplikacji z wszelkimi dokonanymi zmianami. Pełen tekst licencji jest dołączony do aplikacji, a jej kod źródłowy jest dostępny na podanej powyżej witrynie internetowej."
 
 msgctxt "ok"
 msgid "OK"
@@ -210,11 +210,11 @@ msgstr "Wybór pliku"
 
 msgctxt "file_directory_postfix"
 msgid "[dir]"
-msgstr "[dir]"
+msgstr "[katalog]"
 
 msgctxt "file_parent_dir"
 msgid "[Parent directory]"
-msgstr "[Parent directory]"
+msgstr "[Katalog nadrzędny]"
 
 msgctxt "file_current_dir"
 msgid "Current directory:"
@@ -330,11 +330,11 @@ msgstr "Aplikacja Vé służy do tłumaczenia plików PO gettexta na systemie An
 
 msgctxt "play_description2"
 msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
-msgstr "Pliki PO są standardem w lokalizacji (tłumaczeniu) przede wszystkim wolnego oprogramowania, które działa na wielu platformach, w tym: Linux, Windows i MacOS. Również aplikacje dla Androida mogą być lokalizowane przy użyciu plików PO (włączając w to aplikację Vé)."
+msgstr "Pliki PO są standardem w lokalizacji (tłumaczeniu) przede wszystkim otwartego oprogramowania, które działa na wielu platformach, w tym: Linux, Windows i MacOS. Również aplikacje dla Androida można tłumaczyć przy użyciu plików PO (włączając w to aplikację Vé)."
 
 msgctxt "play_description3"
 msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on)."
-msgstr "Aplikacja Vé umożliwia wczytanie takiego pliku PO do jej prostego interfejsu, całkowite (lub częściowe) przetłumaczenie oprogramowania na własny język oraz zapisanie uaktualnionego pliku PO, który następnie może zostać zaimplementowany przez twórcę danego oprogramowania. Podczas gdy aplikacja Vé dostarcza podstawowe funkcje do tłumaczenia i lokalizacji oprogramowania, cechuje się ona prostotą, co rekompensuje ograniczenia platformy mobilnej, takiej jak Android (niewielki ekran, brak fizycznej klawiatury itd.)"
+msgstr "Aplikacja Vé umożliwia wczytanie pliku PO do jej prostego interfejsu, całkowite (lub częściowe) przetłumaczenie programu na własny język oraz zapisanie uaktualnionego pliku PO, który następnie może zostać zaimplementowany przez twórcę danego programu. Podczas gdy aplikacja Vé dostarcza podstawowe funkcje do tłumaczenia i lokalizacji oprogramowania, cechuje się ona prostotą, co rekompensuje ograniczenia platformy mobilnej, takiej jak Android (niewielki ekran, brak fizycznej klawiatury itd.)"
 
 msgctxt "play_description4"
 msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
@@ -346,4 +346,4 @@ msgstr "Można pobrać aplikację Vé i używać jej za darmo bez ograniczeń. P
 
 msgctxt "play_description5"
 msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
-msgstr "Aplikacja Vé jest otwartym oprogramowaniem, objętym warunkami licencji GPL. Oznacza to, że można jej używać za darmo do jakichkolwiek celów. Można ją nawet rozpowszechniać, zmodyfikowaną lub nie, lecz tylko na warunkach tej samej licencji, czyli należy dostarczyć pliki źródłowe aplikacji ze wszelkimi dokonanymi zmianami."
+msgstr "Aplikacja Vé jest otwartym oprogramowaniem, objętym warunkami licencji GPL. Oznacza to, że można jej używać za darmo do prywatnych lub innych celów. Można ją nawet rozpowszechniać, zmodyfikowaną lub nie, lecz tylko na warunkach tej samej licencji, co wiąże się z obowiązkiem dostarczenia plików źródłowych aplikacji z wszelkimi dokonanymi zmianami."
