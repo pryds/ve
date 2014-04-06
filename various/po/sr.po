@@ -4,10 +4,10 @@
 # Мирослав Николић <miroslavnikolic@rocketmail.com>, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: ve-0.1.3\n"
+"Project-Id-Version: ve-0.1.4-rc1\n"
 "Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
-"POT-Creation-Date: 2014-02-23 13:21+0100\n"
-"PO-Revision-Date: 2014-02-24 11:10+0200\n"
+"POT-Creation-Date: 2014-02-26 11:06+0100\n"
+"PO-Revision-Date: 2014-04-06 12:20+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
 "Language: sr\n"
@@ -268,10 +268,9 @@ msgctxt "title_activity_donate"
 msgid "Donate to Vé"
 msgstr "Дајте добровољан прилог Веу"
 
-#, c-format
 msgctxt "donate_intro"
-msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation through the app goes directly to the developer of Vé, except for Google's usual 30% share."
-msgstr "Ако вам се свиђа овај програм, размотрите могућност давања добровољног прилога у износу по вашем избору. Ве је у потпуности изграђен на добровољној основи, али ипак има неке новчане издатке. Ако желите да га користите бесплатно, слободни сте да то урадите. Ако желите да дате неки динар као подршку програмеру, можете то учинити путем Гугловог новчаника помоћу уграђене уплатнице у програму, или на веб страници програма. Сваки добровољан прилог путем програма иде програмеру Веа, осим уобичајених Гуглових 30%s учешћа."
+msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation goes directly to the developer of Vé, except for in-app donations which will be subject to Google's usual 30 percent share."
+msgstr "Ако вам се свиђа овај програм, размотрите могућност давања добровољног прилога у износу по вашем избору. Ве је у потпуности изграђен на добровољној основи, али ипак има неке новчане издатке. Ако желите да га користите бесплатно, слободни сте да то урадите. Ако желите да дате неки динар као подршку програмеру, можете то учинити путем Гугловог новчаника помоћу уграђене уплатнице у програму, или на веб страници програма. Сваки добровољан прилог иде програмеру Веа, осим прилога путем програма од којих Гугл узима својих уобичајених 30%s учешћа."
 
 msgctxt "donate_small_title"
 msgid "Normal donation"
