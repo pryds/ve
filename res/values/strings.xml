@@ -80,6 +80,7 @@
     <string name="donate_purchase_consume_error">There was an error completing the purchase:</string>
     <string name="donate_thanks">Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé.</string>
     <string name="play_title">Vé – PO Editor</string>
+    <string name="play_short_desc">Vé lets you translate PO files on your Android device.</string>
     <string name="play_description1">Vé is an editor for translating gettext PO files on Android.</string>
     <string name="play_description2">PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app).</string>
     <string name="play_description3">Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on).</string>
