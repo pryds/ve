@@ -1,0 +1,345 @@
+# Translations template for Vé.
+# Copyright (C) 2014 Thomas Pryds
+# This file is distributed under the same license as the ve package.
+# Mingye Wang <arthur200126@gmail.com>, 2015
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ve 0.1.4-rc1\n"
+"Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
+"POT-Creation-Date: 2014-02-26 11:06+0100\n"
+"PO-Revision-Date: 2015-08-28 11:50+0800\n"
+"Last-Translator: Mingye Wang <arthur200126@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0dev\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.4\n"
+
+msgctxt "locale_of_this_translation"
+msgid "en"
+msgstr "zh_CN"
+
+msgctxt "app_name"
+msgid "Vé"
+msgstr "Vé"
+
+msgctxt "orig_str"
+msgid "Original string"
+msgstr "源文本"
+
+msgctxt "transl_str"
+msgid "Translated string"
+msgstr "翻译"
+
+msgctxt "meta_str_no"
+msgid "String number:"
+msgstr "字串号"
+
+#, c-format
+msgctxt "meta_not_ready"
+msgid "%d not ready,"
+msgid_plural "%d not ready,"
+msgstr[0] "%d 未就绪，"
+
+#, c-format
+msgctxt "meta_untranslated"
+msgid "%d untranslated"
+msgid_plural "%d untranslated"
+msgstr[0] "%d 未翻译"
+
+msgctxt "meta_context"
+msgid "Context:"
+msgstr "上下文："
+
+msgctxt "meta_notes"
+msgid "Notes:"
+msgstr "注释："
+
+msgctxt "meta_files"
+msgid "Files:"
+msgstr "文件："
+
+msgctxt "action_previous"
+msgid "Previous"
+msgstr "上一个"
+
+msgctxt "action_next"
+msgid "Next"
+msgstr "下一个"
+
+msgctxt "action_nextunfinished"
+msgid "Next unfinished"
+msgstr "下一个未完成"
+
+msgctxt "action_gotostringnumber"
+msgid "Go to string number…"
+msgstr "转到字串号…"
+
+msgctxt "action_load"
+msgid "Open file"
+msgstr "打开文件"
+
+msgctxt "action_save"
+msgid "Save file"
+msgstr "保存文件"
+
+msgctxt "action_settings"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "action_about"
+msgid "About Vé"
+msgstr "关于 Vé"
+
+msgctxt "action_donate"
+msgid "Donate"
+msgstr "捐款"
+
+msgctxt "approved"
+msgid "Approved:"
+msgstr "已批准："
+
+msgctxt "ready"
+msgid "Ready"
+msgstr "就绪"
+
+msgctxt "unfinished"
+msgid "Unfinished"
+msgstr "未完成"
+
+msgctxt "title_activity_settings"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "pref_name"
+msgid "Name"
+msgstr "姓名"
+
+msgctxt "pref_name_summ"
+msgid "Your name"
+msgstr "您的姓名"
+
+msgctxt "pref_email"
+msgid "Email"
+msgstr "邮件地址"
+
+msgctxt "pref_email_summ"
+msgid "Your email address"
+msgstr "您的电子邮件地址"
+
+msgctxt "pref_lang"
+msgid "Target language"
+msgstr "目标语言"
+
+msgctxt "pref_lang_summ"
+msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
+msgstr "你要翻译到的语言代码，例如 'en' 或 'zh_CN'"
+
+msgctxt "pref_maillist"
+msgid "Mailing list"
+msgstr "邮件列表"
+
+msgctxt "pref_maillist_summ"
+msgid "The email address of your language team's mailing list"
+msgstr "你所在的语言翻译组的邮件列表地址"
+
+msgctxt "about_title"
+msgid "About Vé"
+msgstr "关于 Vé"
+
+#, c-format
+msgctxt "about_version"
+msgid "Vé version %1$s"
+msgstr "Vé 版本 %1$s"
+
+msgctxt "about_author"
+msgid "By Thomas Pryds"
+msgstr "由 Thomas Pryds 编写"
+
+msgctxt "about_translate_credits"
+msgid "Translated into YourLanguage by YourName"
+msgstr "由 Arthur2e5 翻译到简体中文"
+
+msgctxt "about_license"
+msgid "Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site."
+msgstr "Vé 是开源软件，依照 GPL 许可证发布。这意味着你可以免费地自由用它来做任何事。你甚至可以重发行它，无聊是否更改，只要你按照同一许可证发布，也就是说你所有的更改都要提供源文件。完整的许可证文本在本程序内可以找到；完整的源代码可在以上网址找到。"
+
+msgctxt "ok"
+msgid "OK"
+msgstr "确定"
+
+msgctxt "cancel"
+msgid "Cancel"
+msgstr "取消"
+
+msgctxt "plural_form_1"
+msgid "Plural form 1"
+msgstr "复数形式 1"
+
+msgctxt "plural_form_2"
+msgid "2"
+msgstr "2"
+
+msgctxt "plural_form_3"
+msgid "3"
+msgstr "3"
+
+msgctxt "plural_form_4"
+msgid "4"
+msgstr "4"
+
+msgctxt "plural_form_5"
+msgid "5"
+msgstr "5"
+
+msgctxt "plural_form_6"
+msgid "6"
+msgstr "6"
+
+msgctxt "title_activity_file_chooser"
+msgid "Choose File"
+msgstr "选择文件"
+
+msgctxt "file_directory_postfix"
+msgid "[dir]"
+msgstr "[目录]"
+
+msgctxt "file_parent_dir"
+msgid "[Parent directory]"
+msgstr "[上级目录]"
+
+msgctxt "file_current_dir"
+msgid "Current directory:"
+msgstr "当前目录："
+
+msgctxt "error"
+msgid "Error"
+msgstr "错误"
+
+msgctxt "file_filenotexist"
+msgid "The file does not exist."
+msgstr "文件不存在。"
+
+msgctxt "file_notpofile"
+msgid "The file does not seem to be a PO file."
+msgstr "文件不像是 PO 文件。"
+
+msgctxt "file_fileempty"
+msgid "The file is empty."
+msgstr "文件为空。"
+
+msgctxt "file_ioerror"
+msgid "There was an I/O file error."
+msgstr "发生了文件 I/O 错误。"
+
+msgctxt "file_unknownerror"
+msgid "An unknown error occurred while reading from or writing to file."
+msgstr "读写文件时发生未知错误。"
+
+msgctxt "file_cannotreadfile"
+msgid "Cannot read file."
+msgstr "无法读取文件。"
+
+msgctxt "file_cannotwritefile"
+msgid "Cannot write to file."
+msgstr "无法写入文件。"
+
+msgctxt "file_cannotreaddir"
+msgid "Cannot read from directory."
+msgstr "无法读取目录。"
+
+msgctxt "file_saved"
+msgid "File was saved."
+msgstr "文件已被保存。"
+
+msgctxt "not_all_fields_filled"
+msgid "Error: You did not fill in all fields in the Settings. The file has not been saved."
+msgstr "错误：你没有填写设定里的所有字段。文件未保存。"
+
+msgctxt "title_activity_donate"
+msgid "Donate to Vé"
+msgstr "捐助 Vé"
+
+msgctxt "donate_intro"
+msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation goes directly to the developer of Vé, except for in-app donations which will be subject to Google's usual 30 percent share."
+msgstr "如果你喜欢这个应用，请考虑随意捐一点钱给开发者。Vé 完全由志愿性劳动产生，它的价格可以是你想要的任意值。如果你想免费使用它，尽管用。如果你想付钱支持开发，你可以通过下列应用付款使用 Google Wallet 捐助，或者通过此应用的网站捐助。所有的捐款都会直接送给 Vé 的开发者，不过应用内捐款会被 Google 扣除 30% 的份额。"
+
+msgctxt "donate_small_title"
+msgid "Normal donation"
+msgstr "普通捐款"
+
+msgctxt "donate_small_description"
+msgid "Any amount is highly appreciated!"
+msgstr "多少都行！"
+
+msgctxt "donate50_title"
+msgid "Larger donation"
+msgstr "大额捐款"
+
+msgctxt "donate50_description"
+msgid "Donate a larger amount."
+msgstr "多捐一点。"
+
+msgctxt "donate100_title"
+msgid "Even larger donation"
+msgstr "更大捐款"
+
+msgctxt "donate100_description"
+msgid "Donate an even larger amount."
+msgstr "再捐多点。"
+
+msgctxt "donate_contacting_play_store"
+msgid "Contacting the Play Store…"
+msgstr "正在联系 Play Store…"
+
+msgctxt "donate_button"
+msgid "Donate"
+msgstr "捐款"
+
+msgctxt "donate_init_error"
+msgid "There was an error setting up in-app billing. Donation will not be possible at this time. Details:"
+msgstr "配置应用内付款服务时出错。捐款在此时不可用。详情："
+
+msgctxt "donate_query_error"
+msgid "There was an error querying the Google Play In-App Billing service. Donation will not be possible at this time. Details:"
+msgstr "询问 Google Play 应用内付款服务时出错。捐款在此时不可用。详情："
+
+msgctxt "donate_purchase_consume_error"
+msgid "There was an error completing the purchase:"
+msgstr "完成购买时出错："
+
+msgctxt "donate_thanks"
+msgid "Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé."
+msgstr "非常感谢您捐赠给 Vé 的开发人员。尽管 Vé 是免费使用的，您和他人的捐赠会让开发者有更多空余时间开发 Vé。"
+
+msgctxt "play_title"
+msgid "Vé – PO Editor"
+msgstr "Vé – PO 编辑器"
+
+msgctxt "play_description1"
+msgid "Vé is an editor for translating gettext PO files on Android."
+msgstr "Vé 是一个 gettext PO 文件翻译工具，适用 Android。"
+
+msgctxt "play_description2"
+msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
+msgstr "PO 文件是本地化（翻译）的事实标准，尤其对跨平台的开源软件而言。Linux, Windows 和 MacOS 程序还有 Android 应用都可以用 PO 文件的方式本地化（包括这个程序本身）。"
+
+msgctxt "play_description3"
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on)."
+msgstr "Vé 使您能够加载这样的 PO 文件进入一个简单的界面，完全（或部分）地把应用或程序翻译到你自己的语言，并且保持更新后的 PO 文件用于让开发者来实现。尽管提供了这么多必要的本地化翻译功能，Vé 设计简单，以便弥补 Android 这样的移动平台的限制，例如屏幕小、无物理键盘。"
+
+msgctxt "play_description4"
+msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
+msgstr "Vé 是以北欧神话中奥丁的两兄弟之一的名字命名的。三个兄弟，奥丁，Vili 和 Vé 被认为是给予最初的人人类，Ask 和 Embla 生命的神。在各种能力中，Vé 给了他们说话的能力。"
+
+msgctxt "play_description4b"
+msgid "You can download and use Vé for free without restrictions. However, if you like it, please consider donating an amount of your choise through the in-app purchasing feature."
+msgstr "你可以免费下载使用 Vé 而不受限制。不过，如果你喜欢它的话，请考虑通过应用内购买捐一点钱。"
+
+msgctxt "play_description5"
+msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
+msgstr "Vé 是开源软件，依照 GPL 许可证发布。这意味着你可以免费地自由用它来做任何事。你甚至可以重发行它，无聊是否更改，只要你按照同一许可证发布，也就是说你所有的更改都要提供源文件。"

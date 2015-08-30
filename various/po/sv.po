@@ -1,0 +1,346 @@
+# Translations template for Vé.
+# Copyright (C) 2014 Thomas Pryds
+# This file is distributed under the same license as the ve package.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: ve 0.1.4-rc1\n"
+"Report-Msgid-Bugs-To: https://github.com/pryds/ve/issues\n"
+"POT-Creation-Date: 2014-02-26 11:06+0100\n"
+"PO-Revision-Date: 2015-07-30 19:56+0200\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0dev\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.2\n"
+
+msgctxt "locale_of_this_translation"
+msgid "en"
+msgstr "sv"
+
+msgctxt "app_name"
+msgid "Vé"
+msgstr "Vé"
+
+msgctxt "orig_str"
+msgid "Original string"
+msgstr "Ursprunglig sträng"
+
+msgctxt "transl_str"
+msgid "Translated string"
+msgstr "Översatt sträng"
+
+msgctxt "meta_str_no"
+msgid "String number:"
+msgstr "Strängnummer:"
+
+#, c-format
+msgctxt "meta_not_ready"
+msgid "%d not ready,"
+msgid_plural "%d not ready,"
+msgstr[0] "%d ej klar,"
+msgstr[1] "%d ej klara,"
+
+#, c-format
+msgctxt "meta_untranslated"
+msgid "%d untranslated"
+msgid_plural "%d untranslated"
+msgstr[0] "%d ej översatt"
+msgstr[1] "%d ej översatta"
+
+msgctxt "meta_context"
+msgid "Context:"
+msgstr "Sammanhang:"
+
+msgctxt "meta_notes"
+msgid "Notes:"
+msgstr "Anteckningar:"
+
+msgctxt "meta_files"
+msgid "Files:"
+msgstr "Filer:"
+
+msgctxt "action_previous"
+msgid "Previous"
+msgstr "Föregående"
+
+msgctxt "action_next"
+msgid "Next"
+msgstr "Nästa"
+
+msgctxt "action_nextunfinished"
+msgid "Next unfinished"
+msgstr "Nästa ej klara"
+
+msgctxt "action_gotostringnumber"
+msgid "Go to string number…"
+msgstr "Gå till strängnummer…"
+
+msgctxt "action_load"
+msgid "Open file"
+msgstr "Öppna fil"
+
+msgctxt "action_save"
+msgid "Save file"
+msgstr "Spara fil"
+
+msgctxt "action_settings"
+msgid "Settings"
+msgstr "Inställningar"
+
+msgctxt "action_about"
+msgid "About Vé"
+msgstr "Om Vé"
+
+msgctxt "action_donate"
+msgid "Donate"
+msgstr "Donera"
+
+msgctxt "approved"
+msgid "Approved:"
+msgstr "Accepterad:"
+
+msgctxt "ready"
+msgid "Ready"
+msgstr "Klar"
+
+msgctxt "unfinished"
+msgid "Unfinished"
+msgstr "Ej klar"
+
+msgctxt "title_activity_settings"
+msgid "Settings"
+msgstr "Inställningar"
+
+msgctxt "pref_name"
+msgid "Name"
+msgstr "Namn"
+
+msgctxt "pref_name_summ"
+msgid "Your name"
+msgstr "Ditt namn"
+
+msgctxt "pref_email"
+msgid "Email"
+msgstr "E-post"
+
+msgctxt "pref_email_summ"
+msgid "Your email address"
+msgstr "Din e-postadress"
+
+msgctxt "pref_lang"
+msgid "Target language"
+msgstr "Målspråk"
+
+msgctxt "pref_lang_summ"
+msgid "Code of the language you translate to, e.g. 'en' or 'pt_BR'"
+msgstr "Koden för språket du vill översätta till, t.ex. 'en' eller 'pt_BR'"
+
+msgctxt "pref_maillist"
+msgid "Mailing list"
+msgstr "Sändlista"
+
+msgctxt "pref_maillist_summ"
+msgid "The email address of your language team's mailing list"
+msgstr "E-postadressen till sändlistan för ditt språks översättningsgrupp."
+
+msgctxt "about_title"
+msgid "About Vé"
+msgstr "Om Vé"
+
+#, c-format
+msgctxt "about_version"
+msgid "Vé version %1$s"
+msgstr "Vé version %1$s"
+
+msgctxt "about_author"
+msgid "By Thomas Pryds"
+msgstr "Av Thomas Pryds"
+
+msgctxt "about_translate_credits"
+msgid "Translated into YourLanguage by YourName"
+msgstr "Översatt till svenska av Anders Jonsson"
+
+msgctxt "about_license"
+msgid "Vé is open source software, released under the GPL licence, which means that you can use it for free for any purpose. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes. The complete license text comes with this program. The complete source code for this program is available at the above mentioned web site."
+msgstr "Vé är programvara med öppen källkod, släppt under licensen GPL, vilket betyder att du kan använda det gratis för alla ändamål. Du kan till och med återdistribuera det, med eller utan ändringar, så länge du gör det under samma licens, vilket betyder att du måste tillhandahålla dina källfiler för alla ändringar. Den fullständiga licenstexten följer med programmet. Den fullständiga källkoden för detta program finns tillgänglig på den ovan nämnda webbplatsen."
+
+msgctxt "ok"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "cancel"
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgctxt "plural_form_1"
+msgid "Plural form 1"
+msgstr "Pluralform 1"
+
+msgctxt "plural_form_2"
+msgid "2"
+msgstr "2"
+
+msgctxt "plural_form_3"
+msgid "3"
+msgstr "3"
+
+msgctxt "plural_form_4"
+msgid "4"
+msgstr "4"
+
+msgctxt "plural_form_5"
+msgid "5"
+msgstr "5"
+
+msgctxt "plural_form_6"
+msgid "6"
+msgstr "6"
+
+msgctxt "title_activity_file_chooser"
+msgid "Choose File"
+msgstr "Välj fil"
+
+msgctxt "file_directory_postfix"
+msgid "[dir]"
+msgstr "[kat]"
+
+msgctxt "file_parent_dir"
+msgid "[Parent directory]"
+msgstr "[Föräldrakatalog]"
+
+msgctxt "file_current_dir"
+msgid "Current directory:"
+msgstr "Aktuell katalog:"
+
+msgctxt "error"
+msgid "Error"
+msgstr "Fel"
+
+msgctxt "file_filenotexist"
+msgid "The file does not exist."
+msgstr "Filen existerar inte."
+
+msgctxt "file_notpofile"
+msgid "The file does not seem to be a PO file."
+msgstr "Filen verkar inte vara en PO-fil."
+
+msgctxt "file_fileempty"
+msgid "The file is empty."
+msgstr "Filen är tom."
+
+msgctxt "file_ioerror"
+msgid "There was an I/O file error."
+msgstr "Ett I/O-filfel uppstod."
+
+msgctxt "file_unknownerror"
+msgid "An unknown error occurred while reading from or writing to file."
+msgstr "Ett okänt fel uppstod vid läsning från eller skrivning till en fil."
+
+msgctxt "file_cannotreadfile"
+msgid "Cannot read file."
+msgstr "Kan inte läsa fil."
+
+msgctxt "file_cannotwritefile"
+msgid "Cannot write to file."
+msgstr "Kan inte skriva till fil."
+
+msgctxt "file_cannotreaddir"
+msgid "Cannot read from directory."
+msgstr "Kan inte läsa från katalog."
+
+msgctxt "file_saved"
+msgid "File was saved."
+msgstr "Filen sparades."
+
+msgctxt "not_all_fields_filled"
+msgid "Error: You did not fill in all fields in the Settings. The file has not been saved."
+msgstr "Fel: Du har inte fyllt i alla fält i Inställningar. Filen har inte sparats."
+
+msgctxt "title_activity_donate"
+msgid "Donate to Vé"
+msgstr "Donera till Vé"
+
+msgctxt "donate_intro"
+msgid "If you like this app, please consider donating an amount of your choice to the developer. Vé is built entirely on voluntary basis, and it has whatever price tag you wish. If you want to use it for free, feel welcome to do so. If you want to pay an amount to support the developer, you can do so via Google Wallet through the in-app billing below, or via the app's website. Every donation goes directly to the developer of Vé, except for in-app donations which will be subject to Google's usual 30 percent share."
+msgstr "Om du tycker om denna app så kan du överväga att skänka en summa som du själv väljer till utvecklaren. Vé byggs fullständigt på frivilligarbete, och har vilket pris du vill. Om du vill använda det gratis så är du välkommen att göra det. Om du vill betala en summa för att stödja utvecklaren, så kan du göra detta med Google Wallet genom betalning i appen nedan, eller via appens webbplats. Varje donation går direkt till Vés utvecklare, utom för donationer inifrån appen som kommer att dra bort Googles vanliga andel på 30%."
+
+msgctxt "donate_small_title"
+msgid "Normal donation"
+msgstr "Normal donation"
+
+msgctxt "donate_small_description"
+msgid "Any amount is highly appreciated!"
+msgstr "Alla summor är högst uppskattade!"
+
+msgctxt "donate50_title"
+msgid "Larger donation"
+msgstr "Större donation"
+
+msgctxt "donate50_description"
+msgid "Donate a larger amount."
+msgstr "Donera en större summa."
+
+msgctxt "donate100_title"
+msgid "Even larger donation"
+msgstr "Ännu större donation"
+
+msgctxt "donate100_description"
+msgid "Donate an even larger amount."
+msgstr "Donera en ännu större summa."
+
+msgctxt "donate_contacting_play_store"
+msgid "Contacting the Play Store…"
+msgstr "Kontaktar Play-butiken…"
+
+msgctxt "donate_button"
+msgid "Donate"
+msgstr "Donera"
+
+msgctxt "donate_init_error"
+msgid "There was an error setting up in-app billing. Donation will not be possible at this time. Details:"
+msgstr "Ett fel uppstod då betalning i appen ställdes in. Donation kommer inte vara möjlig för tillfället. Detaljer:"
+
+msgctxt "donate_query_error"
+msgid "There was an error querying the Google Play In-App Billing service. Donation will not be possible at this time. Details:"
+msgstr "Ett fel uppstod vid vid uppslag till Google Plays tjänst för betalning i appar. Donation kommer inte vara möjlig för tillfället. Detaljer:"
+
+msgctxt "donate_purchase_consume_error"
+msgid "There was an error completing the purchase:"
+msgstr "Ett fel uppstod då köpet skulle slutföras:"
+
+msgctxt "donate_thanks"
+msgid "Thank you very much for donating to the Vé developer. While Vé is freely available for use, your and other contributions make it easier to find free time for the development of Vé."
+msgstr "Tack så mycket för att du donerar till Vé-utvecklaren. Även om Vé är fritt tillgängligt för användning, så gör dina och andras bidrag det lättare att finna ledig tid till utvecklingen av Vé."
+
+msgctxt "play_title"
+msgid "Vé – PO Editor"
+msgstr "Vé – PO-redigerare"
+
+msgctxt "play_description1"
+msgid "Vé is an editor for translating gettext PO files on Android."
+msgstr "Vé är en redigerare för att översätta gettext PO-filer på Android."
+
+msgctxt "play_description2"
+msgid "PO files are the de-facto standard for localization (translation) of especially open source programs that run on several platforms, including Linux, Windows and MacOS, but also Android apps may be localized by means of PO files (including this very app)."
+msgstr "PO-filer är de facto-standarden för lokalisering (översättning) av främst program som är öppen källkod som kör på flera plattformar, inkluderande Linux, Windows och MacOS, men även Android-appar kan lokaliseras med PO-filer (även denna app själv inräknad)."
+
+msgctxt "play_description3"
+msgid "Vé enables you to load such a PO file into a simple interface, fully (or partially) translate apps or programs into your own language, and save an updated PO file for implementation by the app/program developer. While providing the essential features for translation and localization of apps and programs, Vé is simple in design to compensate for the limitations of a mobile platform like Android (small screen, no physical keyboard and so on)."
+msgstr "Vé ger dig möjligheten att läsa in en sådan PO-fil till ett enkelt gränssnitt, helt (eller delvis) översätta appar eller program till ditt eget språk, och spara en uppdaterad PO-fil för implementering av appens/programmets utvecklare. Medan det tillhandahåller de nödvändiga funktionerna för översättning och lokalisering av appar och program, så är Vé enkelt designat för att kompensera för begränsningarna hos en mobil plattform som Android (liten skärm, inget fysiskt tangentbord och så vidare)."
+
+msgctxt "play_description4"
+msgid "Vé is named after one of Odin's two brothers in Norse mythology. The three brothers, Odin, Vili and Vé were thought to be the Gods who gave life to the first humans, Ask and Embla. Vé was the one who gave them speech, among other capabilities."
+msgstr "Vé är namngett efter en av Odens två bröder i nordisk mytologi. De tre bröderna Oden, Vile och Ve ansågs vara gudarna som gav liv till de första människorna, Ask och Embla. Ve var den som gav dem tal, tillsammans med andra förmågor."
+
+msgctxt "play_description4b"
+msgid "You can download and use Vé for free without restrictions. However, if you like it, please consider donating an amount of your choise through the in-app purchasing feature."
+msgstr "Du kan hämta och använda Vé gratis utan restriktioner. Överväg att donera en summa du själv väljer genom funktionen för betalning i appar om du gillar det."
+
+msgctxt "play_description5"
+msgid "Vé is open source software, released under the GPL licence, which means you can use it for free, for personal or other purposes. You can even redistribute it, modified or not, provided you do so under the same licence, which means you have to provide your source files for any changes."
+msgstr "Vé är programvara med öppen källkod, släppt under licensen GPL, vilket betyder att du kan använda det gratis för privata eller andra ändamål. Du kan till och med återdistribuera det, med eller utan ändringar, så länge du gör det under samma licens, vilket betyder att du måste tillhandahålla dina källfiler för alla ändringar."
